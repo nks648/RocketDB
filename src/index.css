@@ -1549,3 +1549,314 @@ html, body, #root {
   white-space: nowrap;
   pointer-events: none;
 }
+
+/* ───── Sidebar Search ───── */
+.sidebar-search {
+  position: relative;
+  flex-shrink: 0;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar-search-input {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 7px 28px 7px 10px;
+  font-size: 12px;
+  font-family: var(--font);
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.sidebar-search-input::placeholder { color: var(--text-muted); }
+.sidebar-search-input:focus { border-color: var(--accent); }
+
+.sidebar-search-clear {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 11px;
+  padding: 4px;
+  line-height: 1;
+}
+.sidebar-search-clear:hover { color: var(--text-secondary); }
+
+/* ───── Space Weather Badge ───── */
+.sw-badge-wrap {
+  position: relative;
+}
+
+.sw-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,200,0,0.06);
+  border: 1px solid rgba(255,200,0,0.2);
+  border-radius: var(--radius);
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: var(--font);
+  color: var(--text-secondary);
+  transition: all 0.15s;
+  white-space: nowrap;
+  position: relative;
+}
+
+.sw-badge:hover {
+  border-color: rgba(255,200,0,0.45);
+  background: rgba(255,200,0,0.1);
+  color: var(--text-primary);
+}
+
+.sw-badge.sw-storm {
+  border-color: rgba(255,215,64,0.5);
+  background: rgba(255,215,64,0.08);
+  animation: sw-glow 2s infinite;
+}
+
+@keyframes sw-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,215,64,0); }
+  50% { box-shadow: 0 0 8px rgba(255,215,64,0.25); }
+}
+
+.sw-icon { font-size: 13px; line-height: 1; }
+.sw-label { font-size: 11px; font-weight: 600; letter-spacing: 0.3px; }
+
+.sw-alert-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 0 5px var(--orange);
+  position: absolute;
+  top: 3px; right: 3px;
+}
+
+.sw-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 2000;
+  background: var(--bg-card);
+  border: 1px solid var(--border-bright);
+  border-radius: var(--radius-lg);
+  padding: 14px;
+  min-width: 240px;
+  box-shadow: var(--shadow);
+  animation: slide-down 0.18s ease;
+}
+
+@keyframes slide-down {
+  from { transform: translateY(-6px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+.sw-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.sw-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+.sw-close:hover { color: var(--text-secondary); }
+
+.sw-kp-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.sw-kp-value {
+  font-family: var(--font-mono);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.sw-kp-label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.sw-sparkline {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 40px;
+  margin-bottom: 2px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 6px;
+  padding: 4px 6px;
+}
+
+.sw-bar-wrap {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.sw-bar {
+  width: 100%;
+  border-radius: 2px 2px 0 0;
+  min-height: 2px;
+  transition: height 0.3s;
+}
+
+.sw-sparkline-label {
+  font-size: 9px;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.sw-desc {
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.sw-alerts {
+  border-top: 1px solid var(--border);
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.sw-alerts-title {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.sw-alert-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  font-size: 10px;
+  color: var(--orange);
+  line-height: 1.4;
+}
+
+.sw-alert-icon { flex-shrink: 0; margin-top: 1px; }
+
+.sw-source {
+  font-size: 9px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  padding-top: 6px;
+  text-align: right;
+}
+
+/* ───── Reddit Discussion ───── */
+.reddit-section {
+  margin-top: 8px;
+}
+
+.reddit-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+}
+
+.reddit-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reddit-post {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  background: rgba(255,69,0,0.06);
+  border: 1px solid rgba(255,69,0,0.15);
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.12s, border-color 0.12s;
+}
+
+.reddit-post:hover {
+  background: rgba(255,69,0,0.12);
+  border-color: rgba(255,69,0,0.35);
+}
+
+.reddit-post-sub {
+  font-size: 9px;
+  color: #ff4500;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.reddit-post-title {
+  font-size: 10px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.reddit-post-meta {
+  font-size: 9px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  font-family: var(--font-mono);
+}
+
+.reddit-loading {
+  font-size: 10px;
+  color: var(--text-muted);
+  padding: 4px 0;
+}
+
+/* ───── Launch Probability ───── */
+.probability-chip {
+  font-weight: 700;
+}
+.probability-chip.prob-go     { color: var(--green); background: var(--green-dim); }
+.probability-chip.probability-chip.prob-marginal { color: var(--yellow); background: var(--yellow-dim); }
+.probability-chip.prob-low    { color: var(--orange); background: var(--orange-dim); }
+
+/* ─── Mobile: hide space weather badge label to save space ─── */
+@media (max-width: 768px) {
+  .sw-badge { padding: 5px 8px; }
+  .sw-label { display: none; }
+  .sw-panel { right: auto; left: 0; }
+  .reddit-section { display: none; }
+  .sidebar-search { padding: 6px 8px; }
+}

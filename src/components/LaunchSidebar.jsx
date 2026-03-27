@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useMemo } from 'react'
 import LaunchCard from './LaunchCard'
 import CountdownTimer from './CountdownTimer'
 
@@ -8,7 +8,19 @@ export default function LaunchSidebar({
   selectedLaunch, onSelectLaunch, onPlayVideo,
   isOpen, onToggleSheet,
 }) {
-  const launches = activeTab === 'upcoming' ? upcoming : previous
+  const [filter, setFilter] = useState('')
+  const allLaunches = activeTab === 'upcoming' ? upcoming : previous
+  const launches = useMemo(() => {
+    const q = filter.trim().toLowerCase()
+    if (!q) return allLaunches
+    return allLaunches.filter(l =>
+      l.name?.toLowerCase().includes(q) ||
+      l.rocket?.configuration?.name?.toLowerCase().includes(q) ||
+      l.launch_service_provider?.abbrev?.toLowerCase().includes(q) ||
+      l.launch_service_provider?.name?.toLowerCase().includes(q) ||
+      l.pad?.location?.name?.toLowerCase().includes(q)
+    )
+  }, [allLaunches, filter])
   const nextLaunch = upcoming.find(l => l.net)
 
   return (
@@ -64,6 +76,21 @@ export default function LaunchSidebar({
         </button>
       </div>
 
+      {/* ── Search filter ── */}
+      <div className="sidebar-search">
+        <input
+          type="search"
+          className="sidebar-search-input"
+          placeholder="Filter by rocket, agency, site…"
+          value={filter}
+          onChange={e => setFilter(e.target.value)}
+          aria-label="Filter launches"
+        />
+        {filter && (
+          <button className="sidebar-search-clear" onClick={() => setFilter('')} aria-label="Clear filter">✕</button>
+        )}
+      </div>
+
       {/* ── Launch list ── */}
       {loading && (
         <div className="sidebar-loading">
@@ -73,8 +100,13 @@ export default function LaunchSidebar({
 
       {!loading && launches.length === 0 && (
         <div className="sidebar-empty">
-          <span style={{ fontSize: 32 }}>🛰️</span>
-          <span>No launches found</span>
+          <span style={{ fontSize: 32 }}>{filter ? '🔍' : '🛰️'}</span>
+          <span>{filter ? `No matches for "${filter}"` : 'No launches found'}</span>
+          {filter && (
+            <button className="btn-icon" style={{ fontSize:11 }} onClick={() => setFilter('')}>
+              Clear filter
+            </button>
+          )}
         </div>
       )}
 

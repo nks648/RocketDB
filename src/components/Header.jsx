@@ -1,4 +1,5 @@
 import React from 'react'
+import SpaceWeatherBadge from './SpaceWeatherBadge'
 
 export default function Header({ lastUpdated, loading, onRefetch }) {
   const timeStr = lastUpdated
@@ -32,6 +33,8 @@ export default function Header({ lastUpdated, loading, onRefetch }) {
       <div className="header-status">
         LL2 API · Updated {timeStr}
       </div>
+
+      <SpaceWeatherBadge />
 
       <div className="header-right">
         <button

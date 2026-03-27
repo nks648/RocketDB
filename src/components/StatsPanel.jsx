@@ -2,7 +2,6 @@ import React, { useMemo } from 'react'
 
 export default function StatsPanel({ upcoming, previous }) {
   const stats = useMemo(() => {
-    const total = upcoming.length + previous.length
     const successes = previous.filter(l => l.status?.id === 3).length
     const failures = previous.filter(l => l.status?.id === 4 || l.status?.id === 6).length
     const successRate = previous.length > 0
@@ -20,7 +19,7 @@ export default function StatsPanel({ upcoming, previous }) {
     }
     const topAgencies = Object.entries(agencyCounts)
       .sort((a, b) => b[1] - a[1])
-      .slice(0, 5)
+      .slice(0, 4)
 
     // Next launch
     const next = upcoming.find(l => l.net)
@@ -29,7 +28,21 @@ export default function StatsPanel({ upcoming, previous }) {
       : null
     const nextInHours = nextIn !== null ? (nextIn / 3600000).toFixed(1) : null
 
-    return { total, successes, failures, successRate, topAgencies, next, nextInHours }
+    // Scrub / hold count (upcoming that are past NET)
+    const scrubbed = upcoming.filter(l => {
+      const pastNet = l.net && new Date(l.net).getTime() < Date.now()
+      return pastNet && [2, 5, 8].includes(l.status?.id)
+    }).length
+
+    // Orbit class breakdown from upcoming
+    const orbitCounts = {}
+    for (const l of upcoming) {
+      const o = l.mission?.orbit?.abbrev || l.mission?.orbit?.name || null
+      if (o) orbitCounts[o] = (orbitCounts[o] || 0) + 1
+    }
+    const topOrbits = Object.entries(orbitCounts).sort((a, b) => b[1] - a[1]).slice(0, 3)
+
+    return { successes, failures, successRate, topAgencies, next, nextInHours, scrubbed, topOrbits }
   }, [upcoming, previous])
 
   return (
@@ -66,6 +79,15 @@ export default function StatsPanel({ upcoming, previous }) {
         </div>
       )}
 
+      {stats.scrubbed > 0 && (
+        <div className="stat-item" style={{ '--sv': 'var(--yellow)' }}>
+          <div>
+            <div className="stat-value" style={{ color:'var(--yellow)' }}>{stats.scrubbed}</div>
+            <div className="stat-label">Scrubbed</div>
+          </div>
+        </div>
+      )}
+
       {stats.nextInHours !== null && (
         <div className="stat-item orange">
           <div>
@@ -79,8 +101,21 @@ export default function StatsPanel({ upcoming, previous }) {
         </div>
       )}
 
-      {stats.topAgencies.length > 0 && (
+      {stats.topOrbits.length > 0 && (
         <div className="stats-agencies">
+          <span style={{ fontSize:10, color:'var(--text-muted)', letterSpacing:1, textTransform:'uppercase', whiteSpace:'nowrap' }}>
+            Orbits:
+          </span>
+          {stats.topOrbits.map(([name, count]) => (
+            <span key={name} className="agency-pill">
+              {name} <span style={{ color:'var(--purple)', marginLeft:3 }}>{count}</span>
+            </span>
+          ))}
+        </div>
+      )}
+
+      {stats.topAgencies.length > 0 && (
+        <div className="stats-agencies" style={{ borderLeft:'1px solid var(--border)', paddingLeft:20 }}>
           <span style={{ fontSize:10, color:'var(--text-muted)', letterSpacing:1, textTransform:'uppercase', whiteSpace:'nowrap' }}>
             Agencies:
           </span>
