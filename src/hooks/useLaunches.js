@@ -1,32 +1,61 @@
 import { useState, useEffect, useCallback } from 'react'
 
-const LL2_BASE = 'https://ll.thespacedevs.com/2.2.0'
-const CACHE_TTL = 15 * 60 * 1000 // 15 min — LL2 free tier: 15 req/hr, 2 req/cycle = 8/hr
+const LL2_BASE  = 'https://ll.thespacedevs.com/2.2.0'
+const CACHE_TTL = 15 * 60 * 1000  // 15 min → 8 req/hr (limit: 15/hr)
+const LS_PREFIX = 'rocketdb:ll2:'  // localStorage key prefix
 
-const cache = {}
+// ── Persistent cache (survives page refresh) ──────────────────────────────
+function lsGet(url) {
+  try {
+    const raw = localStorage.getItem(LS_PREFIX + url)
+    if (!raw) return null
+    return JSON.parse(raw) // { data, ts }
+  } catch { return null }
+}
 
+function lsSet(url, data) {
+  try {
+    localStorage.setItem(LS_PREFIX + url, JSON.stringify({ data, ts: Date.now() }))
+  } catch { /* storage full — silent fail */ }
+}
+
+// ── Fetch with localStorage-backed TTL cache ──────────────────────────────
 async function fetchWithCache(url) {
-  const now = Date.now()
-  if (cache[url] && now - cache[url].ts < CACHE_TTL) {
-    return cache[url].data
+  const stored = lsGet(url)
+
+  // Fresh cache hit — no network needed
+  if (stored && Date.now() - stored.ts < CACHE_TTL) {
+    return stored.data
   }
-  const res = await fetch(url)
+
+  let res
+  try {
+    res = await fetch(url)
+  } catch (e) {
+    // Network failure — serve stale cache if available
+    if (stored) return stored.data
+    throw new Error('Network error — check connection')
+  }
+
   if (res.status === 429) {
-    // Rate limited — return stale cache if we have it, else throw
-    if (cache[url]) return cache[url].data
-    throw new Error('HTTP 429 — rate limited. Data refreshes every 15 min.')
+    // Rate limited — always serve whatever we have stored (even expired)
+    if (stored) return stored.data
+    throw new Error('API rate limit reached — please wait a few minutes and refresh')
   }
-  if (!res.ok) throw new Error(`HTTP ${res.status}`)
+
+  if (!res.ok) throw new Error(`API error ${res.status}`)
+
   const data = await res.json()
-  cache[url] = { data, ts: now }
+  lsSet(url, data)
   return data
 }
 
+// ── Hook ──────────────────────────────────────────────────────────────────
 export function useLaunches() {
-  const [upcoming, setUpcoming] = useState([])
-  const [previous, setPrevious] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
+  const [upcoming,    setUpcoming]    = useState([])
+  const [previous,    setPrevious]    = useState([])
+  const [loading,     setLoading]     = useState(true)
+  const [error,       setError]       = useState(null)
   const [lastUpdated, setLastUpdated] = useState(null)
 
   const fetchAll = useCallback(async () => {
@@ -34,12 +63,8 @@ export function useLaunches() {
     setError(null)
     try {
       const [upRes, prevRes] = await Promise.all([
-        fetchWithCache(
-          `${LL2_BASE}/launch/upcoming/?format=json&limit=20&mode=detailed`
-        ),
-        fetchWithCache(
-          `${LL2_BASE}/launch/previous/?format=json&limit=20&ordering=-net&mode=detailed`
-        ),
+        fetchWithCache(`${LL2_BASE}/launch/upcoming/?format=json&limit=20&mode=detailed`),
+        fetchWithCache(`${LL2_BASE}/launch/previous/?format=json&limit=20&ordering=-net&mode=detailed`),
       ])
       setUpcoming(upRes.results || [])
       setPrevious(prevRes.results || [])
