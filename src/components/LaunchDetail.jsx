@@ -14,31 +14,34 @@ function extractYouTubeId(urls) {
 export default function LaunchDetail({ launch, onClose, onPlayVideo }) {
   if (!launch) return null
 
-  const statusKey = STATUS_MAP[launch.status?.id]?.key || 'tbd'
+  const statusKey   = STATUS_MAP[launch.status?.id]?.key || 'tbd'
   const statusLabel = launch.status?.name || 'Unknown'
-  const vehicle = launch.rocket?.configuration?.full_name || launch.rocket?.configuration?.name || '—'
-  const site = launch.pad?.name || '—'
-  const location = launch.pad?.location?.name || ''
-  const missionType = launch.mission?.type || '—'
-  const desc = launch.mission?.description || launch.mission?.name || null
-  const ytId = extractYouTubeId(launch.vidURLs)
-  const isPast = launch.status?.id === 3 || launch.status?.id === 4 || launch.status?.id === 6
+  const vehicle     = launch.rocket?.configuration?.full_name || launch.rocket?.configuration?.name || '—'
+  const site        = launch.pad?.name || '—'
+  const location    = launch.pad?.location?.name || ''
+  const missionType = launch.mission?.type || null
+  const orbit       = launch.mission?.orbit?.name || null
+  const desc        = launch.mission?.description || null
+  const ytId        = extractYouTubeId(launch.vidURLs)
+  const isPast      = [3, 4, 6].includes(launch.status?.id)
 
   const windowStart = launch.window_start
-    ? new Date(launch.window_start).toLocaleString()
+    ? new Date(launch.window_start).toLocaleString([], { dateStyle:'medium', timeStyle:'short' })
     : null
   const windowEnd = launch.window_end
-    ? new Date(launch.window_end).toLocaleString()
+    ? new Date(launch.window_end).toLocaleString([], { timeStyle:'short' })
     : null
+
+  const hasHold    = !!launch.holdreason
+  const hasFailure = !!launch.failreason
 
   return (
     <div className="launch-detail">
       {/* Mission image */}
-      {launch.image ? (
-        <img src={launch.image} alt="" className="launch-detail-img" />
-      ) : (
-        <div className="launch-detail-img-placeholder">🚀</div>
-      )}
+      {launch.image
+        ? <img src={launch.image} alt="" className="launch-detail-img" />
+        : <div className="launch-detail-img-placeholder">🚀</div>
+      }
 
       {/* Info */}
       <div className="launch-detail-info">
@@ -48,16 +51,33 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo }) {
           <span className={`status-badge ${statusKey}`}>{statusLabel}</span>
           <span className="meta-chip">🚀 {vehicle}</span>
           <span className="meta-chip">📍 {site}{location ? `, ${location}` : ''}</span>
-          <span className="meta-chip">🛸 {missionType}</span>
+          {missionType && <span className="meta-chip">🛸 {missionType}{orbit ? ` · ${orbit}` : ''}</span>}
         </div>
 
-        {desc && (
-          <div className="launch-detail-desc">{desc}</div>
-        )}
+        {desc && <div className="launch-detail-desc">{desc}</div>}
 
         {windowStart && (
           <div className="launch-detail-window">
             Window: {windowStart}{windowEnd ? ` → ${windowEnd}` : ''}
+          </div>
+        )}
+
+        {/* ── Hold / Scrub / Failure reasons ── */}
+        {hasHold && (
+          <div className="scrub-reason hold">
+            <div className="scrub-reason-label">⚠ Hold Reason</div>
+            <div className="scrub-reason-text">{launch.holdreason}</div>
+          </div>
+        )}
+        {hasFailure && (
+          <div className="scrub-reason failure">
+            <div className="scrub-reason-label">✕ Failure Reason</div>
+            <div className="scrub-reason-text">{launch.failreason}</div>
+          </div>
+        )}
+        {launch.status?.description && !hasHold && !hasFailure && statusKey !== 'go' && (
+          <div className="scrub-reason info">
+            <div className="scrub-reason-text">{launch.status.description}</div>
           </div>
         )}
       </div>
@@ -85,8 +105,7 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo }) {
             </button>
           )}
         </div>
-
-        <button className="btn-close" onClick={onClose} title="Close" style={{ alignSelf:'flex-start' }}>✕</button>
+        <button className="btn-close" onClick={onClose} style={{ alignSelf:'flex-start' }}>✕</button>
       </div>
     </div>
   )

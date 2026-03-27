@@ -96,6 +96,18 @@ export default function MobileLaunchBanner({ launch, onClose, onPlayVideo }) {
                 <span className="mlb-detail-value">{launch.status.description}</span>
               </div>
             )}
+            {launch.holdreason && (
+              <div className="mlb-detail-row" style={{ alignItems:'flex-start' }}>
+                <span className="mlb-detail-label" style={{ color:'#ff9940' }}>Hold</span>
+                <span className="mlb-detail-value" style={{ color:'#ff9940' }}>{launch.holdreason}</span>
+              </div>
+            )}
+            {launch.failreason && (
+              <div className="mlb-detail-row" style={{ alignItems:'flex-start' }}>
+                <span className="mlb-detail-label" style={{ color:'#ff4444' }}>Failure</span>
+                <span className="mlb-detail-value" style={{ color:'#ff6b6b' }}>{launch.failreason}</span>
+              </div>
+            )}
             {desc && (
               <div className="mlb-detail-desc">{desc}</div>
             )}

@@ -921,6 +921,47 @@ html, body, #root {
 
 .leaflet-control-attribution a { color: var(--text-muted) !important; }
 
+/* ───── Scrub / Hold / Failure Reason Banner ───── */
+.scrub-reason {
+  border-radius: var(--radius);
+  padding: 7px 10px;
+  margin-top: 6px;
+  border-left: 3px solid;
+}
+
+.scrub-reason.hold {
+  background: rgba(255,153,64,0.1);
+  border-color: #ff9940;
+}
+
+.scrub-reason.failure {
+  background: rgba(255,68,68,0.1);
+  border-color: #ff4444;
+}
+
+.scrub-reason.info {
+  background: rgba(0,200,240,0.06);
+  border-color: var(--accent);
+}
+
+.scrub-reason-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.scrub-reason.hold    .scrub-reason-label { color: #ff9940; }
+.scrub-reason.failure .scrub-reason-label { color: #ff4444; }
+.scrub-reason.info    .scrub-reason-label { color: var(--accent); }
+
+.scrub-reason-text {
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
 /* ───── Mobile & Tablet Responsive ───── */
 
 /* Tablet: tighten sidebar width */
