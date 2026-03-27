@@ -117,25 +117,29 @@ export default function WorldMap({ launches, selectedLaunch, onSelectLaunch, onP
         <button
           className={`toggle-btn${showMaritime ? ' active' : ''}`}
           onClick={() => setShowMaritime(v => !v)}
-          title="Toggle maritime exclusion zones"
+          aria-label="Toggle maritime exclusion zones"
         >
-          <span style={{ color: '#ff6b35' }}>⬡</span>
+          <span className="toggle-swatch" style={{ background:'#ff6b35' }} />
           <span className="toggle-label">Maritime</span>
+          <span className="toggle-check">{showMaritime ? '✓' : ''}</span>
         </button>
         <button
           className={`toggle-btn${showAirspace ? ' active' : ''}`}
           onClick={() => setShowAirspace(v => !v)}
-          title="Toggle FAA airspace TFRs"
+          aria-label="Toggle airspace TFRs"
         >
-          <span style={{ color: '#bb86fc' }}>○</span>
+          <span className="toggle-swatch" style={{ background:'#bb86fc' }} />
           <span className="toggle-label">Airspace</span>
+          <span className="toggle-check">{showAirspace ? '✓' : ''}</span>
         </button>
         <button
           className={`toggle-btn${showSites ? ' active' : ''}`}
           onClick={() => setShowSites(v => !v)}
-          title="Toggle launch site markers"
+          aria-label="Toggle launch sites"
         >
-          🚀 <span className="toggle-label">Sites</span>
+          <span className="toggle-swatch" style={{ background:'#00c8f0' }} />
+          <span className="toggle-label">Sites</span>
+          <span className="toggle-check">{showSites ? '✓' : ''}</span>
         </button>
       </div>
 

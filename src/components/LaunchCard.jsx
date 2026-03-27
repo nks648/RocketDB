@@ -2,27 +2,30 @@ import React from 'react'
 import CountdownTimer from './CountdownTimer'
 import { STATUS_MAP } from '../data/launchZones'
 
-function getStatusClass(statusId) {
+function getStatusKey(statusId) {
   return STATUS_MAP[statusId]?.key || 'tbd'
 }
 
 function extractYouTubeId(urls) {
-  if (!urls || urls.length === 0) return null
+  if (!urls?.length) return null
   for (const v of urls) {
-    const u = v.url || v
-    const m = u.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([A-Za-z0-9_-]{11})/)
+    const m = (v.url || v).match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([A-Za-z0-9_-]{11})/)
     if (m) return m[1]
   }
   return null
 }
 
 export default function LaunchCard({ launch, selected, onSelect, onPlayVideo }) {
-  const statusKey = getStatusClass(launch.status?.id)
-  const statusLabel = launch.status?.abbrev || launch.status?.name || 'TBD'
+  const statusKey = getStatusKey(launch.status?.id)
+  const statusLabel = launch.status?.abbrev || 'TBD'
   const vehicle = launch.rocket?.configuration?.name || '—'
-  const site = launch.pad?.location?.name || launch.pad?.name || '—'
+  const location = launch.pad?.location?.name || launch.pad?.name || '—'
   const ytId = extractYouTubeId(launch.vidURLs)
-  const isPast = launch.status?.id === 3 || launch.status?.id === 4 || launch.status?.id === 6
+  const isPast = [3, 4, 6].includes(launch.status?.id)
+
+  // Split "Falcon 9 Block 5 | Starlink Group 6-67" → vehicle + mission
+  const parts = launch.name.split(' | ')
+  const missionName = parts.length > 1 ? parts.slice(1).join(' | ') : parts[0]
 
   return (
     <div
@@ -32,42 +35,47 @@ export default function LaunchCard({ launch, selected, onSelect, onPlayVideo }) 
       tabIndex={0}
       onKeyDown={e => e.key === 'Enter' && onSelect(selected ? null : launch)}
     >
-      {launch.image ? (
-        <img
-          src={launch.image}
-          alt=""
-          className="launch-card-img"
-          loading="lazy"
-          onError={e => { e.currentTarget.style.display = 'none' }}
-        />
-      ) : (
-        <div className="launch-card-img-placeholder">🚀</div>
-      )}
+      {/* Row 1: status badge + vehicle + countdown */}
+      <div className="lc-row lc-top">
+        <span className={`status-badge ${statusKey}`}>{statusLabel}</span>
+        <span className="lc-vehicle">{vehicle}</span>
+        {!isPast && (
+          <span className="lc-countdown">
+            <CountdownTimer netTime={launch.net} />
+          </span>
+        )}
+        {isPast && (
+          <span className="lc-date">
+            {new Date(launch.net).toLocaleDateString([], { month: 'short', day: 'numeric' })}
+          </span>
+        )}
+      </div>
 
-      <div className="launch-card-body">
-        <div className="launch-card-name" title={launch.name}>{launch.name}</div>
-        <div className="launch-card-vehicle">{vehicle}</div>
-        <div className="launch-card-site" title={site}>{site}</div>
+      {/* Row 2: mission name (most prominent) */}
+      <div className="lc-name">{missionName}</div>
 
-        <div className="launch-card-footer">
-          <span className={`status-badge ${statusKey}`}>{statusLabel}</span>
-
-          <div className="launch-card-actions">
-            {!isPast && <CountdownTimer netTime={launch.net} />}
-            {ytId && (
-              <button
-                className="action-btn"
-                title="Watch live stream"
-                onClick={e => {
-                  e.stopPropagation()
-                  onPlayVideo(`https://www.youtube.com/embed/${ytId}?autoplay=1`)
-                }}
-              >
-                ▶
-              </button>
-            )}
-          </div>
-        </div>
+      {/* Row 3: location + optional stream button */}
+      <div className="lc-row lc-bottom">
+        <span className="lc-location">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{flexShrink:0}}>
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          {location}
+        </span>
+        {ytId && (
+          <button
+            className="lc-stream-btn"
+            onClick={e => {
+              e.stopPropagation()
+              onPlayVideo(`https://www.youtube.com/embed/${ytId}?autoplay=1`, launch.name)
+            }}
+            title="Watch live stream"
+          >
+            <span className="lc-stream-dot" />
+            LIVE
+          </button>
+        )}
       </div>
     </div>
   )

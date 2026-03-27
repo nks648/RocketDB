@@ -3,6 +3,7 @@ import Header from './components/Header'
 import WorldMap from './components/WorldMap'
 import LaunchSidebar from './components/LaunchSidebar'
 import LaunchDetail from './components/LaunchDetail'
+import MobileLaunchBanner from './components/MobileLaunchBanner'
 import StatsPanel from './components/StatsPanel'
 import VideoModal from './components/VideoModal'
 import { useLaunches } from './hooks/useLaunches'
@@ -10,8 +11,9 @@ import { useLaunches } from './hooks/useLaunches'
 export default function App() {
   const { upcoming, previous, loading, error, lastUpdated, refetch } = useLaunches()
   const [selectedLaunch, setSelectedLaunch] = useState(null)
-  const [videoState, setVideoState] = useState(null) // { url, title }
+  const [videoState, setVideoState] = useState(null)
   const [activeTab, setActiveTab] = useState('upcoming')
+  const [mobileSheetOpen, setMobileSheetOpen] = useState(false)
 
   function handlePlayVideo(url, title) {
     setVideoState({ url, title })
@@ -19,6 +21,8 @@ export default function App() {
 
   function handleSelectLaunch(launch) {
     setSelectedLaunch(launch)
+    // Close sheet so map is fully visible after selecting
+    setMobileSheetOpen(false)
   }
 
   return (
@@ -29,6 +33,7 @@ export default function App() {
         onRefetch={refetch}
       />
 
+      {/* Desktop sidebar */}
       <LaunchSidebar
         upcoming={upcoming}
         previous={previous}
@@ -38,8 +43,11 @@ export default function App() {
         selectedLaunch={selectedLaunch}
         onSelectLaunch={handleSelectLaunch}
         onPlayVideo={handlePlayVideo}
+        isOpen={mobileSheetOpen}
+        onToggleSheet={() => setMobileSheetOpen(v => !v)}
       />
 
+      {/* Map area */}
       <div className="map-area">
         <WorldMap
           launches={[...upcoming, ...previous]}
@@ -48,6 +56,7 @@ export default function App() {
           onPlayVideo={handlePlayVideo}
         />
 
+        {/* Desktop selected launch detail */}
         {selectedLaunch && (
           <LaunchDetail
             launch={selectedLaunch}
@@ -56,6 +65,23 @@ export default function App() {
           />
         )}
       </div>
+
+      {/* Mobile floating selected launch banner (above bottom sheet) */}
+      {selectedLaunch && (
+        <MobileLaunchBanner
+          launch={selectedLaunch}
+          onClose={() => setSelectedLaunch(null)}
+          onPlayVideo={handlePlayVideo}
+        />
+      )}
+
+      {/* Sheet backdrop dimmer */}
+      {mobileSheetOpen && (
+        <div
+          className="sheet-backdrop"
+          onClick={() => setMobileSheetOpen(false)}
+        />
+      )}
 
       <StatsPanel upcoming={upcoming} previous={previous} />
 
@@ -69,7 +95,7 @@ export default function App() {
 
       {error && (
         <div className="error-banner">
-          ⚠ API error: {error} — showing cached data
+          ⚠ {error} — cached data shown
         </div>
       )}
     </div>
