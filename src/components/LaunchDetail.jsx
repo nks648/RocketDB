@@ -6,14 +6,15 @@ import { STATUS_MAP } from '../data/launchZones'
 function parseStreams(vidURLs) {
   if (!vidURLs?.length) return []
   return vidURLs.map(v => {
-    const url = v.url || v
+    const url = typeof v === 'string' ? v : v?.url
+    if (!url || typeof url !== 'string') return null
     const ytMatch = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([A-Za-z0-9_-]{11})/)
-    return {
-      url,
-      ytId: ytMatch?.[1] || null,
-      label: v.title || (ytMatch ? 'YouTube' : new URL(url).hostname.replace('www.', '')),
+    let hostname = 'Stream'
+    if (!ytMatch) {
+      try { hostname = new URL(url).hostname.replace('www.', '') } catch { /* invalid url */ }
     }
-  }).filter(s => s.url)
+    return { url, ytId: ytMatch?.[1] || null, label: v.title || (ytMatch ? 'YouTube' : hostname) }
+  }).filter(Boolean)
 }
 
 function NotifyButton({ launch }) {

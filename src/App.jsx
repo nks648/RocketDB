@@ -20,6 +20,7 @@ export default function App() {
     const target = selectedLaunch || upcoming[0]
     if (!target?.net) { document.title = 'RocketDB'; return }
     function tick() {
+      const name = target.rocket?.configuration?.name || 'Launch'
       const ms = new Date(target.net).getTime() - Date.now()
       if (ms <= 0) {
         const nonFinal = [2, 5, 8]
@@ -31,7 +32,6 @@ export default function App() {
       const h = Math.floor((ms % 86400000) / 3600000)
       const m = Math.floor((ms % 3600000) / 60000)
       const s = Math.floor((ms % 60000) / 1000)
-      const name = target.rocket?.configuration?.name || 'Launch'
       document.title = d > 0
         ? `T-${d}d ${h}h — ${name} — RocketDB`
         : `T-${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')} — ${name} — RocketDB`
