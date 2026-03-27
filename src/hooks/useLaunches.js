@@ -53,6 +53,9 @@ async function fetchWithCache(url) {
 // Statuses that mean a launch is truly over
 const FINAL_STATUSES = new Set([3, 4, 7]) // Success, Failure, Partial Failure
 
+// How long after NET before a still-"GO" launch is treated as "launched, result pending"
+const INFLIGHT_GRACE_MS = 30 * 60 * 1000 // 30 min
+
 // ── Hook ──────────────────────────────────────────────────────────────────
 export function useLaunches() {
   const [upcoming,    setUpcoming]    = useState([])
@@ -72,20 +75,43 @@ export function useLaunches() {
 
       const upcomingResults = upRes.results || []
       const previousResults = prevRes.results || []
+      const now = Date.now()
 
-      // Scrubbed / awaiting new window: past NET but not a final outcome
-      // Move these into upcoming so they don't appear as "past launches"
+      // ── Classify /upcoming/ results ──────────────────────────────────────
+      // Some entries are "GO" (status 1) but their NET is well in the past —
+      // the rocket has launched but LL2 hasn't confirmed the result yet.
+      // Move those to the Previous tab so Upcoming stays clean.
+      const pastNetGo = upcomingResults.filter(l =>
+        l.status?.id === 1 &&
+        l.net &&
+        new Date(l.net).getTime() < now - INFLIGHT_GRACE_MS
+      )
+      const genuinelyUpcoming = upcomingResults.filter(l =>
+        !(l.status?.id === 1 &&
+          l.net &&
+          new Date(l.net).getTime() < now - INFLIGHT_GRACE_MS)
+      )
+
+      // ── Classify /previous/ results ───────────────────────────────────────
+      // Scrubbed = past NET but no final outcome → keep in Upcoming
+      // Finished = confirmed Success / Failure / Partial
       const scrubbed = previousResults.filter(l => !FINAL_STATUSES.has(l.status?.id))
       const finished = previousResults.filter(l =>  FINAL_STATUSES.has(l.status?.id))
 
-      // Merge scrubbed into upcoming, avoiding duplicates, sort by NET
-      const upcomingIds = new Set(upcomingResults.map(l => l.id))
+      // ── Build Upcoming: genuinely upcoming + scrubbed (no dupes) ──────────
+      const upcomingIds = new Set(genuinelyUpcoming.map(l => l.id))
       const toAdd = scrubbed.filter(l => !upcomingIds.has(l.id))
-      const merged = [...upcomingResults, ...toAdd]
+      const merged = [...genuinelyUpcoming, ...toAdd]
         .sort((a, b) => new Date(a.net) - new Date(b.net))
 
+      // ── Build Previous: confirmed + "launched, result pending" ─────────────
+      const prevIds = new Set(finished.map(l => l.id))
+      const pendingResult = pastNetGo.filter(l => !prevIds.has(l.id))
+      const allPrevious = [...finished, ...pendingResult]
+        .sort((a, b) => new Date(b.net) - new Date(a.net))
+
       setUpcoming(merged)
-      setPrevious(finished)
+      setPrevious(allPrevious)
       setLastUpdated(new Date())
     } catch (err) {
       setError(err.message)
