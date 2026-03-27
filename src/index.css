@@ -921,6 +921,166 @@ html, body, #root {
 
 .leaflet-control-attribution a { color: var(--text-muted) !important; }
 
+/* ───── Weather Widget ───── */
+.weather-widget {
+  background: rgba(8, 16, 32, 0.6);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  margin-top: 8px;
+}
+
+.weather-widget.loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+}
+
+.weather-loading-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 1.2s infinite;
+}
+
+.weather-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.weather-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.weather-gng {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.weather-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 4px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 6px;
+}
+
+.weather-cell-icon { font-size: 16px; line-height: 1; }
+.weather-cell-val  { font-size: 11px; font-weight: 700; color: var(--text-primary); font-family: var(--font-mono); }
+.weather-cell-lbl  { font-size: 9px; color: var(--text-muted); text-align: center; }
+
+.weather-issues { display: flex; flex-direction: column; gap: 3px; margin-bottom: 6px; }
+
+.weather-issue {
+  font-size: 10px;
+  color: #ff9940;
+  background: rgba(255,153,64,0.1);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.weather-forecast-toggle {
+  background: none;
+  border: none;
+  font-size: 10px;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 2px 0;
+  font-family: var(--font);
+  letter-spacing: 0.3px;
+}
+
+.weather-forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 4px;
+  border-top: 1px solid var(--border);
+  padding-top: 6px;
+}
+
+.weather-hour {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+}
+.wh-time  { color: var(--text-muted); width: 36px; font-family: var(--font-mono); }
+.wh-icon  { font-size: 12px; }
+.wh-wind  { color: var(--text-secondary); min-width: 40px; }
+.wh-cloud { color: var(--text-muted); min-width: 32px; }
+.wh-precip{ color: #4fc3f7; }
+
+.weather-source {
+  font-size: 9px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+/* Compact weather for mobile banner */
+.weather-compact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 4px 0;
+}
+
+.weather-gng-pill {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.weather-compact-stat {
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+
+/* ───── Notify button ───── */
+.btn-notify {
+  background: rgba(0,200,240,0.08);
+  border: 1px solid rgba(0,200,240,0.3);
+  color: var(--accent);
+  border-radius: var(--radius);
+  padding: 6px 10px;
+  font-size: 11px;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.btn-notify:hover { background: rgba(0,200,240,0.16); }
+.btn-notify.set   { border-color: var(--green); color: var(--green); background: rgba(0,230,118,0.08); cursor: default; }
+.btn-notify.denied{ border-color: var(--border); color: var(--text-muted); cursor: default; }
+
+.mlb-btn.mlb-notify     { font-size: 14px; }
+.mlb-btn.mlb-notify.set { border-color: var(--green); color: var(--green); background: rgba(0,230,118,0.1); }
+
 /* ───── Scrub / Hold / Failure Reason Banner ───── */
 .scrub-reason {
   border-radius: var(--radius);

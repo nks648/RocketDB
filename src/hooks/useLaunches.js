@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'
 
 const LL2_BASE = 'https://ll.thespacedevs.com/2.2.0'
-const CACHE_TTL = 5 * 60 * 1000 // 5 minutes
+const CACHE_TTL = 15 * 60 * 1000 // 15 min — LL2 free tier: 15 req/hr, 2 req/cycle = 8/hr
 
 const cache = {}
 
@@ -11,6 +11,11 @@ async function fetchWithCache(url) {
     return cache[url].data
   }
   const res = await fetch(url)
+  if (res.status === 429) {
+    // Rate limited — return stale cache if we have it, else throw
+    if (cache[url]) return cache[url].data
+    throw new Error('HTTP 429 — rate limited. Data refreshes every 15 min.')
+  }
   if (!res.ok) throw new Error(`HTTP ${res.status}`)
   const data = await res.json()
   cache[url] = { data, ts: now }

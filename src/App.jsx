@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from './components/Header'
 import WorldMap from './components/WorldMap'
 import LaunchSidebar from './components/LaunchSidebar'
@@ -14,6 +14,27 @@ export default function App() {
   const [videoState, setVideoState] = useState(null)
   const [activeTab, setActiveTab] = useState('upcoming')
   const [mobileSheetOpen, setMobileSheetOpen] = useState(false)
+
+  // Live tab-title countdown for selected or next upcoming launch
+  useEffect(() => {
+    const target = selectedLaunch || upcoming[0]
+    if (!target?.net) { document.title = 'RocketDB'; return }
+    function tick() {
+      const ms = new Date(target.net).getTime() - Date.now()
+      if (ms <= 0) { document.title = '🚀 Liftoff! — RocketDB'; return }
+      const d = Math.floor(ms / 86400000)
+      const h = Math.floor((ms % 86400000) / 3600000)
+      const m = Math.floor((ms % 3600000) / 60000)
+      const s = Math.floor((ms % 60000) / 1000)
+      const name = target.rocket?.configuration?.name || 'Launch'
+      document.title = d > 0
+        ? `T-${d}d ${h}h — ${name} — RocketDB`
+        : `T-${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')} — ${name} — RocketDB`
+    }
+    tick()
+    const id = setInterval(tick, 1000)
+    return () => { clearInterval(id); document.title = 'RocketDB' }
+  }, [selectedLaunch, upcoming])
 
   function handlePlayVideo(url, title) {
     setVideoState({ url, title })
