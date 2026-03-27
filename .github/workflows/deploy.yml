@@ -6,20 +6,13 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,19 +26,32 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
+      - name: Build (base = /RocketDB/)
         run: npm run build
 
-      - name: Setup Pages (enables Pages if not already enabled)
-        uses: actions/configure-pages@v4
-        with:
-          enablement: true
+      - name: Enable GitHub Pages via API
+        run: |
+          # Try to create Pages config (POST) - if it already exists, try PUT
+          curl -s -o /tmp/pages_resp.json -w "%{http_code}" \
+            -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/${{ github.repository }}/pages \
+            -d '{"source":{"branch":"gh-pages","path":"/"}}' | tee /tmp/pages_http_code.txt
+          cat /tmp/pages_resp.json
+          # If already exists (422), try updating
+          if grep -q "422\|already_enabled" /tmp/pages_resp.json /tmp/pages_http_code.txt 2>/dev/null; then
+            curl -s -X PUT \
+              -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+              -H "Accept: application/vnd.github+json" \
+              https://api.github.com/repos/${{ github.repository }}/pages \
+              -d '{"source":{"branch":"gh-pages","path":"/"}}' || true
+          fi
 
-      - name: Upload build artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy dist to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: dist
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          commit_message: "deploy: ${{ github.sha }}"
