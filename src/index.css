@@ -1103,6 +1103,20 @@ html, body, #root {
 
   .mlb-bar { width: 4px; flex-shrink: 0; }
 
+  /* Wraps everything to the right of the bar */
+  .mlb-content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* The always-visible compact row */
+  .mlb-compact {
+    display: flex;
+    align-items: stretch;
+  }
+
   .mlb-body {
     flex: 1;
     min-width: 0;
@@ -1150,14 +1164,14 @@ html, body, #root {
 
   .mlb-right .countdown { font-size: 12px; letter-spacing: 0.5px; }
 
-  .mlb-actions { display: flex; gap: 6px; align-items: center; }
+  .mlb-actions { display: flex; gap: 5px; align-items: center; }
 
   .mlb-btn {
     background: var(--bg-card);
     border: 1px solid var(--border);
     color: var(--text-secondary);
     border-radius: 6px;
-    width: 32px; height: 32px;
+    width: 30px; height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1170,6 +1184,61 @@ html, body, #root {
     border-color: rgba(255,50,50,0.35);
     color: #ff6b6b;
     background: rgba(255,50,50,0.12);
+  }
+
+  .mlb-btn.mlb-info {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 700;
+  }
+
+  .mlb-btn.mlb-info.active {
+    background: var(--accent-dim);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* Expanded detail panel */
+  .mlb-detail {
+    border-top: 1px solid var(--border);
+    padding: 10px 12px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .mlb-detail-row {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+  }
+
+  .mlb-detail-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    width: 46px;
+    flex-shrink: 0;
+  }
+
+  .mlb-detail-value {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+  }
+
+  .mlb-detail-desc {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-top: 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .mlb-btn.mlb-close:hover {
