@@ -50,6 +50,9 @@ async function fetchWithCache(url) {
   return data
 }
 
+// Statuses that mean a launch is truly over
+const FINAL_STATUSES = new Set([3, 4, 7]) // Success, Failure, Partial Failure
+
 // ── Hook ──────────────────────────────────────────────────────────────────
 export function useLaunches() {
   const [upcoming,    setUpcoming]    = useState([])
@@ -66,8 +69,23 @@ export function useLaunches() {
         fetchWithCache(`${LL2_BASE}/launch/upcoming/?format=json&limit=20&mode=detailed`),
         fetchWithCache(`${LL2_BASE}/launch/previous/?format=json&limit=20&ordering=-net&mode=detailed`),
       ])
-      setUpcoming(upRes.results || [])
-      setPrevious(prevRes.results || [])
+
+      const upcomingResults = upRes.results || []
+      const previousResults = prevRes.results || []
+
+      // Scrubbed / awaiting new window: past NET but not a final outcome
+      // Move these into upcoming so they don't appear as "past launches"
+      const scrubbed = previousResults.filter(l => !FINAL_STATUSES.has(l.status?.id))
+      const finished = previousResults.filter(l =>  FINAL_STATUSES.has(l.status?.id))
+
+      // Merge scrubbed into upcoming, avoiding duplicates, sort by NET
+      const upcomingIds = new Set(upcomingResults.map(l => l.id))
+      const toAdd = scrubbed.filter(l => !upcomingIds.has(l.id))
+      const merged = [...upcomingResults, ...toAdd]
+        .sort((a, b) => new Date(a.net) - new Date(b.net))
+
+      setUpcoming(merged)
+      setPrevious(finished)
       setLastUpdated(new Date())
     } catch (err) {
       setError(err.message)
