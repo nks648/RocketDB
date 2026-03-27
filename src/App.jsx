@@ -21,7 +21,12 @@ export default function App() {
     if (!target?.net) { document.title = 'RocketDB'; return }
     function tick() {
       const ms = new Date(target.net).getTime() - Date.now()
-      if (ms <= 0) { document.title = '🚀 Liftoff! — RocketDB'; return }
+      if (ms <= 0) {
+        const nonFinal = [2, 5, 8]
+        const sid = target.status?.id
+        document.title = nonFinal.includes(sid) ? `NET TBC — ${name} — RocketDB` : '🚀 Liftoff! — RocketDB'
+        return
+      }
       const d = Math.floor(ms / 86400000)
       const h = Math.floor((ms % 86400000) / 3600000)
       const m = Math.floor((ms % 3600000) / 60000)

@@ -131,7 +131,7 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo }) {
         <div style={{ display:'flex', flexDirection:'column', gap:8, alignItems:'flex-end' }}>
           {!isPast && (
             <>
-              <CountdownTimer netTime={launch.net} large />
+              <CountdownTimer netTime={launch.net} status={launch.status} large />
               <div className="countdown-label">NET Launch</div>
             </>
           )}

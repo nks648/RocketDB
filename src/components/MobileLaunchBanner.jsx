@@ -95,7 +95,7 @@ export default function MobileLaunchBanner({ launch, onClose, onPlayVideo }) {
           </div>
 
           <div className="mlb-right">
-            {!isPast && <CountdownTimer netTime={launch.net} />}
+            <CountdownTimer netTime={launch.net} status={launch.status} />
             <div className="mlb-actions">
               <button
                 className={`mlb-btn mlb-info${expanded ? ' active' : ''}`}

@@ -13,7 +13,15 @@ function formatDuration(ms) {
   return `T-${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`
 }
 
-export default function CountdownTimer({ netTime, large = false }) {
+// What to show when NET has passed but launch is not confirmed complete
+const PAST_LABELS = {
+  2: 'NET TBD',
+  5: 'On Hold',
+  6: 'In Flight',
+  8: 'NET TBC',
+}
+
+export default function CountdownTimer({ netTime, status, large = false }) {
   const [now, setNow] = useState(Date.now())
 
   useEffect(() => {
@@ -21,13 +29,20 @@ export default function CountdownTimer({ netTime, large = false }) {
     return () => clearInterval(id)
   }, [])
 
-  if (!netTime) return <span className="countdown past">TBD</span>
+  if (!netTime) {
+    const label = status?.id ? (PAST_LABELS[status.id] || 'TBD') : 'TBD'
+    return <span className="countdown past">{label}</span>
+  }
 
   const target = new Date(netTime).getTime()
   const diff = target - now
 
   if (diff < 0) {
-    return <span className={large ? 'countdown-large' : 'countdown past'}>Launched</span>
+    // If status indicates it's not truly over, show appropriate label
+    const label = status?.id && PAST_LABELS[status.id]
+      ? PAST_LABELS[status.id]
+      : 'Launched'
+    return <span className={large ? 'countdown-large past' : 'countdown past'}>{label}</span>
   }
 
   const cls = large ? 'countdown-large' : diff < 3600000 ? 'countdown imminent' : 'countdown'

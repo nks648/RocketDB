@@ -26,7 +26,7 @@ export default function LaunchSidebar({
                 <span className="handle-next">
                   Next: {nextLaunch.name.split(' | ')[1] || nextLaunch.name.split(' | ')[0]}
                   {' — '}
-                  <CountdownTimer netTime={nextLaunch.net} />
+                  <CountdownTimer netTime={nextLaunch.net} status={nextLaunch.status} />
                 </span>
               )}
               {isOpen && (

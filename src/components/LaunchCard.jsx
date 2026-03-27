@@ -35,7 +35,7 @@ export default function LaunchCard({ launch, selected, onSelect, onPlayVideo }) 
       <span className="lc-time">
         {isPast
           ? new Date(launch.net).toLocaleDateString([], { month: 'short', day: 'numeric' })
-          : <CountdownTimer netTime={launch.net} />
+          : <CountdownTimer netTime={launch.net} status={launch.status} />
         }
       </span>
       {ytId && (
