@@ -60,6 +60,7 @@ html, body, #root {
   grid-template-rows: var(--header-h) 1fr var(--stats-h);
   grid-template-columns: var(--sidebar-w) 1fr;
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
 }
 
@@ -896,6 +897,201 @@ html, body, #root {
 }
 
 .leaflet-control-attribution a { color: var(--text-muted) !important; }
+
+/* ───── Mobile & Tablet Responsive ───── */
+
+/* Tablet: tighten sidebar width */
+@media (max-width: 1024px) {
+  :root { --sidebar-w: 300px; }
+}
+
+/* Mobile: full reflow */
+@media (max-width: 768px) {
+  :root {
+    --header-h: 46px;
+    --stats-h: 50px;
+    --sidebar-w: 100%;
+  }
+
+  /* Switch from grid to flex-column so we can reorder */
+  .app {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh; /* dynamic viewport height avoids browser-chrome overlap */
+    height: 100vh;  /* fallback */
+    overflow: hidden;
+  }
+
+  /* Header: compact */
+  .header {
+    order: 1;
+    padding: 0 12px;
+    gap: 8px;
+    flex-shrink: 0;
+    height: var(--header-h);
+  }
+  .header-logo { font-size: 14px; letter-spacing: 1px; }
+  .header-logo svg { width: 16px; height: 16px; }
+  .header-status { display: none; }
+  .header-right { gap: 8px; }
+  .btn-icon .btn-label { display: none; } /* hide text, keep icon */
+  .btn-icon { padding: 6px 8px; }
+
+  /* Map: takes the middle ~50% */
+  .app > .map-area {
+    order: 2;
+    flex: 1;
+    min-height: 220px;
+    overflow: hidden;
+  }
+
+  /* Sidebar: bottom panel at 44dvh */
+  .sidebar {
+    order: 3;
+    flex-shrink: 0;
+    height: 44dvh;
+    height: 44vh;
+    border-right: none;
+    border-top: 2px solid var(--border-bright);
+  }
+
+  /* Pull-handle visual cue */
+  .sidebar::before {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 4px;
+    background: var(--border-bright);
+    border-radius: 2px;
+    margin: 8px auto 4px;
+    flex-shrink: 0;
+  }
+
+  /* Stats: last, horizontally scrollable */
+  .stats-panel {
+    order: 4;
+    flex-shrink: 0;
+    height: var(--stats-h);
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .stats-panel::-webkit-scrollbar { display: none; }
+  .stats-agencies { display: none; } /* save space on small screens */
+  .stat-item { flex-shrink: 0; padding: 0 14px; }
+
+  /* Sidebar tabs */
+  .sidebar-tab { padding: 8px 10px; font-size: 11px; }
+  .sidebar-list { padding: 6px; gap: 5px; }
+
+  /* Launch cards: tighter */
+  .launch-card { padding: 9px 10px; gap: 8px; }
+  .launch-card-img,
+  .launch-card-img-placeholder { width: 44px; height: 44px; font-size: 18px; }
+  .launch-card-name { font-size: 12px; }
+  .launch-card-vehicle { font-size: 10px; }
+  .launch-card-site { font-size: 10px; }
+  .countdown { font-size: 11px; }
+
+  /* Launch detail overlay: full-width, taller */
+  .launch-detail {
+    grid-template-columns: 64px 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px 12px;
+    padding: 12px 14px 14px;
+    max-height: 55%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .launch-detail-img { width: 64px; height: 64px; }
+  .launch-detail-img-placeholder { width: 64px; height: 64px; font-size: 28px; }
+  .launch-detail-side {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .countdown-large { font-size: 16px; }
+  .countdown-label { text-align: left; }
+  .detail-action-row { margin: 0; }
+
+  /* Map controls: compact */
+  .map-toggle-panel {
+    top: 6px;
+    right: 6px;
+    gap: 3px;
+  }
+  .toggle-btn {
+    font-size: 10px;
+    padding: 5px 8px;
+    gap: 4px;
+  }
+  .toggle-btn .toggle-label { display: none; } /* hide label, show icon only */
+
+  /* Hide legend on mobile (space-saving) */
+  .map-legend { display: none; }
+
+  /* Map attribution: tinier */
+  .leaflet-control-attribution { font-size: 7px !important; }
+  .leaflet-control-zoom { margin-bottom: 10px !important; margin-left: 10px !important; }
+
+  /* Video modal: full screen */
+  .modal-backdrop { align-items: flex-end; }
+  .modal-inner {
+    width: 100%;
+    max-height: 92dvh;
+    max-height: 92vh;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .modal-video {
+    flex: 1;
+    padding-bottom: 0;
+    min-height: 200px;
+  }
+  .modal-video iframe {
+    position: static;
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+  }
+
+  /* Popup: bigger tap area */
+  .popup-inner { padding: 10px 12px; }
+  .popup-name { font-size: 12px; }
+  .popup-countdown { font-size: 12px; }
+
+  /* Error banner: full width at top */
+  .error-banner {
+    top: var(--header-h);
+    right: 0;
+    left: 0;
+    max-width: 100%;
+    border-radius: 0;
+    text-align: center;
+  }
+}
+
+/* Very small phones (≤ 380px) */
+@media (max-width: 380px) {
+  .sidebar { height: 42dvh; height: 42vh; }
+  .launch-card-img,
+  .launch-card-img-placeholder { display: none; }
+  .toggle-btn { padding: 4px 6px; font-size: 9px; }
+}
+
+/* Landscape mobile: give map more height */
+@media (max-width: 768px) and (orientation: landscape) {
+  .app > .map-area { flex: 1; min-height: 180px; }
+  .sidebar { height: 38dvh; height: 38vh; }
+  .launch-detail { max-height: 80%; }
+
+  /* Show legend in landscape (more space) */
+  .map-legend { display: block; }
+}
 
 /* NOTAM info panel */
 .notam-info-panel {

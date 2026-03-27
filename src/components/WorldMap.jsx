@@ -119,21 +119,23 @@ export default function WorldMap({ launches, selectedLaunch, onSelectLaunch, onP
           onClick={() => setShowMaritime(v => !v)}
           title="Toggle maritime exclusion zones"
         >
-          <span style={{ color: '#ff6b35' }}>⬡</span> Maritime Zones
+          <span style={{ color: '#ff6b35' }}>⬡</span>
+          <span className="toggle-label">Maritime</span>
         </button>
         <button
           className={`toggle-btn${showAirspace ? ' active' : ''}`}
           onClick={() => setShowAirspace(v => !v)}
           title="Toggle FAA airspace TFRs"
         >
-          <span style={{ color: '#bb86fc' }}>○</span> Airspace TFRs
+          <span style={{ color: '#bb86fc' }}>○</span>
+          <span className="toggle-label">Airspace</span>
         </button>
         <button
           className={`toggle-btn${showSites ? ' active' : ''}`}
           onClick={() => setShowSites(v => !v)}
           title="Toggle launch site markers"
         >
-          🚀 Launch Sites
+          🚀 <span className="toggle-label">Sites</span>
         </button>
       </div>
 

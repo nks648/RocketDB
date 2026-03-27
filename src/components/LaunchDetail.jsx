@@ -64,31 +64,29 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo }) {
 
       {/* Right side: countdown + actions */}
       <div className="launch-detail-side">
-        <button className="btn-close" onClick={onClose} title="Close">✕</button>
-
-        {!isPast && (
-          <>
-            <CountdownTimer netTime={launch.net} large />
-            <div className="countdown-label">NET Launch</div>
-          </>
-        )}
-
-        {isPast && (
-          <div className="countdown-large" style={{ fontSize:14 }}>
-            {new Date(launch.net).toLocaleDateString()}
-          </div>
-        )}
-
-        <div className="detail-action-row">
+        <div style={{ display:'flex', alignItems:'center', gap:8, flexWrap:'wrap' }}>
+          {!isPast && (
+            <div style={{ display:'flex', flexDirection:'column', alignItems:'flex-start', gap:2 }}>
+              <CountdownTimer netTime={launch.net} large />
+              <div className="countdown-label">NET Launch</div>
+            </div>
+          )}
+          {isPast && (
+            <div className="countdown-large" style={{ fontSize:14 }}>
+              {new Date(launch.net).toLocaleDateString()}
+            </div>
+          )}
           {ytId && (
             <button
               className="btn-primary"
               onClick={() => onPlayVideo(`https://www.youtube.com/embed/${ytId}?autoplay=1`)}
             >
-              ▶ Watch Stream
+              ▶ Stream
             </button>
           )}
         </div>
+
+        <button className="btn-close" onClick={onClose} title="Close" style={{ alignSelf:'flex-start' }}>✕</button>
       </div>
     </div>
   )
