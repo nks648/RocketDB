@@ -70,8 +70,8 @@ export default function LaunchCard({ launch, selected, onSelect, onPlayVideo }) 
       </span>
 
       <span className="lc-names">
-        <span className="lc-mission">{mission || vehicle}</span>
-        {mission && <span className="lc-vehicle-sub">{vehicle}</span>}
+        <span className="lc-mission">{vehicle}</span>
+        {mission && <span className="lc-vehicle-sub">{mission}</span>}
       </span>
 
       <span className="lc-time">{rightContent()}</span>
