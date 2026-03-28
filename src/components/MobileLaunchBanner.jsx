@@ -15,10 +15,13 @@ function extractYouTubeId(urls) {
 function parseStreams(vidURLs) {
   if (!vidURLs?.length) return []
   return vidURLs.map(v => {
-    const url = v.url || v
+    const url = typeof v === 'string' ? v : v?.url
+    if (!url || typeof url !== 'string') return null
+    // Security: only allow HTTPS URLs
+    if (!url.startsWith('https://')) return null
     const ytMatch = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([A-Za-z0-9_-]{11})/)
     return { url, ytId: ytMatch?.[1] || null, label: v.title || (ytMatch ? 'YouTube' : 'Stream') }
-  })
+  }).filter(Boolean)
 }
 
 function NotifyButton({ launch }) {

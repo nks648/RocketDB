@@ -39,7 +39,7 @@ export default function LaunchCard({ launch, selected, onSelect, onPlayVideo }) 
   const ytId        = extractYouTubeId(launch.vidURLs)
   const isFinal     = FINAL_STATUSES.has(launch.status?.id)
   const isScrubbed  = SCRUB_STATUSES.has(launch.status?.id)
-  const isPending   = !isFinal && launch.net && new Date(launch.net).getTime() < Date.now()
+  const isPending   = !isFinal && !isScrubbed && launch.net && new Date(launch.net).getTime() < Date.now()
   const { mission } = splitName(launch.name)
 
   // For past cards show "✓ Mar 27" or "? pending"

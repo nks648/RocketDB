@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 
 const LL2_BASE  = 'https://lldev.thespacedevs.com/2.2.0' // dev server — higher rate limits, same data
 const CACHE_TTL = 15 * 60 * 1000  // 15 min → 8 req/hr (limit: 15/hr)
-const LS_PREFIX = 'rocketdb:ll2:'  // localStorage key prefix
+const LS_PREFIX = 'rocketdb:ll2:v2:'  // bump version to clear stale cache
 
 // ── Persistent cache (survives page refresh) ──────────────────────────────
 function lsGet(url) {

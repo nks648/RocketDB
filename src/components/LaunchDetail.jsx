@@ -13,10 +13,12 @@ function parseStreams(vidURLs) {
   return vidURLs.map(v => {
     const url = typeof v === 'string' ? v : v?.url
     if (!url || typeof url !== 'string') return null
+    // Security: only allow HTTPS URLs — reject javascript:, data:, http:, etc.
+    if (!url.startsWith('https://')) return null
     const ytMatch = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([A-Za-z0-9_-]{11})/)
     let hostname = 'Stream'
     if (!ytMatch) {
-      try { hostname = new URL(url).hostname.replace('www.', '') } catch { /* invalid url */ }
+      try { hostname = new URL(url).hostname.replace('www.', '') } catch { return null }
     }
     return { url, ytId: ytMatch?.[1] || null, label: v.title || (ytMatch ? 'YouTube' : hostname) }
   }).filter(Boolean)
