@@ -429,19 +429,30 @@ html, body, #root {
   background: var(--bg-overlay);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 12px 14px;
-  min-width: 160px;
+  padding: 6px 10px;
+  min-width: 100px;
   backdrop-filter: blur(8px);
 }
 
-.map-legend h4 {
+.legend-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--text-muted);
-  margin-bottom: 8px;
+  font-family: var(--font);
+  padding: 2px 0;
+  transition: color 0.15s;
 }
+.legend-toggle-btn:hover { color: var(--text-secondary); }
 
 .legend-item {
   display: flex;

@@ -165,7 +165,8 @@ export default function WorldMap({ launches, selectedLaunch, onSelectLaunch, onP
   const [showAircraft,   setShowAircraft]   = useState(false)
   const [showISS,        setShowISS]        = useState(false)
   const [showTrajectory, setShowTrajectory] = useState(false)
-  const [panelOpen,      setPanelOpen]      = useState(true)
+  const [panelOpen,  setPanelOpen]  = useState(true)
+  const [legendOpen, setLegendOpen] = useState(false)  // collapsed by default
 
   // Focus point: selected launch pad, else nearest upcoming launch
   const focusLaunch = selectedLaunch || launches.find(l => l.pad?.latitude)
@@ -401,32 +402,43 @@ export default function WorldMap({ launches, selectedLaunch, onSelectLaunch, onP
         )}
       </MapContainer>
 
-      {/* Legend */}
+      {/* Legend — collapsible */}
       <div className="map-legend">
-        <h4>Map Layers</h4>
-        <div className="legend-item">
-          <div className="legend-line" style={{ background:'#ff6b35' }} /> Maritime Exclusion
-        </div>
-        <div className="legend-item">
-          <div className="legend-line" style={{ background:'#bb86fc' }} /> FAA TFR / Airspace
-        </div>
-        <div className="legend-item">
-          <div className="legend-line" style={{ background:'#ff6b35', opacity:0.85 }} /> Ascent Arc
-        </div>
-        <div className="legend-item">
-          <div className="legend-line" style={{ background:'#00c8f0', opacity:0.6 }} /> Ground Track
-        </div>
-        <div className="legend-item"><div style={{ fontSize:12 }}>🚀</div> Launch Site</div>
-        <div className="legend-item"><div style={{ fontSize:12 }}>✈</div> Live Aircraft</div>
-        <div className="legend-item"><div style={{ fontSize:12 }}>🛸</div> ISS</div>
-        <div style={{ borderTop:'1px solid var(--border)', margin:'8px 0 6px', paddingTop:6 }}>
-          <div style={{ fontSize:10, color:'var(--text-muted)', marginBottom:5, letterSpacing:1, textTransform:'uppercase' }}>Status</div>
-        </div>
-        <div className="legend-item"><div className="legend-dot" style={{ background:'#00e676' }} />Go for Launch</div>
-        <div className="legend-item"><div className="legend-dot" style={{ background:'#ffd740' }} />TBD</div>
-        <div className="legend-item"><div className="legend-dot" style={{ background:'#ff6b35' }} />Hold</div>
-        <div className="legend-item"><div className="legend-dot" style={{ background:'#00c8f0' }} />Success</div>
-        <div className="legend-item"><div className="legend-dot" style={{ background:'#ff4444' }} />Failure</div>
+        <button className="legend-toggle-btn" onClick={() => setLegendOpen(v => !v)}
+          aria-label={legendOpen ? 'Collapse legend' : 'Expand legend'}>
+          <span>Legend</span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"
+            style={{ transform: legendOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition:'transform 0.2s' }}>
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </button>
+
+        {legendOpen && <>
+          <div className="legend-item">
+            <div className="legend-line" style={{ background:'#ff6b35' }} /> Maritime Exclusion
+          </div>
+          <div className="legend-item">
+            <div className="legend-line" style={{ background:'#bb86fc' }} /> FAA TFR / Airspace
+          </div>
+          <div className="legend-item">
+            <div className="legend-line" style={{ background:'#ff6b35', opacity:0.85 }} /> Ascent Arc
+          </div>
+          <div className="legend-item">
+            <div className="legend-line" style={{ background:'#00c8f0', opacity:0.6 }} /> Ground Track
+          </div>
+          <div className="legend-item"><div style={{ fontSize:12 }}>🚀</div> Launch Site</div>
+          <div className="legend-item"><div style={{ fontSize:12 }}>✈</div> Live Aircraft</div>
+          <div className="legend-item"><div style={{ fontSize:12 }}>🛸</div> ISS</div>
+          <div style={{ borderTop:'1px solid var(--border)', margin:'8px 0 6px', paddingTop:6 }}>
+            <div style={{ fontSize:10, color:'var(--text-muted)', marginBottom:5, letterSpacing:1, textTransform:'uppercase' }}>Status</div>
+          </div>
+          <div className="legend-item"><div className="legend-dot" style={{ background:'#00e676' }} />Go for Launch</div>
+          <div className="legend-item"><div className="legend-dot" style={{ background:'#ffd740' }} />TBD</div>
+          <div className="legend-item"><div className="legend-dot" style={{ background:'#ff6b35' }} />Hold</div>
+          <div className="legend-item"><div className="legend-dot" style={{ background:'#00c8f0' }} />Success</div>
+          <div className="legend-item"><div className="legend-dot" style={{ background:'#ff4444' }} />Failure</div>
+        </>}
       </div>
     </div>
   )
