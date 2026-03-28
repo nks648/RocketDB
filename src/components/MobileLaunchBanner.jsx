@@ -4,6 +4,7 @@ import WeatherWidget from './WeatherWidget'
 import OrbitalParams from './OrbitalParams'
 import RedditDiscussion from './RedditDiscussion'
 import { STATUS_MAP } from '../data/launchZones'
+import { shareLaunch, downloadICS } from '../utils/shareExport'
 
 function extractYouTubeId(urls) {
   if (!urls?.length) return null
@@ -58,7 +59,7 @@ function NotifyButton({ launch }) {
   return <button className="mlb-btn mlb-notify" onClick={schedule} title="Set launch alerts">🔔</button>
 }
 
-export default function MobileLaunchBanner({ launch, onClose, onPlayVideo }) {
+export default function MobileLaunchBanner({ launch, onClose, onPlayVideo, onCinematic }) {
   const [expanded, setExpanded] = useState(false)
 
   const statusKey   = STATUS_MAP[launch.status?.id]?.key   || 'tbd'
@@ -115,6 +116,14 @@ export default function MobileLaunchBanner({ launch, onClose, onPlayVideo }) {
                 >▶</button>
               )}
               {!isPast && <NotifyButton launch={launch} />}
+              {!isPast && (
+                <button className="mlb-btn" onClick={onCinematic} title="Cinematic mode (F)">🎬</button>
+              )}
+              <button
+                className="mlb-btn"
+                onClick={() => shareLaunch(launch)}
+                title="Share launch"
+              >⎘</button>
               <button className="mlb-btn mlb-close" onClick={onClose} title="Close">✕</button>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import Header from './components/Header'
 import WorldMap from './components/WorldMap'
 import LaunchSidebar from './components/LaunchSidebar'
@@ -6,18 +6,33 @@ import LaunchDetail from './components/LaunchDetail'
 import MobileLaunchBanner from './components/MobileLaunchBanner'
 import StatsPanel from './components/StatsPanel'
 import VideoModal from './components/VideoModal'
+import CinematicMode from './components/CinematicMode'
 import { useLaunches } from './hooks/useLaunches'
 import { useFavorites } from './hooks/useFavorites'
+
+function useOnlineStatus() {
+  const [online, setOnline] = useState(() => navigator.onLine)
+  useEffect(() => {
+    const on = () => setOnline(true)
+    const off = () => setOnline(false)
+    window.addEventListener('online', on)
+    window.addEventListener('offline', off)
+    return () => { window.removeEventListener('online', on); window.removeEventListener('offline', off) }
+  }, [])
+  return online
+}
 
 export default function App() {
   const { upcoming, previous, loading, error, lastUpdated, refetch } = useLaunches()
   const { favs, toggle: toggleFavorite } = useFavorites()
   const [selectedLaunch, setSelectedLaunch] = useState(null)
-  const [videoState, setVideoState] = useState(null)
-  const [activeTab, setActiveTab] = useState('upcoming')
+  const [videoState, setVideoState]         = useState(null)
+  const [activeTab, setActiveTab]           = useState('upcoming')
   const [mobileSheetOpen, setMobileSheetOpen] = useState(false)
+  const [cinematicLaunch, setCinematicLaunch] = useState(null)
   const [theme, setTheme] = useState(() => localStorage.getItem('rocketdb:theme') || 'dark')
   const [initialSelectDone, setInitialSelectDone] = useState(false)
+  const online = useOnlineStatus()
 
   // Apply theme to document
   useEffect(() => {
@@ -76,13 +91,59 @@ export default function App() {
     return () => { clearInterval(id); document.title = 'RocketDB' }
   }, [selectedLaunch, upcoming])
 
-  function handlePlayVideo(url, title) {
-    setVideoState({ url, title })
-  }
-
-  function handleSelectLaunch(launch) {
+  // ── Keyboard shortcuts ───────────────────────────────────────────────────────
+  const handleSelectLaunch = useCallback((launch) => {
     setSelectedLaunch(launch)
     setMobileSheetOpen(false)
+  }, [])
+
+  useEffect(() => {
+    function onKey(e) {
+      const tag = e.target.tagName
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return
+      if (e.metaKey || e.ctrlKey || e.altKey) return
+
+      switch (e.key) {
+        case 'Escape':
+          if (cinematicLaunch) { setCinematicLaunch(null); return }
+          if (selectedLaunch)  { setSelectedLaunch(null); return }
+          break
+
+        case 'n': case 'N': {
+          // Next launch in active tab
+          const list = activeTab === 'upcoming' ? upcoming : previous
+          if (!list.length) return
+          const idx = list.findIndex(l => l.id === selectedLaunch?.id)
+          handleSelectLaunch(list[Math.min(idx + 1, list.length - 1)])
+          setActiveTab(activeTab)
+          break
+        }
+        case 'p': case 'P': {
+          // Previous launch in active tab
+          const list = activeTab === 'upcoming' ? upcoming : previous
+          if (!list.length) return
+          const idx = list.findIndex(l => l.id === selectedLaunch?.id)
+          handleSelectLaunch(list[Math.max(idx - 1, 0)])
+          break
+        }
+        case 'f': case 'F':
+          if (selectedLaunch) setCinematicLaunch(selectedLaunch)
+          break
+
+        case 'r': case 'R':
+          if (!loading) refetch()
+          break
+
+        default:
+          break
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [upcoming, previous, selectedLaunch, cinematicLaunch, activeTab, loading, refetch, handleSelectLaunch])
+
+  function handlePlayVideo(url, title) {
+    setVideoState({ url, title })
   }
 
   return (
@@ -93,6 +154,7 @@ export default function App() {
         onRefetch={refetch}
         theme={theme}
         onToggleTheme={() => setTheme(t => t === 'dark' ? 'light' : 'dark')}
+        online={online}
       />
 
       {/* Desktop sidebar */}
@@ -126,28 +188,36 @@ export default function App() {
             launch={selectedLaunch}
             onClose={() => setSelectedLaunch(null)}
             onPlayVideo={handlePlayVideo}
+            onCinematic={() => setCinematicLaunch(selectedLaunch)}
           />
         )}
       </div>
 
-      {/* Mobile floating selected launch banner (above bottom sheet) */}
+      {/* Mobile floating selected launch banner */}
       {selectedLaunch && (
         <MobileLaunchBanner
           launch={selectedLaunch}
           onClose={() => setSelectedLaunch(null)}
           onPlayVideo={handlePlayVideo}
+          onCinematic={() => setCinematicLaunch(selectedLaunch)}
         />
       )}
 
       {/* Sheet backdrop dimmer */}
       {mobileSheetOpen && (
-        <div
-          className="sheet-backdrop"
-          onClick={() => setMobileSheetOpen(false)}
-        />
+        <div className="sheet-backdrop" onClick={() => setMobileSheetOpen(false)} />
       )}
 
       <StatsPanel upcoming={upcoming} previous={previous} />
+
+      {/* Cinematic T-0 mode */}
+      {cinematicLaunch && (
+        <CinematicMode
+          launch={cinematicLaunch}
+          onClose={() => setCinematicLaunch(null)}
+          onPlayVideo={handlePlayVideo}
+        />
+      )}
 
       {videoState && (
         <VideoModal

@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SpaceWeatherBadge from './SpaceWeatherBadge'
 
-export default function Header({ lastUpdated, loading, onRefetch, theme, onToggleTheme }) {
+export default function Header({ lastUpdated, loading, onRefetch, theme, onToggleTheme, online }) {
+  const [showShortcuts, setShowShortcuts] = useState(false)
+
   const timeStr = lastUpdated
     ? lastUpdated.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })
     : '—'
@@ -16,14 +18,18 @@ export default function Header({ lastUpdated, loading, onRefetch, theme, onToggl
         RocketDB
       </div>
 
-      {!loading && (
+      {/* Online / offline / loading indicator */}
+      {!online ? (
+        <div className="header-live" style={{ color: 'var(--orange)' }}>
+          <span style={{ display:'inline-block', width:8, height:8, borderRadius:'50%', background:'var(--orange)', flexShrink:0 }} />
+          Offline
+        </div>
+      ) : !loading ? (
         <div className="header-live">
           <span className="pulse-dot" />
           Live
         </div>
-      )}
-
-      {loading && (
+      ) : (
         <div className="header-live" style={{ color: 'var(--text-muted)' }}>
           <span style={{ display:'inline-block', width:8, height:8, borderRadius:'50%', background:'var(--text-muted)', flexShrink:0 }} />
           Fetching…
@@ -37,12 +43,36 @@ export default function Header({ lastUpdated, loading, onRefetch, theme, onToggl
       <SpaceWeatherBadge />
 
       <div className="header-right">
+        {/* Keyboard shortcuts hint */}
+        <div className="shortcut-hint-wrap">
+          <button
+            className="btn-icon"
+            onClick={() => setShowShortcuts(v => !v)}
+            title="Keyboard shortcuts"
+            aria-label="Keyboard shortcuts"
+          >
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M8 12h.01M12 12h.01M16 12h.01M7 16h10"/>
+            </svg>
+            <span className="btn-label">Keys</span>
+          </button>
+          {showShortcuts && (
+            <div className="shortcut-panel" onClick={() => setShowShortcuts(false)}>
+              <div className="shortcut-row"><kbd>N</kbd> Next launch</div>
+              <div className="shortcut-row"><kbd>P</kbd> Prev launch</div>
+              <div className="shortcut-row"><kbd>F</kbd> Cinematic mode</div>
+              <div className="shortcut-row"><kbd>R</kbd> Refresh data</div>
+              <div className="shortcut-row"><kbd>Esc</kbd> Close panel</div>
+            </div>
+          )}
+        </div>
+
         {/* Theme toggle */}
         <button
           className="btn-icon"
           onClick={onToggleTheme}
           title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-          aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
         >
           {theme === 'dark' ? (
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -60,7 +90,7 @@ export default function Header({ lastUpdated, loading, onRefetch, theme, onToggl
         <button
           className="btn-icon"
           onClick={onRefetch}
-          title="Refresh launch data"
+          title="Refresh launch data (R)"
           disabled={loading}
         >
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
