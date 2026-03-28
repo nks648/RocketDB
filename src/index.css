@@ -549,9 +549,18 @@ html, body, #root {
   grid-template-columns: auto 1fr auto;
   gap: 20px;
   align-items: start;
-  max-height: 220px;
+  max-height: 52vh;
   overflow: hidden;
   animation: slide-up 0.25s ease;
+}
+
+.launch-detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  max-height: calc(52vh - 32px);
+  padding-right: 4px;
 }
 
 @keyframes slide-up {
@@ -578,8 +587,6 @@ html, body, #root {
   justify-content: center;
   font-size: 36px;
 }
-
-.launch-detail-info { display: flex; flex-direction: column; gap: 8px; }
 
 .launch-detail-name {
   font-size: 16px;
