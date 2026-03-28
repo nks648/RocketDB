@@ -9,3 +9,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>,
 )
+
+// Register service worker for PWA support (offline + notification click handler)
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/RocketDB/sw.js').catch(() => {
+      // SW registration failure is non-fatal — app works fine without it
+    })
+  })
+}

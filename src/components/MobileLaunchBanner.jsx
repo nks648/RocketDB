@@ -1,6 +1,8 @@
 import React, { useState, useCallback } from 'react'
 import CountdownTimer from './CountdownTimer'
 import WeatherWidget from './WeatherWidget'
+import OrbitalParams from './OrbitalParams'
+import RedditDiscussion from './RedditDiscussion'
 import { STATUS_MAP } from '../data/launchZones'
 
 function extractYouTubeId(urls) {
@@ -17,7 +19,6 @@ function parseStreams(vidURLs) {
   return vidURLs.map(v => {
     const url = typeof v === 'string' ? v : v?.url
     if (!url || typeof url !== 'string') return null
-    // Security: only allow HTTPS URLs
     if (!url.startsWith('https://')) return null
     const ytMatch = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([A-Za-z0-9_-]{11})/)
     return { url, ytId: ytMatch?.[1] || null, label: v.title || (ytMatch ? 'YouTube' : 'Stream') }
@@ -71,6 +72,7 @@ export default function MobileLaunchBanner({ launch, onClose, onPlayVideo }) {
   const isPast      = [3, 4, 6].includes(launch.status?.id)
   const streams     = parseStreams(launch.vidURLs)
   const primaryYt   = streams.find(s => s.ytId)
+  const hasOrbit    = !!(launch.mission?.orbit?.abbrev || launch.mission?.orbit?.name)
 
   const padLat = parseFloat(launch.pad?.latitude)
   const padLng = parseFloat(launch.pad?.longitude)
@@ -121,7 +123,7 @@ export default function MobileLaunchBanner({ launch, onClose, onPlayVideo }) {
         {/* ── Expanded detail ── */}
         {expanded && (
           <div className="mlb-detail">
-            {/* Weather — most important for enthusiasts */}
+            {/* Weather */}
             {!isPast && !isNaN(padLat) && !isNaN(padLng) && (
               <div style={{ marginBottom: 8 }}>
                 <WeatherWidget lat={padLat} lng={padLng} compact />
@@ -166,6 +168,17 @@ export default function MobileLaunchBanner({ launch, onClose, onPlayVideo }) {
                 <span className="mlb-detail-value" style={{ color:'#ff6b6b' }}>{launch.failreason}</span>
               </div>
             )}
+
+            {/* Orbital params */}
+            {hasOrbit && (
+              <div style={{ marginTop: 8 }}>
+                <div className="mlb-section-title">📡 Orbital Parameters</div>
+                <OrbitalParams launch={launch} />
+              </div>
+            )}
+
+            {/* Reddit discussion */}
+            <RedditDiscussion launch={launch} />
 
             {/* Extra streams */}
             {streams.length > 1 && (

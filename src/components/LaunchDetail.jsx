@@ -1,19 +1,16 @@
 import React, { useState, useCallback } from 'react'
 import CountdownTimer from './CountdownTimer'
 import WeatherWidget from './WeatherWidget'
+import OrbitalParams from './OrbitalParams'
+import RedditDiscussion from './RedditDiscussion'
 import { STATUS_MAP } from '../data/launchZones'
-import { useRedditThread } from '../hooks/useRedditThread'
 import { useSunriseSunset } from '../hooks/useSunriseSunset'
-import {
-  guessInclination, orbitAltKm, orbitalPeriod, orbitalVelocity,
-} from '../utils/orbital'
 
 function parseStreams(vidURLs) {
   if (!vidURLs?.length) return []
   return vidURLs.map(v => {
     const url = typeof v === 'string' ? v : v?.url
     if (!url || typeof url !== 'string') return null
-    // Security: only allow HTTPS URLs — reject javascript:, data:, http:, etc.
     if (!url.startsWith('https://')) return null
     const ytMatch = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([A-Za-z0-9_-]{11})/)
     let hostname = 'Stream'
@@ -25,7 +22,7 @@ function parseStreams(vidURLs) {
 }
 
 function NotifyButton({ launch }) {
-  const [state, setState] = useState('idle') // idle | granted | denied | set
+  const [state, setState] = useState('idle')
 
   const schedule = useCallback(async () => {
     if (!('Notification' in window)) { setState('denied'); return }
@@ -61,64 +58,31 @@ function NotifyButton({ launch }) {
   return <button className="btn-notify" onClick={schedule}>🔔 Notify Me</button>
 }
 
-function OrbitalParams({ launch }) {
-  const orbitAbbrev = launch?.mission?.orbit?.abbrev
-  const orbitName   = launch?.mission?.orbit?.name
-  if (!orbitName && !orbitAbbrev) return null
-
-  const padLat  = parseFloat(launch?.pad?.latitude)
-  const inc     = guessInclination(orbitAbbrev, isNaN(padLat) ? null : padLat)
-  const altKm   = orbitAltKm(orbitAbbrev)
-  const Tmin    = Math.round(orbitalPeriod(altKm) / 60)
-  const velKms  = orbitalVelocity(altKm).toFixed(2)
-
-  const rows = [
-    { label: 'Orbit',        val: orbitAbbrev || orbitName },
-    { label: 'Altitude',     val: altKm >= 1000 ? `${(altKm/1000).toFixed(0)}k km` : `${altKm.toLocaleString()} km` },
-    { label: 'Inclination',  val: `${inc.toFixed(1)}°` },
-    { label: 'Period',       val: `~${Tmin} min` },
-    { label: 'Velocity',     val: `${velKms} km/s` },
-  ]
+function BoosterReuse({ launch }) {
+  const stages = launch.rocket?.launcher_stage
+  if (!stages?.length) return null
 
   return (
-    <div className="orbital-panel">
-      <div className="orbital-panel-grid">
-        {rows.map(r => (
-          <div key={r.label} className="op-cell">
-            <div className="op-val">{r.val}</div>
-            <div className="op-label">{r.label}</div>
+    <div className="booster-grid">
+      {stages.map((stage, i) => {
+        const serial = stage.launcher?.serial_number
+        const flightNum = stage.launcher_flight_number
+        const reused = stage.reused
+        const landSuccess = stage.landing?.success
+        const landType = stage.landing?.type?.abbrev
+
+        return (
+          <div key={i} className="booster-item">
+            <div className="booster-serial">{serial || `Core ${i + 1}`}</div>
+            <div className="booster-meta">
+              {flightNum && <span className="booster-chip">Flight #{flightNum}</span>}
+              {reused && <span className="booster-chip reused">♻ Reused</span>}
+              {landSuccess === true  && <span className="booster-chip landed">✓ {landType || 'Landed'}</span>}
+              {landSuccess === false && <span className="booster-chip expended">✕ Expended</span>}
+            </div>
           </div>
-        ))}
-      </div>
-      <div className="op-note">
-        ⓘ Altitude &amp; inclination are estimates based on orbit class
-      </div>
-    </div>
-  )
-}
-
-function RedditDiscussion({ launch }) {
-  const { posts, loading } = useRedditThread(launch)
-  if (loading) return <div className="reddit-loading">Loading discussion…</div>
-  if (!posts.length) return null
-  return (
-    <div className="reddit-section">
-      <div className="reddit-title">
-        <svg width="11" height="11" viewBox="0 0 20 20" fill="currentColor" style={{ color:'#ff4500', verticalAlign:'middle', marginRight:4 }}>
-          <circle cx="10" cy="10" r="10"/>
-          <path fill="white" d="M16.7 10a1.5 1.5 0 0 0-2.6-1 7.4 7.4 0 0 0-3.9-1.2l.7-3.1 2.1.5a1 1 0 1 0 .1-.5l-2.4-.5a.2.2 0 0 0-.3.2l-.7 3.4a7.4 7.4 0 0 0-3.9 1.2 1.5 1.5 0 1 0-1.6 2.4 3 3 0 0 0 0 .5c0 2.5 2.9 4.5 6.5 4.5s6.5-2 6.5-4.5a3 3 0 0 0 0-.5 1.5 1.5 0 0 0 .5-1.4zm-10.2 1a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm5.6 2.7a3.4 3.4 0 0 1-4.2 0 .3.3 0 0 1 .4-.4 2.8 2.8 0 0 0 3.4 0 .3.3 0 0 1 .4.4zm-.2-1.7a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
-        </svg>
-        Discussion
-      </div>
-      <div className="reddit-posts">
-        {posts.map(p => (
-          <a key={p.id} href={p.url} target="_blank" rel="noopener noreferrer" className="reddit-post">
-            <span className="reddit-post-sub">r/{p.sub}</span>
-            <span className="reddit-post-title">{p.title}</span>
-            <span className="reddit-post-meta">▲{p.score} · {p.comments} comments</span>
-          </a>
-        ))}
-      </div>
+        )
+      })}
     </div>
   )
 }
@@ -166,7 +130,6 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo }) {
   )
 
   const streams = parseStreams(launch.vidURLs)
-  const primaryYt = streams.find(s => s.ytId)
 
   const windowStart = launch.window_start
     ? new Date(launch.window_start).toLocaleString([], { dateStyle:'medium', timeStyle:'short' })
@@ -174,6 +137,9 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo }) {
   const windowEnd = launch.window_end
     ? new Date(launch.window_end).toLocaleString([], { timeStyle:'short' })
     : null
+
+  const hasBooster = launch.rocket?.launcher_stage?.length > 0
+  const hasOrbit   = !!(launch.mission?.orbit?.abbrev || launch.mission?.orbit?.name)
 
   return (
     <div className="launch-detail">
@@ -236,8 +202,15 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo }) {
           </div>
         )}
 
+        {/* Booster reuse */}
+        {hasBooster && (
+          <CollapsibleSection title="🔁 Booster / Reuse">
+            <BoosterReuse launch={launch} />
+          </CollapsibleSection>
+        )}
+
         {/* Orbital parameters */}
-        {!isPast && (launch.mission?.orbit?.abbrev || launch.mission?.orbit?.name) && (
+        {hasOrbit && (
           <CollapsibleSection title="📡 Orbital Parameters">
             <OrbitalParams launch={launch} />
           </CollapsibleSection>

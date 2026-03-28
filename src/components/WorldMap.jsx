@@ -117,6 +117,25 @@ function LaunchPopup({ launch, onSelect, onPlayVideo }) {
   )
 }
 
+// ── ISS ground track overlay ──────────────────────────────────────────────────
+function ISSTrackOverlay({ issPos, show }) {
+  const segs = useMemo(() => {
+    if (!show || !issPos) return []
+    const track = groundTrack(51.6, 408, issPos.lng)
+    return splitAtAntimeridian(track)
+  }, [show, issPos])
+
+  if (!segs.length) return null
+  return (
+    <>
+      {segs.map((seg, i) => (
+        <Polyline key={`iss-track-${i}`} positions={seg}
+          pathOptions={{ color:'#bb86fc', weight:1.5, opacity:0.45, dashArray:'3 8' }} />
+      ))}
+    </>
+  )
+}
+
 // ── Orbital overlay (ground track + trajectory arc) ───────────────────────────
 function OrbitalOverlay({ launch, showTrajectory }) {
   const orbitAbbrev  = launch?.mission?.orbit?.abbrev
@@ -374,6 +393,9 @@ export default function WorldMap({ launches, selectedLaunch, onSelectLaunch, onP
           </Marker>
         ))}
 
+        {/* ISS ground track */}
+        <ISSTrackOverlay issPos={issPos} show={showISS} />
+
         {/* ISS marker */}
         {showISS && issPos && (
           <Marker position={[issPos.lat, issPos.lng]}
@@ -429,7 +451,10 @@ export default function WorldMap({ launches, selectedLaunch, onSelectLaunch, onP
           </div>
           <div className="legend-item"><div style={{ fontSize:12 }}>🚀</div> Launch Site</div>
           <div className="legend-item"><div style={{ fontSize:12 }}>✈</div> Live Aircraft</div>
-          <div className="legend-item"><div style={{ fontSize:12 }}>🛸</div> ISS</div>
+          <div className="legend-item"><div style={{ fontSize:12 }}>🛸</div> ISS Position</div>
+          <div className="legend-item">
+            <div className="legend-line" style={{ background:'#bb86fc', opacity:0.5 }} /> ISS Track
+          </div>
           <div style={{ borderTop:'1px solid var(--border)', margin:'8px 0 6px', paddingTop:6 }}>
             <div style={{ fontSize:10, color:'var(--text-muted)', marginBottom:5, letterSpacing:1, textTransform:'uppercase' }}>Status</div>
           </div>

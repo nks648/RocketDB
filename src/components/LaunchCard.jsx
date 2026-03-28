@@ -29,12 +29,23 @@ function outcomeIcon(statusId) {
   if (statusId === 3) return { icon: '✓', cls: 'oc-success' }
   if (statusId === 4) return { icon: '✕', cls: 'oc-failure' }
   if (statusId === 7) return { icon: '~', cls: 'oc-partial' }
-  return { icon: '?', cls: 'oc-pending' }  // result not yet confirmed
+  return { icon: '?', cls: 'oc-pending' }
 }
 
-export default function LaunchCard({ launch, selected, onSelect, onPlayVideo }) {
+function timeSince(netDate) {
+  if (!netDate) return null
+  const ms = Date.now() - new Date(netDate).getTime()
+  if (ms < 0) return null
+  const d = Math.floor(ms / 86400000)
+  if (d < 1) return 'Today'
+  if (d < 7) return `${d}d ago`
+  if (d < 30) return `${Math.floor(d / 7)}w ago`
+  if (d < 365) return `${Math.floor(d / 30)}mo ago`
+  return `${Math.floor(d / 365)}y ago`
+}
+
+export default function LaunchCard({ launch, selected, onSelect, onPlayVideo, isFavorite, onToggleFavorite }) {
   const statusKey   = getStatusKey(launch.status?.id)
-  const statusLabel = launch.status?.abbrev || 'TBD'
   const vehicle     = launch.rocket?.configuration?.name || '—'
   const ytId        = extractYouTubeId(launch.vidURLs)
   const isFinal     = FINAL_STATUSES.has(launch.status?.id)
@@ -42,14 +53,11 @@ export default function LaunchCard({ launch, selected, onSelect, onPlayVideo }) 
   const isPending   = !isFinal && !isScrubbed && launch.net && new Date(launch.net).getTime() < Date.now()
   const { mission } = splitName(launch.name)
 
-  // For past cards show "✓ Mar 27" or "? pending"
   function rightContent() {
     if (isFinal) {
       const oc = outcomeIcon(launch.status?.id)
-      const d  = launch.net
-        ? new Date(launch.net).toLocaleDateString([], { month: 'short', day: 'numeric' })
-        : '—'
-      return <span className={`lc-outcome ${oc.cls}`}>{oc.icon} {d}</span>
+      const ago = timeSince(launch.net)
+      return <span className={`lc-outcome ${oc.cls}`}>{oc.icon} {ago || '—'}</span>
     }
     if (isPending) {
       return <span className="lc-pending">Pending result</span>
@@ -63,10 +71,11 @@ export default function LaunchCard({ launch, selected, onSelect, onPlayVideo }) 
       onClick={() => onSelect(selected ? null : launch)}
       role="button"
       tabIndex={0}
+      data-launch-card
       onKeyDown={e => e.key === 'Enter' && onSelect(selected ? null : launch)}
     >
       <span className={`status-badge ${isPending ? 'pending' : statusKey}`}>
-        {isPending ? 'PNDG' : statusLabel}
+        {isPending ? 'PNDG' : (launch.status?.abbrev || 'TBD')}
       </span>
 
       <span className="lc-names">
@@ -85,6 +94,17 @@ export default function LaunchCard({ launch, selected, onSelect, onPlayVideo }) 
           }}
           aria-label="Watch live stream"
         >▶</button>
+      )}
+
+      {onToggleFavorite && (
+        <button
+          className={`lc-fav${isFavorite ? ' active' : ''}`}
+          onClick={e => { e.stopPropagation(); onToggleFavorite(launch.id) }}
+          aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+          title={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+        >
+          {isFavorite ? '★' : '☆'}
+        </button>
       )}
     </div>
   )

@@ -2126,6 +2126,286 @@ html, body, #root {
   .sw-badge { padding: 5px 8px; }
   .sw-label { display: none; }
   .sw-panel { right: auto; left: 0; }
-  .reddit-section { display: none; }
+  /* Reddit section visible in mobile banner expanded view */
   .sidebar-search { padding: 6px 8px; }
+}
+
+/* ───── Light Theme ───── */
+[data-theme="light"] {
+  --bg-primary: #eef2f7;
+  --bg-secondary: #e3eaf3;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f0f5fc;
+  --bg-overlay: rgba(238, 242, 247, 0.95);
+  --border: #c5d4e8;
+  --border-bright: #9ab5cc;
+  --text-primary: #0d1f2f;
+  --text-secondary: #2d4a62;
+  --text-muted: #7a9ab8;
+  --accent: #0099bb;
+  --accent-dim: rgba(0, 153, 187, 0.12);
+  --accent-glow: rgba(0, 153, 187, 0.3);
+  --orange-dim: rgba(200, 80, 10, 0.1);
+  --green-dim: rgba(0, 160, 80, 0.1);
+  --red-dim: rgba(200, 30, 30, 0.1);
+  --yellow-dim: rgba(180, 130, 0, 0.1);
+}
+
+[data-theme="light"] .leaflet-container { background: #c9d8e8 !important; }
+[data-theme="light"] .launch-card { background: linear-gradient(135deg, #f8fbff 0%, #f0f6ff 100%); }
+[data-theme="light"] .launch-card:hover { background: linear-gradient(135deg, #eef4fc 0%, #e8f2ff 100%); }
+[data-theme="light"] .launch-card.selected { background: linear-gradient(135deg, #ddeeff 0%, #d5e9ff 100%); }
+[data-theme="light"] .sidebar { background: var(--bg-secondary); }
+[data-theme="light"] .header { background: var(--bg-secondary); }
+[data-theme="light"] .stats-panel { background: var(--bg-secondary); }
+[data-theme="light"] .weather-widget { background: rgba(200,220,240,0.4); }
+[data-theme="light"] .orbital-panel { background: rgba(0,153,187,0.04); }
+[data-theme="light"] .reddit-post { background: rgba(255,69,0,0.04); }
+[data-theme="light"] .toggle-btn { background: rgba(240,246,252,0.95); color: #2d4a62; }
+[data-theme="light"] .toggle-btn.active { background: rgba(220,240,252,0.98); }
+[data-theme="light"] .toggle-panel-header { background: rgba(0,153,187,0.1); }
+[data-theme="light"] .map-legend { background: rgba(238,242,247,0.97); }
+[data-theme="light"] .leaflet-popup-content-wrapper { background: #fff !important; }
+[data-theme="light"] .modal-header { background: var(--bg-card); }
+[data-theme="light"] .sw-badge { background: rgba(200,160,0,0.08); }
+
+/* ───── Sidebar Filters (agency + favorites) ───── */
+.sidebar-filters {
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar-filter-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px 8px;
+}
+
+.sidebar-agency-select {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 11px;
+  font-family: var(--font);
+  color: var(--text-secondary);
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.15s;
+  min-width: 0;
+}
+.sidebar-agency-select:focus { border-color: var(--accent); }
+.sidebar-agency-select option { background: var(--bg-card); color: var(--text-primary); }
+
+.sidebar-fav-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-family: var(--font);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.sidebar-fav-btn:hover { border-color: var(--yellow); color: var(--yellow); }
+.sidebar-fav-btn.active {
+  background: var(--yellow-dim);
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+
+/* ───── Favorites star in launch card ───── */
+.lc-fav {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 2px 3px;
+  line-height: 1;
+  transition: color 0.15s, transform 0.15s;
+  opacity: 0;
+}
+.launch-card:hover .lc-fav,
+.launch-card.selected .lc-fav,
+.lc-fav.active {
+  opacity: 1;
+}
+.lc-fav:hover { color: var(--yellow); transform: scale(1.2); }
+.lc-fav.active { color: var(--yellow); opacity: 1; }
+
+/* ───── Booster / Reuse section ───── */
+.booster-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 10px;
+}
+
+.booster-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 7px 10px;
+  background: rgba(187, 134, 252, 0.06);
+  border: 1px solid rgba(187, 134, 252, 0.2);
+  border-radius: var(--radius);
+  min-width: 120px;
+}
+
+.booster-serial {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--purple);
+}
+
+.booster-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.booster-chip {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+.booster-chip.reused  { background: rgba(0,230,118,0.08); border-color: var(--green); color: var(--green); }
+.booster-chip.landed  { background: rgba(0,200,240,0.08); border-color: var(--accent); color: var(--accent); }
+.booster-chip.expended{ background: rgba(255,68,68,0.08); border-color: var(--red); color: var(--red); }
+
+/* ───── Launch Rate Chart ───── */
+.stats-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: var(--stats-h);
+  padding: 8px 16px 0;
+  border-left: 1px solid var(--border);
+  position: relative;
+}
+
+.chart-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+  height: 100%;
+  justify-content: flex-end;
+  min-width: 24px;
+}
+
+.chart-bar-wrap {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.chart-bar {
+  width: 100%;
+  background: var(--accent);
+  border-radius: 2px 2px 0 0;
+  opacity: 0.7;
+  transition: opacity 0.15s, height 0.3s;
+  min-height: 0;
+}
+.chart-col:hover .chart-bar { opacity: 1; }
+
+.chart-label {
+  font-size: 8px;
+  color: var(--text-muted);
+  text-align: center;
+  letter-spacing: 0.3px;
+  line-height: 1;
+}
+
+.chart-count {
+  font-size: 8px;
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.chart-title {
+  position: absolute;
+  top: 4px;
+  left: 20px;
+  font-size: 8px;
+  color: var(--text-muted);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+/* ───── Mobile stats: compact one-liner ───── */
+@media (max-width: 768px) {
+  .stats-panel {
+    display: flex;
+    position: fixed;
+    bottom: var(--sheet-peek);
+    left: 0; right: 0;
+    height: 30px;
+    z-index: 450;
+    padding: 0 12px;
+    gap: 0;
+    background: rgba(7,11,20,0.92);
+    border-top: 1px solid var(--border);
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+  }
+  .stat-item { padding: 0 10px; }
+  .stat-item:first-child { padding-left: 0; }
+  .stat-value { font-size: 13px; }
+  .stat-label { font-size: 8px; }
+  .stats-agencies { display: none; }
+  .stats-chart { display: none; }
+}
+
+/* ───── Mobile section title in banner ───── */
+.mlb-section-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+
+/* ───── Mobile: show expanded banner above stats bar ───── */
+@media (max-width: 768px) {
+  .mobile-launch-banner.mlb-expanded {
+    bottom: 30px; /* above the mobile stats bar */
+    overflow-y: auto;
+    max-height: calc(100dvh - var(--header-h) - 30px);
+  }
+  /* Shift zoom control above stats + sheet peek */
+  .leaflet-control-zoom {
+    margin-bottom: calc(var(--sheet-peek) + 30px + 12px) !important;
+  }
+}
+
+/* ───── Keyboard focus ring for launch cards ───── */
+.launch-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
 }

@@ -42,8 +42,34 @@ export default function StatsPanel({ upcoming, previous }) {
     }
     const topOrbits = Object.entries(orbitCounts).sort((a, b) => b[1] - a[1]).slice(0, 3)
 
-    return { successes, failures, successRate, topAgencies, next, nextInHours, scrubbed, topOrbits }
+    // Monthly launch rate — last 6 months
+    const months = []
+    for (let i = 5; i >= 0; i--) {
+      const d = new Date()
+      d.setDate(1)
+      d.setMonth(d.getMonth() - i)
+      months.push({
+        label: d.toLocaleString('default', { month: 'short' }),
+        year: d.getFullYear(),
+        month: d.getMonth(),
+        count: 0,
+        success: 0,
+      })
+    }
+    for (const l of previous) {
+      if (!l.net) continue
+      const d = new Date(l.net)
+      const entry = months.find(m => m.year === d.getFullYear() && m.month === d.getMonth())
+      if (entry) {
+        entry.count++
+        if (l.status?.id === 3) entry.success++
+      }
+    }
+
+    return { successes, failures, successRate, topAgencies, next, nextInHours, scrubbed, topOrbits, months }
   }, [upcoming, previous])
+
+  const maxCount = Math.max(...stats.months.map(m => m.count), 1)
 
   return (
     <div className="stats-panel">
@@ -124,6 +150,26 @@ export default function StatsPanel({ upcoming, previous }) {
               {name} <span style={{ color:'var(--accent)', marginLeft:3 }}>{count}</span>
             </span>
           ))}
+        </div>
+      )}
+
+      {/* Monthly launch rate chart — last 6 months */}
+      {stats.months.some(m => m.count > 0) && (
+        <div className="stats-chart" title="Launches per month (last 6 months)">
+          {stats.months.map((m, i) => (
+            <div key={i} className="chart-col">
+              <div className="chart-bar-wrap">
+                <div
+                  className="chart-bar"
+                  style={{ height: `${Math.max((m.count / maxCount) * 100, m.count > 0 ? 8 : 0)}%` }}
+                  title={`${m.label}: ${m.count} launches (${m.success} success)`}
+                />
+              </div>
+              <div className="chart-label">{m.label}</div>
+              {m.count > 0 && <div className="chart-count">{m.count}</div>}
+            </div>
+          ))}
+          <div className="chart-title">Launches / month</div>
         </div>
       )}
     </div>

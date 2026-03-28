@@ -7,10 +7,8 @@ function formatDuration(ms) {
   const h = Math.floor((totalSec % 86400) / 3600)
   const m = Math.floor((totalSec % 3600) / 60)
   const s = totalSec % 60
-  if (d > 0) {
-    return `T-${d}d ${String(h).padStart(2,'0')}h ${String(m).padStart(2,'0')}m`
-  }
-  return `T-${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`
+  const hms = `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`
+  return d > 0 ? `T-${d}d ${hms}` : `T-${hms}`
 }
 
 // What to show when NET has passed but launch is not confirmed complete
