@@ -165,6 +165,7 @@ export default function WorldMap({ launches, selectedLaunch, onSelectLaunch, onP
   const [showAircraft,   setShowAircraft]   = useState(false)
   const [showISS,        setShowISS]        = useState(false)
   const [showTrajectory, setShowTrajectory] = useState(false)
+  const [panelOpen,      setPanelOpen]      = useState(true)
 
   // Focus point: selected launch pad, else nearest upcoming launch
   const focusLaunch = selectedLaunch || launches.find(l => l.pad?.latitude)
@@ -199,60 +200,73 @@ export default function WorldMap({ launches, selectedLaunch, onSelectLaunch, onP
 
       {/* ── Layer toggle panel ── */}
       <div className="map-toggle-panel">
-        <button className={`toggle-btn${showMaritime ? ' active' : ''}`}
-          onClick={() => setShowMaritime(v => !v)} aria-label="Toggle maritime zones">
-          <span className="toggle-swatch" style={{ background:'#ff6b35' }} />
-          <span className="toggle-label">Maritime</span>
-          <span className="toggle-check">{showMaritime ? '✓' : ''}</span>
+        {/* Panel header — always visible, click to collapse */}
+        <button className="toggle-panel-header" onClick={() => setPanelOpen(v => !v)}
+          aria-label={panelOpen ? 'Collapse layers panel' : 'Expand layers panel'}>
+          <span style={{ fontSize:11 }}>🗂 Map Layers</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"
+            style={{ transform: panelOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition:'transform 0.2s', flexShrink:0 }}>
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
         </button>
 
-        <button className={`toggle-btn${showAirspace ? ' active' : ''}`}
-          onClick={() => setShowAirspace(v => !v)} aria-label="Toggle airspace TFRs">
-          <span className="toggle-swatch" style={{ background:'#bb86fc' }} />
-          <span className="toggle-label">Airspace</span>
-          <span className="toggle-check">{showAirspace ? '✓' : ''}</span>
-        </button>
+        {panelOpen && <>
+          <button className={`toggle-btn${showMaritime ? ' active' : ''}`}
+            onClick={() => setShowMaritime(v => !v)} aria-label="Toggle maritime zones">
+            <span className="toggle-swatch" style={{ background:'#ff6b35' }} />
+            <span className="toggle-label">Maritime</span>
+            <span className="toggle-check">{showMaritime ? '✓' : ''}</span>
+          </button>
 
-        <button className={`toggle-btn${showSites ? ' active' : ''}`}
-          onClick={() => setShowSites(v => !v)} aria-label="Toggle launch sites">
-          <span className="toggle-swatch" style={{ background:'#00c8f0' }} />
-          <span className="toggle-label">Sites</span>
-          <span className="toggle-check">{showSites ? '✓' : ''}</span>
-        </button>
+          <button className={`toggle-btn${showAirspace ? ' active' : ''}`}
+            onClick={() => setShowAirspace(v => !v)} aria-label="Toggle airspace TFRs">
+            <span className="toggle-swatch" style={{ background:'#bb86fc' }} />
+            <span className="toggle-label">Airspace</span>
+            <span className="toggle-check">{showAirspace ? '✓' : ''}</span>
+          </button>
 
-        <button className={`toggle-btn${showAircraft ? ' active' : ''}`}
-          onClick={() => setShowAircraft(v => !v)}
-          title="Live aircraft near active site (OpenSky Network)">
-          <span className="toggle-swatch" style={{ background:'#ffd740', fontSize:10 }}>✈</span>
-          <span className="toggle-label">
-            Aircraft{aircraftLoading ? ' …' : showAircraft ? ` (${aircraft.length})` : ''}
-          </span>
-          <span className="toggle-check">{showAircraft ? '✓' : ''}</span>
-        </button>
+          <button className={`toggle-btn${showSites ? ' active' : ''}`}
+            onClick={() => setShowSites(v => !v)} aria-label="Toggle launch sites">
+            <span className="toggle-swatch" style={{ background:'#00c8f0' }} />
+            <span className="toggle-label">Sites</span>
+            <span className="toggle-check">{showSites ? '✓' : ''}</span>
+          </button>
 
-        <button className={`toggle-btn${showISS ? ' active' : ''}`}
-          onClick={() => setShowISS(v => !v)}
-          title="International Space Station live position (wheretheiss.at)">
-          <span className="toggle-swatch" style={{ background:'#bb86fc', fontSize:10 }}>🛸</span>
-          <span className="toggle-label">
-            ISS{issPos ? ` · ${issPos.altKm.toFixed(0)} km` : ''}
-          </span>
-          <span className="toggle-check">{showISS ? '✓' : ''}</span>
-        </button>
+          <button className={`toggle-btn${showAircraft ? ' active' : ''}`}
+            onClick={() => setShowAircraft(v => !v)}
+            title="Live aircraft near active site (OpenSky Network)">
+            <span className="toggle-swatch" style={{ background:'#ffd740', fontSize:10 }}>✈</span>
+            <span className="toggle-label">
+              Aircraft{aircraftLoading ? ' …' : showAircraft ? ` (${aircraft.length})` : ''}
+            </span>
+            <span className="toggle-check">{showAircraft ? '✓' : ''}</span>
+          </button>
 
-        <button
-          className={`toggle-btn${showTrajectory ? ' active' : ''}${!hasOrbitData ? ' toggle-disabled' : ''}`}
-          onClick={() => hasOrbitData && setShowTrajectory(v => !v)}
-          title={hasOrbitData
-            ? `Show ascent arc + ${targetOrbit} ground track`
-            : 'Select a launch with orbit data to show trajectory'}
-        >
-          <span className="toggle-swatch" style={{ background:'#ff6b35', fontSize:10 }}>📡</span>
-          <span className="toggle-label">
-            Trajectory{targetOrbit ? ` · ${targetOrbit}` : ''}
-          </span>
-          <span className="toggle-check">{showTrajectory ? '✓' : ''}</span>
-        </button>
+          <button className={`toggle-btn${showISS ? ' active' : ''}`}
+            onClick={() => setShowISS(v => !v)}
+            title="International Space Station live position (wheretheiss.at)">
+            <span className="toggle-swatch" style={{ background:'#bb86fc', fontSize:10 }}>🛸</span>
+            <span className="toggle-label">
+              ISS{issPos ? ` · ${issPos.altKm.toFixed(0)} km` : ''}
+            </span>
+            <span className="toggle-check">{showISS ? '✓' : ''}</span>
+          </button>
+
+          <button
+            className={`toggle-btn${showTrajectory ? ' active' : ''}${!hasOrbitData ? ' toggle-disabled' : ''}`}
+            onClick={() => hasOrbitData && setShowTrajectory(v => !v)}
+            title={hasOrbitData
+              ? `Show ascent arc + ${targetOrbit} ground track`
+              : 'Select a launch with orbit data to show trajectory'}
+          >
+            <span className="toggle-swatch" style={{ background:'#ff6b35', fontSize:10 }}>📡</span>
+            <span className="toggle-label">
+              Trajectory{targetOrbit ? ` · ${targetOrbit}` : ''}
+            </span>
+            <span className="toggle-check">{showTrajectory ? '✓' : ''}</span>
+          </button>
+        </>}
       </div>
 
       {/* ── Status notes ── */}

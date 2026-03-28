@@ -82,7 +82,6 @@ function OrbitalParams({ launch }) {
 
   return (
     <div className="orbital-panel">
-      <div className="orbital-panel-title">📡 Orbital Parameters</div>
       <div className="orbital-panel-grid">
         {rows.map(r => (
           <div key={r.label} className="op-cell">
@@ -120,6 +119,23 @@ function RedditDiscussion({ launch }) {
           </a>
         ))}
       </div>
+    </div>
+  )
+}
+
+function CollapsibleSection({ title, defaultOpen = true, children }) {
+  const [open, setOpen] = useState(defaultOpen)
+  return (
+    <div className="collapsible-section">
+      <button className="collapsible-header" onClick={() => setOpen(v => !v)}>
+        <span>{title}</span>
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"
+          style={{ transform: open ? 'rotate(180deg)' : 'rotate(0deg)', transition:'transform 0.2s', flexShrink:0 }}>
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </button>
+      {open && <div className="collapsible-body">{children}</div>}
     </div>
   )
 }
@@ -221,11 +237,17 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo }) {
         )}
 
         {/* Orbital parameters */}
-        {!isPast && <OrbitalParams launch={launch} />}
+        {!isPast && (launch.mission?.orbit?.abbrev || launch.mission?.orbit?.name) && (
+          <CollapsibleSection title="📡 Orbital Parameters">
+            <OrbitalParams launch={launch} />
+          </CollapsibleSection>
+        )}
 
-        {/* Weather */}
+        {/* Pad weather */}
         {!isPast && !isNaN(padLat) && !isNaN(padLng) && (
-          <WeatherWidget lat={padLat} lng={padLng} />
+          <CollapsibleSection title="🌤 Pad Weather">
+            <WeatherWidget lat={padLat} lng={padLng} />
+          </CollapsibleSection>
         )}
 
         {/* Reddit discussion */}
