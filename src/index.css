@@ -1550,6 +1550,94 @@ html, body, #root {
   pointer-events: none;
 }
 
+/* ───── Launch Card — updated layout ───── */
+
+/* Two-line name column */
+.lc-names {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.lc-mission {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ddeeff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lc-vehicle-sub {
+  font-size: 10px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: var(--font-mono);
+}
+
+/* Scrubbed / waiting for new window — dimmed */
+.launch-card.lc-scrubbed {
+  opacity: 0.6;
+}
+.launch-card.lc-scrubbed:hover,
+.launch-card.lc-scrubbed.selected {
+  opacity: 1;
+}
+
+/* Outcome column (Previous tab) */
+.lc-outcome {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.lc-outcome.oc-success { color: var(--green); }
+.lc-outcome.oc-failure { color: var(--red); }
+.lc-outcome.oc-partial { color: var(--orange); }
+.lc-outcome.oc-pending { color: var(--text-muted); }
+
+.lc-pending {
+  font-size: 10px;
+  color: var(--orange);
+  font-style: italic;
+  white-space: nowrap;
+}
+
+/* "Pending" badge variant */
+.status-badge.pending {
+  background: rgba(255,107,53,0.15);
+  color: var(--orange);
+}
+
+/* Taller cards for two lines */
+.launch-card {
+  height: 52px;
+}
+
+/* Expandable description */
+.launch-detail-desc.expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.desc-expand-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 10px;
+  font-family: var(--font);
+  padding: 2px 0;
+  letter-spacing: 0.3px;
+}
+.desc-expand-btn:hover { text-decoration: underline; }
+
 /* ───── Sidebar Search ───── */
 .sidebar-search {
   position: relative;

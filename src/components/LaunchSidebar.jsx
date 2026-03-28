@@ -62,17 +62,25 @@ export default function LaunchSidebar({
       <div className="sidebar-tabs">
         <button
           className={`sidebar-tab${activeTab === 'upcoming' ? ' active' : ''}`}
-          onClick={() => setActiveTab('upcoming')}
+          onClick={() => { setActiveTab('upcoming'); setFilter('') }}
         >
           Upcoming
-          {upcoming.length > 0 && <span className="sidebar-count">{upcoming.length}</span>}
+          {upcoming.length > 0 && (
+            <span className="sidebar-count">
+              {filter && activeTab === 'upcoming' ? launches.length : upcoming.length}
+            </span>
+          )}
         </button>
         <button
           className={`sidebar-tab${activeTab === 'previous' ? ' active' : ''}`}
-          onClick={() => setActiveTab('previous')}
+          onClick={() => { setActiveTab('previous'); setFilter('') }}
         >
           Previous
-          {previous.length > 0 && <span className="sidebar-count">{previous.length}</span>}
+          {previous.length > 0 && (
+            <span className="sidebar-count">
+              {filter && activeTab === 'previous' ? launches.length : previous.length}
+            </span>
+          )}
         </button>
       </div>
 

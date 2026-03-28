@@ -82,6 +82,7 @@ function RedditDiscussion({ launch }) {
 }
 
 export default function LaunchDetail({ launch, onClose, onPlayVideo }) {
+  const [descExpanded, setDescExpanded] = useState(false)
   if (!launch) return null
 
   const statusKey   = STATUS_MAP[launch.status?.id]?.key || 'tbd'
@@ -135,7 +136,16 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo }) {
           )}
         </div>
 
-        {desc && <div className="launch-detail-desc">{desc}</div>}
+        {desc && (
+          <div>
+            <div className={`launch-detail-desc${descExpanded ? ' expanded' : ''}`}>{desc}</div>
+            {desc.length > 160 && (
+              <button className="desc-expand-btn" onClick={() => setDescExpanded(v => !v)}>
+                {descExpanded ? '▲ Less' : '▼ More'}
+              </button>
+            )}
+          </div>
+        )}
 
         {windowStart && (
           <div className="launch-detail-window">

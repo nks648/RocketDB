@@ -53,8 +53,11 @@ async function fetchWithCache(url) {
 // Statuses that mean a launch is truly over
 const FINAL_STATUSES = new Set([3, 4, 7]) // Success, Failure, Partial Failure
 
-// How long after NET before a still-"GO" launch is treated as "launched, result pending"
-const INFLIGHT_GRACE_MS = 30 * 60 * 1000 // 30 min
+// Statuses that mean "scrubbed / awaiting new window" — keep in Upcoming
+const SCRUB_STATUSES = new Set([2, 5, 8]) // TBD, Hold, TBC
+
+// Tiny grace so a launch doesn't vanish the instant it hits T-0
+const NET_GRACE_MS = 2 * 60 * 1000 // 2 min
 
 // ── Hook ──────────────────────────────────────────────────────────────────
 export function useLaunches() {
@@ -78,23 +81,19 @@ export function useLaunches() {
       const now = Date.now()
 
       // ── Classify /upcoming/ results ──────────────────────────────────────
-      // Some entries are "GO" (status 1) but their NET is well in the past —
-      // the rocket has launched but LL2 hasn't confirmed the result yet.
-      // Move those to the Previous tab so Upcoming stays clean.
-      const pastNetGo = upcomingResults.filter(l =>
-        l.status?.id === 1 &&
-        l.net &&
-        new Date(l.net).getTime() < now - INFLIGHT_GRACE_MS
-      )
-      const genuinelyUpcoming = upcomingResults.filter(l =>
-        !(l.status?.id === 1 &&
-          l.net &&
-          new Date(l.net).getTime() < now - INFLIGHT_GRACE_MS)
-      )
+      // A launch belongs in Upcoming only if its NET is in the future
+      // OR it is scrubbed/on-hold (waiting for a new window).
+      // Anything else past NET (GO, In Flight, etc.) has launched — move it out.
+      const isStillUpcoming = l => {
+        if (!l.net) return true                              // no NET → keep
+        const pastNet = new Date(l.net).getTime() < now - NET_GRACE_MS
+        if (!pastNet) return true                            // future → keep
+        return SCRUB_STATUSES.has(l.status?.id)             // scrubbed → keep
+      }
+      const genuinelyUpcoming = upcomingResults.filter(isStillUpcoming)
+      const launchedFromUpcoming = upcomingResults.filter(l => !isStillUpcoming(l))
 
       // ── Classify /previous/ results ───────────────────────────────────────
-      // Scrubbed = past NET but no final outcome → keep in Upcoming
-      // Finished = confirmed Success / Failure / Partial
       const scrubbed = previousResults.filter(l => !FINAL_STATUSES.has(l.status?.id))
       const finished = previousResults.filter(l =>  FINAL_STATUSES.has(l.status?.id))
 
@@ -104,9 +103,9 @@ export function useLaunches() {
       const merged = [...genuinelyUpcoming, ...toAdd]
         .sort((a, b) => new Date(a.net) - new Date(b.net))
 
-      // ── Build Previous: confirmed + "launched, result pending" ─────────────
+      // ── Build Previous: confirmed + "result pending" (no dupes) ───────────
       const prevIds = new Set(finished.map(l => l.id))
-      const pendingResult = pastNetGo.filter(l => !prevIds.has(l.id))
+      const pendingResult = launchedFromUpcoming.filter(l => !prevIds.has(l.id))
       const allPrevious = [...finished, ...pendingResult]
         .sort((a, b) => new Date(b.net) - new Date(a.net))
 
