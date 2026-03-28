@@ -3,6 +3,10 @@ import CountdownTimer from './CountdownTimer'
 import WeatherWidget from './WeatherWidget'
 import { STATUS_MAP } from '../data/launchZones'
 import { useRedditThread } from '../hooks/useRedditThread'
+import { useSunriseSunset } from '../hooks/useSunriseSunset'
+import {
+  guessInclination, orbitAltKm, orbitalPeriod, orbitalVelocity,
+} from '../utils/orbital'
 
 function parseStreams(vidURLs) {
   if (!vidURLs?.length) return []
@@ -55,6 +59,43 @@ function NotifyButton({ launch }) {
   return <button className="btn-notify" onClick={schedule}>🔔 Notify Me</button>
 }
 
+function OrbitalParams({ launch }) {
+  const orbitAbbrev = launch?.mission?.orbit?.abbrev
+  const orbitName   = launch?.mission?.orbit?.name
+  if (!orbitName && !orbitAbbrev) return null
+
+  const padLat  = parseFloat(launch?.pad?.latitude)
+  const inc     = guessInclination(orbitAbbrev, isNaN(padLat) ? null : padLat)
+  const altKm   = orbitAltKm(orbitAbbrev)
+  const Tmin    = Math.round(orbitalPeriod(altKm) / 60)
+  const velKms  = orbitalVelocity(altKm).toFixed(2)
+
+  const rows = [
+    { label: 'Orbit',        val: orbitAbbrev || orbitName },
+    { label: 'Altitude',     val: altKm >= 1000 ? `${(altKm/1000).toFixed(0)}k km` : `${altKm.toLocaleString()} km` },
+    { label: 'Inclination',  val: `${inc.toFixed(1)}°` },
+    { label: 'Period',       val: `~${Tmin} min` },
+    { label: 'Velocity',     val: `${velKms} km/s` },
+  ]
+
+  return (
+    <div className="orbital-panel">
+      <div className="orbital-panel-title">📡 Orbital Parameters</div>
+      <div className="orbital-panel-grid">
+        {rows.map(r => (
+          <div key={r.label} className="op-cell">
+            <div className="op-val">{r.val}</div>
+            <div className="op-label">{r.label}</div>
+          </div>
+        ))}
+      </div>
+      <div className="op-note">
+        ⓘ Altitude &amp; inclination are estimates based on orbit class
+      </div>
+    </div>
+  )
+}
+
 function RedditDiscussion({ launch }) {
   const { posts, loading } = useRedditThread(launch)
   if (loading) return <div className="reddit-loading">Loading discussion…</div>
@@ -98,8 +139,13 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo }) {
   const agencyAbbr  = launch.launch_service_provider?.abbrev || null
   const probability = launch.probability != null ? launch.probability : null
 
-  const padLat = parseFloat(launch.pad?.latitude)
-  const padLng = parseFloat(launch.pad?.longitude)
+  const padLat   = parseFloat(launch.pad?.latitude)
+  const padLng   = parseFloat(launch.pad?.longitude)
+  const sunData  = useSunriseSunset(
+    isNaN(padLat) ? null : padLat,
+    isNaN(padLng) ? null : padLng,
+    launch.net
+  )
 
   const streams = parseStreams(launch.vidURLs)
   const primaryYt = streams.find(s => s.ytId)
@@ -134,6 +180,11 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo }) {
               🎯 {probability}% launch prob.
             </span>
           )}
+          {!isPast && sunData?.icon && (
+            <span className="meta-chip" style={{ color: sunData.color }}>
+              {sunData.icon} {sunData.label}
+            </span>
+          )}
         </div>
 
         {desc && (
@@ -166,6 +217,9 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo }) {
             <div className="scrub-reason-text">{launch.failreason}</div>
           </div>
         )}
+
+        {/* Orbital parameters */}
+        {!isPast && <OrbitalParams launch={launch} />}
 
         {/* Weather */}
         {!isPast && !isNaN(padLat) && !isNaN(padLng) && (

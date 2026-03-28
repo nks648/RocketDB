@@ -1940,6 +1940,94 @@ html, body, #root {
 .probability-chip.probability-chip.prob-marginal { color: var(--yellow); background: var(--yellow-dim); }
 .probability-chip.prob-low    { color: var(--orange); background: var(--orange-dim); }
 
+/* ───── Orbital Parameters Panel ───── */
+.orbital-panel {
+  margin-top: 8px;
+  background: rgba(0, 200, 240, 0.04);
+  border: 1px solid rgba(0, 200, 240, 0.18);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+}
+
+.orbital-panel-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.orbital-panel-grid {
+  display: flex;
+  gap: 0;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.op-cell {
+  flex: 1;
+  min-width: 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 6px;
+  border-right: 1px solid var(--border);
+}
+.op-cell:last-child { border-right: none; }
+
+.op-val {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.op-label {
+  font-size: 9px;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.op-note {
+  font-size: 9px;
+  color: var(--text-muted);
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* ───── Map status note ───── */
+.map-status-note {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: rgba(7, 11, 20, 0.9);
+  border: 1px solid;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 11px;
+  white-space: nowrap;
+  pointer-events: none;
+  backdrop-filter: blur(6px);
+}
+
+/* ───── Trajectory toggle disabled state ───── */
+.toggle-btn.toggle-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.toggle-btn.toggle-disabled:hover {
+  border-color: rgba(42, 74, 112, 0.7);
+  background: rgba(8, 14, 26, 0.88);
+  color: #c0d8e8;
+}
+
 /* ─── Mobile: hide space weather badge label to save space ─── */
 @media (max-width: 768px) {
   .sw-badge { padding: 5px 8px; }
