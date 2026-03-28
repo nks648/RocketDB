@@ -1,0 +1,21 @@
+{
+  "name": "RocketDB — Live Launch Dashboard",
+  "short_name": "RocketDB",
+  "description": "Live rocket launch tracker with countdown timers, orbital mechanics, and real-time maps",
+  "start_url": "/RocketDB/",
+  "scope": "/RocketDB/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#070b14",
+  "theme_color": "#00c8f0",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["news", "utilities"],
+  "lang": "en"
+}
