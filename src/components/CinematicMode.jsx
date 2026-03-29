@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import CountdownTimer from './CountdownTimer'
 import { STATUS_MAP } from '../data/launchZones'
+import { useRocketImage } from '../hooks/useRocketImage'
 
 function parseStreams(vidURLs) {
   if (!vidURLs?.length) return []
@@ -14,6 +15,7 @@ function parseStreams(vidURLs) {
 
 export default function CinematicMode({ launch, onClose, onPlayVideo }) {
   const [tick, setTick] = useState(Date.now())
+  const imgSrc = useRocketImage(launch)
 
   useEffect(() => {
     const id = setInterval(() => setTick(Date.now()), 1000)
@@ -50,9 +52,8 @@ export default function CinematicMode({ launch, onClose, onPlayVideo }) {
     <div className={`cinematic${isImminent ? ' cinematic-imminent' : ''}`}
       onClick={e => { if (e.target === e.currentTarget) onClose() }}>
 
-      {/* Background — blurred launch image, fallback to rocket config image */}
-      {(launch.image || launch.rocket?.configuration?.image_url) && (
-        <div className="cinematic-bg" style={{ backgroundImage: `url(${launch.image || launch.rocket.configuration.image_url})` }} />
+      {imgSrc && (
+        <div className="cinematic-bg" style={{ backgroundImage: `url(${imgSrc})` }} />
       )}
       <div className="cinematic-vignette" />
 

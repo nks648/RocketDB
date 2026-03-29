@@ -5,6 +5,7 @@ import OrbitalParams from './OrbitalParams'
 import RedditDiscussion from './RedditDiscussion'
 import { STATUS_MAP } from '../data/launchZones'
 import { useSunriseSunset } from '../hooks/useSunriseSunset'
+import { useRocketImage } from '../hooks/useRocketImage'
 import { shareLaunch, downloadICS } from '../utils/shareExport'
 
 function parseStreams(vidURLs) {
@@ -127,6 +128,7 @@ function ShareButton({ launch }) {
 
 export default function LaunchDetail({ launch, onClose, onPlayVideo, onCinematic }) {
   const [descExpanded, setDescExpanded] = useState(false)
+  const imgSrc = useRocketImage(launch)
   if (!launch) return null
 
   const statusKey   = STATUS_MAP[launch.status?.id]?.key || 'tbd'
@@ -176,9 +178,8 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo, onCinematic
         </svg>
       </button>
 
-      {/* Image — fallback to rocket config image if launch has no specific photo */}
-      {(launch.image || launch.rocket?.configuration?.image_url)
-        ? <img src={launch.image || launch.rocket.configuration.image_url} alt="" className="launch-detail-img" />
+      {imgSrc
+        ? <img src={imgSrc} alt="" className="launch-detail-img" />
         : <div className="launch-detail-img-placeholder">🚀</div>
       }
 
