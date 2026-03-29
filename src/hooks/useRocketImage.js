@@ -1,76 +1,113 @@
 import { useState, useEffect } from 'react'
 
-// Shared in-memory cache — avoids re-fetching within a session
 const cache = new Map()
 
-function wikiTitle(url) {
+function wikiTitleFromUrl(url) {
   if (!url) return null
   const m = url.match(/\/wiki\/([^#?]+)/)
-  return m ? decodeURIComponent(m[1].replace(/_/g, ' ')) : null
+  return m ? decodeURIComponent(m[1]) : null
 }
 
-async function fetchWiki(wikiUrl) {
-  const title = wikiTitle(wikiUrl)
-  if (!title) return null
-
-  const key = `wiki:${title}`
-  if (cache.has(key)) return cache.get(key)
-
+// Wikipedia action API — more reliable than REST summary for images
+async function wikiActionImage(title) {
+  const url =
+    `https://en.wikipedia.org/w/api.php?action=query&prop=pageimages` +
+    `&pithumbsize=500&format=json&origin=*&titles=${encodeURIComponent(title)}`
   try {
-    const res = await fetch(
-      `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`
-    )
-    if (!res.ok) { cache.set(key, null); return null }
+    const res = await fetch(url)
+    if (!res.ok) return null
     const d = await res.json()
-    const img = d.thumbnail?.source || d.originalimage?.source || null
-    cache.set(key, img)
-    return img
-  } catch {
-    cache.set(key, null)
-    return null
-  }
+    const pages = d.query?.pages
+    if (!pages) return null
+    const page = Object.values(pages)[0]
+    return page?.thumbnail?.source || null
+  } catch { return null }
 }
 
-/**
- * Returns the best available image URL for a launch, loading async fallbacks
- * as needed. Priority:
- *   1. launch.image                         (LL2 launch-specific photo)
- *   2. rocket.configuration.image_url       (LL2 rocket type photo)
- *   3. Wikipedia thumbnail                  (via rocket.configuration.wiki_url)
- *   4. launch_service_provider.image_url    (agency photo)
- *   5. launch_service_provider.logo_url     (agency logo — last resort)
- */
-export function useRocketImage(launch) {
-  const syncImg =
+// Wikipedia search — find an article by keyword then get its image
+async function wikiSearchImage(query) {
+  const url =
+    `https://en.wikipedia.org/w/api.php?action=query&generator=search` +
+    `&gsrsearch=${encodeURIComponent(query)}&gsrnamespace=0&gsrlimit=3` +
+    `&prop=pageimages&pithumbsize=500&format=json&origin=*`
+  try {
+    const res = await fetch(url)
+    if (!res.ok) return null
+    const d = await res.json()
+    const pages = d.query?.pages
+    if (!pages) return null
+    // Take the first result that has a thumbnail
+    for (const page of Object.values(pages)) {
+      if (page.thumbnail?.source) return page.thumbnail.source
+    }
+    return null
+  } catch { return null }
+}
+
+async function resolveImage(launch) {
+  // 1. LL2 fields (try both common naming conventions)
+  const ll2 =
     launch?.image ||
     launch?.rocket?.configuration?.image_url ||
+    launch?.rocket?.configuration?.image ||
     null
+  if (ll2) return ll2
 
-  const wikiUrl = launch?.rocket?.configuration?.wiki_url
+  const rocketName  = launch?.rocket?.configuration?.full_name || launch?.rocket?.configuration?.name
+  const agencyName  = launch?.launch_service_provider?.name
+  const wikiUrl     = launch?.rocket?.configuration?.wiki_url
 
-  // Check wiki cache synchronously so there's no flicker on re-renders
-  const cachedWiki = wikiUrl
-    ? (cache.has(`wiki:${wikiTitle(wikiUrl)}`) ? cache.get(`wiki:${wikiTitle(wikiUrl)}`) : undefined)
-    : null
+  // 2. Wikipedia — direct article via wiki_url (action API is more reliable than REST)
+  if (wikiUrl) {
+    const title = wikiTitleFromUrl(wikiUrl)
+    if (title) {
+      const img = await wikiActionImage(title)
+      if (img) return img
+    }
+  }
 
-  const [wikiImg, setWikiImg] = useState(cachedWiki ?? null)
+  // 3. Wikipedia — search by rocket name
+  if (rocketName) {
+    const query = agencyName ? `${rocketName} ${agencyName} rocket` : `${rocketName} rocket launch vehicle`
+    const img = await wikiSearchImage(query)
+    if (img) return img
+  }
 
-  useEffect(() => {
-    if (syncImg) return            // already have an image — no fetch needed
-    if (cachedWiki !== undefined) return  // already checked Wikipedia
-
-    let cancelled = false
-    fetchWiki(wikiUrl).then(img => {
-      if (!cancelled) setWikiImg(img)
-    })
-    return () => { cancelled = true }
-  }, [syncImg, wikiUrl, cachedWiki])
-
+  // 4. Agency image / logo
   return (
-    syncImg ||
-    wikiImg ||
     launch?.launch_service_provider?.image_url ||
     launch?.launch_service_provider?.logo_url ||
     null
   )
+}
+
+/**
+ * Returns the best available image for a launch, trying in order:
+ *   LL2 launch photo → LL2 rocket config photo → Wikipedia (direct + search) → agency logo
+ */
+export function useRocketImage(launch) {
+  const cacheKey = launch?.id
+
+  const [img, setImg] = useState(() => {
+    if (!cacheKey) return null
+    return cache.has(cacheKey) ? cache.get(cacheKey) : null
+  })
+
+  useEffect(() => {
+    if (!launch) return
+    if (cache.has(launch.id)) {
+      setImg(cache.get(launch.id))
+      return
+    }
+
+    let cancelled = false
+    resolveImage(launch).then(result => {
+      if (cancelled) return
+      cache.set(launch.id, result)
+      setImg(result)
+    })
+    return () => { cancelled = true }
+  }, [launch?.id]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  return img
 }
