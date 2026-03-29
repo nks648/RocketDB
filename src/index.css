@@ -715,7 +715,8 @@ html, body, #root {
   align-items: center;
   padding: 0 20px;
   gap: 0;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .stat-item {
@@ -750,12 +751,11 @@ html, body, #root {
 .stat-item.red .stat-value { color: var(--red); }
 
 .stats-agencies {
-  flex: 1;
+  flex-shrink: 0;
   display: flex;
   gap: 10px;
   align-items: center;
   padding-left: 20px;
-  overflow: hidden;
 }
 
 .agency-pill {
@@ -2446,6 +2446,12 @@ html, body, #root {
 /* ───── Keyboard shortcuts panel ───── */
 .shortcut-hint-wrap {
   position: relative;
+}
+
+.shortcut-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2999;
 }
 
 .shortcut-panel {

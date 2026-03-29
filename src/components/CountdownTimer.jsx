@@ -13,6 +13,7 @@ function formatDuration(ms) {
 
 // What to show when NET has passed but launch is not confirmed complete
 const PAST_LABELS = {
+  1: 'Pending Result',
   2: 'NET TBD',
   5: 'On Hold',
   6: 'In Flight',
