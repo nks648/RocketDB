@@ -50,9 +50,9 @@ export default function CinematicMode({ launch, onClose, onPlayVideo }) {
     <div className={`cinematic${isImminent ? ' cinematic-imminent' : ''}`}
       onClick={e => { if (e.target === e.currentTarget) onClose() }}>
 
-      {/* Background — blurred launch image or star field */}
-      {launch.image && (
-        <div className="cinematic-bg" style={{ backgroundImage: `url(${launch.image})` }} />
+      {/* Background — blurred launch image, fallback to rocket config image */}
+      {(launch.image || launch.rocket?.configuration?.image_url) && (
+        <div className="cinematic-bg" style={{ backgroundImage: `url(${launch.image || launch.rocket.configuration.image_url})` }} />
       )}
       <div className="cinematic-vignette" />
 

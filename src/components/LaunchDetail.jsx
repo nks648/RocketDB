@@ -176,9 +176,9 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo, onCinematic
         </svg>
       </button>
 
-      {/* Image */}
-      {launch.image
-        ? <img src={launch.image} alt="" className="launch-detail-img" />
+      {/* Image — fallback to rocket config image if launch has no specific photo */}
+      {(launch.image || launch.rocket?.configuration?.image_url)
+        ? <img src={launch.image || launch.rocket.configuration.image_url} alt="" className="launch-detail-img" />
         : <div className="launch-detail-img-placeholder">🚀</div>
       }
 
