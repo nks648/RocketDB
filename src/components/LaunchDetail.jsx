@@ -169,6 +169,13 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo, onCinematic
 
   return (
     <div className="launch-detail">
+      {/* Close button — overlays top-right of entire panel */}
+      <button className="launch-detail-close" onClick={onClose} aria-label="Close">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
       {/* Image */}
       {launch.image
         ? <img src={launch.image} alt="" className="launch-detail-img" />
@@ -255,76 +262,71 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo, onCinematic
 
       {/* Right side */}
       <div className="launch-detail-side">
-        {/* Close always pinned top-right */}
-        <button className="btn-close detail-close-top" onClick={onClose} aria-label="Close">✕</button>
-
-        <div style={{ display:'flex', flexDirection:'column', gap:8, alignItems:'flex-end' }}>
-          {isPending && (
-            <div style={{ textAlign:'right' }}>
-              <div className="countdown-large" style={{ fontSize:18, color:'var(--orange)', letterSpacing:1 }}>
-                Pending Result
-              </div>
-              <div className="countdown-label" style={{ color:'var(--orange)', opacity:0.7 }}>
-                Awaiting confirmation
-              </div>
+        {isPending && (
+          <div style={{ textAlign:'right' }}>
+            <div className="countdown-large" style={{ fontSize:18, color:'var(--orange)', letterSpacing:1 }}>
+              Pending Result
             </div>
-          )}
-          {!isPast && !isPending && (
-            <>
-              <CountdownTimer netTime={launch.net} status={launch.status} large />
-              <div className="countdown-label">NET Launch</div>
-            </>
-          )}
-          {isPast && (
-            <div className="countdown-large" style={{ fontSize:14 }}>
-              {new Date(launch.net).toLocaleDateString()}
+            <div className="countdown-label" style={{ color:'var(--orange)', opacity:0.7 }}>
+              Awaiting confirmation
             </div>
-          )}
-
-          {/* Stream buttons */}
-          {streams.length > 0 && (
-            <div style={{ display:'flex', flexDirection:'column', gap:4, alignItems:'flex-end' }}>
-              {streams.map((s, i) => (
-                s.ytId ? (
-                  <button
-                    key={i}
-                    className="btn-primary"
-                    onClick={() => onPlayVideo(`https://www.youtube.com/embed/${s.ytId}?autoplay=1`, s.label)}
-                  >
-                    ▶ {s.label}
-                  </button>
-                ) : (
-                  <a key={i} href={s.url} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ textDecoration:'none' }}>
-                    ↗ {s.label}
-                  </a>
-                )
-              ))}
-            </div>
-          )}
-
-          {/* Notify */}
-          {!isPast && <NotifyButton launch={launch} />}
-
-          {/* Share + Calendar */}
-          <div style={{ display:'flex', gap:6, flexWrap:'wrap', justifyContent:'flex-end' }}>
-            <ShareButton launch={launch} />
-            {!isPast && launch.net && (
-              <button className="btn-icon btn-action" onClick={() => downloadICS(launch)} title="Add to calendar (.ics)">
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
-                </svg>
-                .ics
-              </button>
-            )}
-            {!isPast && (
-              <button className="btn-icon btn-action" onClick={onCinematic} title="Cinematic mode (F)">
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/>
-                </svg>
-                Cinema
-              </button>
-            )}
           </div>
+        )}
+        {!isPast && !isPending && (
+          <>
+            <CountdownTimer netTime={launch.net} status={launch.status} large />
+            <div className="countdown-label">NET Launch</div>
+          </>
+        )}
+        {isPast && (
+          <div className="countdown-large" style={{ fontSize:14 }}>
+            {new Date(launch.net).toLocaleDateString()}
+          </div>
+        )}
+
+        {/* Stream buttons */}
+        {streams.length > 0 && (
+          <div style={{ display:'flex', flexDirection:'column', gap:4, alignItems:'flex-end' }}>
+            {streams.map((s, i) => (
+              s.ytId ? (
+                <button
+                  key={i}
+                  className="btn-primary"
+                  onClick={() => onPlayVideo(`https://www.youtube.com/embed/${s.ytId}?autoplay=1`, s.label)}
+                >
+                  ▶ {s.label}
+                </button>
+              ) : (
+                <a key={i} href={s.url} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ textDecoration:'none' }}>
+                  ↗ {s.label}
+                </a>
+              )
+            ))}
+          </div>
+        )}
+
+        {/* Notify */}
+        {!isPast && <NotifyButton launch={launch} />}
+
+        {/* Share + Calendar */}
+        <div style={{ display:'flex', gap:6, flexWrap:'wrap', justifyContent:'flex-end' }}>
+          <ShareButton launch={launch} />
+          {!isPast && launch.net && (
+            <button className="btn-icon btn-action" onClick={() => downloadICS(launch)} title="Add to calendar (.ics)">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              .ics
+            </button>
+          )}
+          {!isPast && (
+            <button className="btn-icon btn-action" onClick={onCinematic} title="Cinematic mode (F)">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/>
+              </svg>
+              Cinema
+            </button>
+          )}
         </div>
       </div>
     </div>

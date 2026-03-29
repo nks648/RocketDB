@@ -73,7 +73,8 @@ html, body, #root {
   padding: 0 20px;
   background: var(--bg-secondary);
   border-bottom: 1px solid var(--border);
-  z-index: 200;
+  position: relative;
+  z-index: 1200;
   user-select: none;
 }
 
@@ -555,12 +556,12 @@ html, body, #root {
   background: var(--bg-overlay);
   border-top: 1px solid var(--border);
   backdrop-filter: blur(12px);
-  padding: 16px 20px;
+  padding: 14px 16px 14px 16px;
   display: grid;
   grid-template-columns: auto 1fr auto;
-  gap: 20px;
+  gap: 16px;
   align-items: start;
-  max-height: 52vh;
+  max-height: 62vh;
   overflow: hidden;
   animation: slide-up 0.25s ease;
 }
@@ -570,8 +571,9 @@ html, body, #root {
   flex-direction: column;
   gap: 8px;
   overflow-y: auto;
-  max-height: calc(52vh - 32px);
-  padding-right: 4px;
+  max-height: calc(62vh - 28px);
+  padding-right: 6px;
+  scroll-padding-top: 8px;
 }
 
 @keyframes slide-up {
@@ -644,6 +646,7 @@ html, body, #root {
   flex-direction: column;
   align-items: flex-end;
   gap: 10px;
+  padding-top: 32px;
 }
 
 .countdown-large {
@@ -1142,9 +1145,24 @@ html, body, #root {
 
 /* ───── Mobile & Tablet Responsive ───── */
 
-/* Tablet: tighten sidebar width */
+/* Tablet: adjust sidebar width for different sizes */
+@media (max-width: 1280px) {
+  :root { --sidebar-w: 320px; }
+}
+
 @media (max-width: 1024px) {
-  :root { --sidebar-w: 300px; }
+  :root { --sidebar-w: 270px; }
+  .header-status { font-size: 10px; }
+}
+
+@media (max-width: 900px) {
+  :root { --sidebar-w: 230px; --stats-h: 44px; }
+  .header-status { display: none; }
+  .stat-value { font-size: 15px; }
+  .stat-label { font-size: 9px; }
+  /* Hide charts and agencies on small tablets to avoid clutter */
+  .stats-agencies { display: none; }
+  .stats-chart { display: none; }
 }
 
 /* Mobile: map fills screen, sidebar is a bottom sheet */
@@ -1168,7 +1186,7 @@ html, body, #root {
     position: fixed;
     top: 0; left: 0; right: 0;
     height: var(--header-h);
-    z-index: 1100;
+    z-index: 1200;
     padding: 0 14px;
     gap: 8px;
   }
@@ -2183,16 +2201,29 @@ html, body, #root {
 [data-theme="light"] .popup-name     { color: var(--text-primary); }
 [data-theme="light"] .popup-vehicle  { color: #0077aa; }
 
-/* ───── Detail panel: close pinned top-right ───── */
-.launch-detail-side {
-  position: relative;
-}
-
-.detail-close-top {
+/* ───── Detail panel: close button ───── */
+.launch-detail-close {
   position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 10;
+  top: 10px;
+  right: 10px;
+  z-index: 20;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border-bright);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+.launch-detail-close:hover {
+  border-color: var(--red);
+  color: var(--red);
+  background: var(--red-dim);
 }
 
 /* ───── Sidebar Filters (agency + favorites) ───── */
@@ -2420,9 +2451,9 @@ html, body, #root {
 /* ───── Mobile: show expanded banner above stats bar ───── */
 @media (max-width: 768px) {
   .mobile-launch-banner.mlb-expanded {
-    bottom: 30px; /* above the mobile stats bar */
     overflow-y: auto;
-    max-height: calc(100dvh - var(--header-h) - 30px);
+    max-height: calc(100dvh - var(--header-h) - 16px);
+    -webkit-overflow-scrolling: touch;
   }
   /* Shift zoom control above stats + sheet peek */
   .leaflet-control-zoom {
@@ -2457,7 +2488,7 @@ html, body, #root {
 .shortcut-panel {
   /* Fixed so it escapes the app's overflow:hidden grid */
   position: fixed;
-  top: var(--header-h);
+  top: calc(var(--header-h) + 4px);
   right: 16px;
   z-index: 3000;
   background: var(--bg-card);
