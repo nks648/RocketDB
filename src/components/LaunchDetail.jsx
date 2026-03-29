@@ -161,6 +161,11 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo, onCinematic
 
   const hasBooster = launch.rocket?.launcher_stage?.length > 0
   const hasOrbit   = !!(launch.mission?.orbit?.abbrev || launch.mission?.orbit?.name)
+  // Past NET but result not yet confirmed (e.g. GO-for-launch that's now in flight / awaiting confirmation)
+  const SCRUB_STATUSES = new Set([2, 5, 8])
+  const FINAL_STATUSES = new Set([3, 4, 7])
+  const netMs     = launch.net ? new Date(launch.net).getTime() : null
+  const isPending = !isPast && netMs && netMs < Date.now() && !SCRUB_STATUSES.has(launch.status?.id) && !FINAL_STATUSES.has(launch.status?.id)
 
   return (
     <div className="launch-detail">
@@ -250,8 +255,21 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo, onCinematic
 
       {/* Right side */}
       <div className="launch-detail-side">
+        {/* Close always pinned top-right */}
+        <button className="btn-close detail-close-top" onClick={onClose} aria-label="Close">✕</button>
+
         <div style={{ display:'flex', flexDirection:'column', gap:8, alignItems:'flex-end' }}>
-          {!isPast && (
+          {isPending && (
+            <div style={{ textAlign:'right' }}>
+              <div className="countdown-large" style={{ fontSize:18, color:'var(--orange)', letterSpacing:1 }}>
+                Pending Result
+              </div>
+              <div className="countdown-label" style={{ color:'var(--orange)', opacity:0.7 }}>
+                Awaiting confirmation
+              </div>
+            </div>
+          )}
+          {!isPast && !isPending && (
             <>
               <CountdownTimer netTime={launch.net} status={launch.status} large />
               <div className="countdown-label">NET Launch</div>
@@ -308,8 +326,6 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo, onCinematic
             )}
           </div>
         </div>
-
-        <button className="btn-close" onClick={onClose} style={{ alignSelf:'flex-start' }}>✕</button>
       </div>
     </div>
   )

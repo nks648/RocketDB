@@ -1,8 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import SpaceWeatherBadge from './SpaceWeatherBadge'
 
 export default function Header({ lastUpdated, loading, onRefetch, theme, onToggleTheme, online }) {
   const [showShortcuts, setShowShortcuts] = useState(false)
+  const shortcutRef = useRef(null)
+
+  // Close shortcut panel on outside click
+  useEffect(() => {
+    if (!showShortcuts) return
+    function handleOutside(e) {
+      if (!shortcutRef.current?.contains(e.target)) setShowShortcuts(false)
+    }
+    document.addEventListener('mousedown', handleOutside)
+    return () => document.removeEventListener('mousedown', handleOutside)
+  }, [showShortcuts])
 
   const timeStr = lastUpdated
     ? lastUpdated.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })
@@ -44,7 +55,7 @@ export default function Header({ lastUpdated, loading, onRefetch, theme, onToggl
 
       <div className="header-right">
         {/* Keyboard shortcuts hint */}
-        <div className="shortcut-hint-wrap">
+        <div className="shortcut-hint-wrap" ref={shortcutRef}>
           <button
             className="btn-icon"
             onClick={() => setShowShortcuts(v => !v)}
