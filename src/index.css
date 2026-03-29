@@ -2316,7 +2316,9 @@ html, body, #root {
   background: rgba(187, 134, 252, 0.06);
   border: 1px solid rgba(187, 134, 252, 0.2);
   border-radius: var(--radius);
-  min-width: 120px;
+  min-width: 100px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .booster-serial {
@@ -2341,7 +2343,6 @@ html, body, #root {
   background: var(--bg-card);
   border: 1px solid var(--border);
   color: var(--text-secondary);
-  white-space: nowrap;
 }
 .booster-chip.reused  { background: rgba(0,230,118,0.08); border-color: var(--green); color: var(--green); }
 .booster-chip.landed  { background: rgba(0,200,240,0.08); border-color: var(--accent); color: var(--accent); }

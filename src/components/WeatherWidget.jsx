@@ -37,9 +37,8 @@ export default function WeatherWidget({ lat, lng, compact = false }) {
 
   return (
     <div className="weather-widget">
-      {/* Header */}
+      {/* Status badge only — title is shown by the parent collapsible */}
       <div className="weather-header">
-        <div className="weather-title">🌤 Pad Weather</div>
         <div
           className="weather-gng"
           style={{ background:`${statusColor}18`, border:`1px solid ${statusColor}55`, color: statusColor }}
