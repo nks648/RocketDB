@@ -72,8 +72,8 @@ export function useLaunches() {
     setError(null)
     try {
       const [upRes, prevRes] = await Promise.all([
-        fetchWithCache(`${LL2_BASE}/launch/upcoming/?format=json&limit=20&mode=detailed`),
-        fetchWithCache(`${LL2_BASE}/launch/previous/?format=json&limit=20&ordering=-net&mode=detailed`),
+        fetchWithCache(`${LL2_BASE}/launch/upcoming/?format=json&limit=50&mode=detailed`),
+        fetchWithCache(`${LL2_BASE}/launch/previous/?format=json&limit=30&ordering=-net&mode=detailed`),
       ])
 
       const upcomingResults = upRes.results || []
