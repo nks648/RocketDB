@@ -3,6 +3,7 @@ import CountdownTimer from './CountdownTimer'
 import WeatherWidget from './WeatherWidget'
 import OrbitalParams from './OrbitalParams'
 import RedditDiscussion from './RedditDiscussion'
+import LaunchDateHint from './LaunchDateHint'
 import { STATUS_MAP } from '../data/launchZones'
 import { shareLaunch, downloadICS } from '../utils/shareExport'
 
@@ -59,7 +60,7 @@ function NotifyButton({ launch }) {
   return <button className="mlb-btn mlb-notify" onClick={schedule} title="Set launch alerts">🔔</button>
 }
 
-export default function MobileLaunchBanner({ launch, onClose, onPlayVideo, onCinematic }) {
+export default function MobileLaunchBanner({ launch, onClose, onPlayVideo, onCinematic, rllMatch, override, onSetOverride, onClearOverride }) {
   const [expanded, setExpanded] = useState(false)
 
   const statusKey   = STATUS_MAP[launch.status?.id]?.key   || 'tbd'
@@ -159,6 +160,16 @@ export default function MobileLaunchBanner({ launch, onClose, onPlayVideo, onCin
                 <span className="mlb-detail-value">{windowStart}</span>
               </div>
             )}
+
+            {/* Date intelligence: RLL hint + user pin */}
+            <LaunchDateHint
+              launch={launch}
+              rllMatch={rllMatch}
+              override={override}
+              onSetOverride={(net, note) => onSetOverride?.(launch.id, net, note)}
+              onClearOverride={() => onClearOverride?.(launch.id)}
+            />
+
             {launch.status?.description && (
               <div className="mlb-detail-row">
                 <span className="mlb-detail-label">Status</span>

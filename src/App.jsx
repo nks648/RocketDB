@@ -208,6 +208,10 @@ export default function App() {
           onClose={() => setSelectedLaunch(null)}
           onPlayVideo={handlePlayVideo}
           onCinematic={() => setCinematicLaunch(selectedLaunch)}
+          rllMatch={matchRLL(selectedLaunch, rllLaunches)}
+          override={overrides[selectedLaunch.id] || null}
+          onSetOverride={setOverride}
+          onClearOverride={clearOverride}
         />
       )}
 
