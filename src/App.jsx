@@ -9,6 +9,8 @@ import VideoModal from './components/VideoModal'
 import CinematicMode from './components/CinematicMode'
 import { useLaunches } from './hooks/useLaunches'
 import { useFavorites } from './hooks/useFavorites'
+import { useRLLLaunches, matchRLL } from './hooks/useRLLLaunches'
+import { useUserDateOverrides } from './hooks/useUserDateOverrides'
 
 function useOnlineStatus() {
   const [online, setOnline] = useState(() => navigator.onLine)
@@ -25,6 +27,8 @@ function useOnlineStatus() {
 export default function App() {
   const { upcoming, previous, loading, error, lastUpdated, refetch } = useLaunches()
   const { favs, toggle: toggleFavorite } = useFavorites()
+  const rllLaunches = useRLLLaunches()
+  const { overrides, set: setOverride, clear: clearOverride } = useUserDateOverrides()
   const [selectedLaunch, setSelectedLaunch] = useState(null)
   const [videoState, setVideoState]         = useState(null)
   const [activeTab, setActiveTab]           = useState('upcoming')
@@ -189,6 +193,10 @@ export default function App() {
             onClose={() => setSelectedLaunch(null)}
             onPlayVideo={handlePlayVideo}
             onCinematic={() => setCinematicLaunch(selectedLaunch)}
+            rllMatch={matchRLL(selectedLaunch, rllLaunches)}
+            override={overrides[selectedLaunch.id] || null}
+            onSetOverride={setOverride}
+            onClearOverride={clearOverride}
           />
         )}
       </div>

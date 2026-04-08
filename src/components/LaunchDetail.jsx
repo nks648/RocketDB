@@ -3,6 +3,7 @@ import CountdownTimer from './CountdownTimer'
 import WeatherWidget from './WeatherWidget'
 import OrbitalParams from './OrbitalParams'
 import RedditDiscussion from './RedditDiscussion'
+import LaunchDateHint from './LaunchDateHint'
 import { STATUS_MAP } from '../data/launchZones'
 import { useSunriseSunset } from '../hooks/useSunriseSunset'
 import { useRocketImage } from '../hooks/useRocketImage'
@@ -126,7 +127,7 @@ function ShareButton({ launch }) {
   )
 }
 
-export default function LaunchDetail({ launch, onClose, onPlayVideo, onCinematic }) {
+export default function LaunchDetail({ launch, onClose, onPlayVideo, onCinematic, rllMatch, override, onSetOverride, onClearOverride }) {
   const [descExpanded, setDescExpanded] = useState(false)
   const imgSrc = useRocketImage(launch)
   if (!launch) return null
@@ -221,6 +222,15 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo, onCinematic
             Window: {windowStart}{windowEnd ? ` → ${windowEnd}` : ''}
           </div>
         )}
+
+        {/* Supplementary date intelligence */}
+        <LaunchDateHint
+          launch={launch}
+          rllMatch={rllMatch}
+          override={override}
+          onSetOverride={(net, note) => onSetOverride?.(launch.id, net, note)}
+          onClearOverride={() => onClearOverride?.(launch.id)}
+        />
 
         {/* Hold / failure reasons */}
         {launch.holdreason && (
