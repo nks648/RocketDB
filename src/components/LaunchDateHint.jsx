@@ -10,7 +10,10 @@ export default function LaunchDateHint({ launch, rllMatch, override, onSetOverri
   const [inputVal, setInputVal] = useState('')
   const [inputNote, setInputNote] = useState('')
 
-  const isTBC = [2, 5, 8].includes(launch?.status?.id)
+  // TBD (2), Hold (5), TBC (8) — also treat "Go" (1) launches as eligible
+  // so users can always pin a community-sourced date for any future launch
+  const isTBC = [1, 2, 5, 8].includes(launch?.status?.id)
+  const isPast = [3, 4, 6, 7].includes(launch?.status?.id)
   const hasNoConfirmedNet = !launch?.net || isTBC
 
   // Format RLL window
@@ -40,6 +43,7 @@ export default function LaunchDateHint({ launch, rllMatch, override, onSetOverri
     setEditing(true)
   }
 
+  if (isPast) return null
   if (!rllDate && !override && !isTBC) return null
 
   return (

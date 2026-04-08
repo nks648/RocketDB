@@ -77,8 +77,8 @@ export function matchRLL(ll2Launch, rllLaunches) {
   // Only return if we're reasonably confident (score ≥ 2)
   if (bestScore < 2) return null
 
-  // Only useful if RLL has a specific window
-  if (!best?.win_open) return null
+  // Only useful if RLL has some date info (window or date string)
+  if (!best?.win_open && !best?.date_str) return null
 
   return best
 }
