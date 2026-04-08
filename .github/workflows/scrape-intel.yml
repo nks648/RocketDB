@@ -1,0 +1,44 @@
+name: Scrape Launch Intel
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # every 6 hours (00:00, 06:00, 12:00, 18:00 UTC)
+  workflow_dispatch:          # manual trigger from Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: claude/rocket-launch-dashboard-8cJtz
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run scraper
+        run: node scripts/scrape-intel.js
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name  "RocketDB Intel Bot"
+          git config user.email "actions@github.com"
+          git add public/launch-intel.json
+          if git diff --staged --quiet; then
+            echo "No changes to launch-intel.json — skipping commit"
+          else
+            git commit -m "scrape: update launch intel $(date -u '+%Y-%m-%dT%H:%M:%SZ')"
+            git push origin claude/rocket-launch-dashboard-8cJtz
+          fi

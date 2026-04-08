@@ -60,7 +60,7 @@ function NotifyButton({ launch }) {
   return <button className="mlb-btn mlb-notify" onClick={schedule} title="Set launch alerts">🔔</button>
 }
 
-export default function MobileLaunchBanner({ launch, onClose, onPlayVideo, onCinematic, rllMatch, override, onSetOverride, onClearOverride }) {
+export default function MobileLaunchBanner({ launch, onClose, onPlayVideo, onCinematic, rllMatch, intelMatch, override, onSetOverride, onClearOverride }) {
   const [expanded, setExpanded] = useState(false)
 
   const statusKey   = STATUS_MAP[launch.status?.id]?.key   || 'tbd'
@@ -161,10 +161,11 @@ export default function MobileLaunchBanner({ launch, onClose, onPlayVideo, onCin
               </div>
             )}
 
-            {/* Date intelligence: RLL hint + user pin */}
+            {/* Date intelligence: RLL + intel + user pin */}
             <LaunchDateHint
               launch={launch}
               rllMatch={rllMatch}
+              intelMatch={intelMatch}
               override={override}
               onSetOverride={(net, note) => onSetOverride?.(launch.id, net, note)}
               onClearOverride={() => onClearOverride?.(launch.id)}

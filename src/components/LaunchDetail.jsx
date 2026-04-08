@@ -127,7 +127,7 @@ function ShareButton({ launch }) {
   )
 }
 
-export default function LaunchDetail({ launch, onClose, onPlayVideo, onCinematic, rllMatch, override, onSetOverride, onClearOverride }) {
+export default function LaunchDetail({ launch, onClose, onPlayVideo, onCinematic, rllMatch, intelMatch, override, onSetOverride, onClearOverride }) {
   const [descExpanded, setDescExpanded] = useState(false)
   const imgSrc = useRocketImage(launch)
   if (!launch) return null
@@ -227,6 +227,7 @@ export default function LaunchDetail({ launch, onClose, onPlayVideo, onCinematic
         <LaunchDateHint
           launch={launch}
           rllMatch={rllMatch}
+          intelMatch={intelMatch}
           override={override}
           onSetOverride={(net, note) => onSetOverride?.(launch.id, net, note)}
           onClearOverride={() => onClearOverride?.(launch.id)}

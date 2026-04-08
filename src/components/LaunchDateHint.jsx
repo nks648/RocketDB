@@ -5,7 +5,7 @@ import React, { useState } from 'react'
  *   - RocketLaunch.Live window (if API has a date LL2 doesn't)
  *   - User-pinned custom date/time
  */
-export default function LaunchDateHint({ launch, rllMatch, override, onSetOverride, onClearOverride }) {
+export default function LaunchDateHint({ launch, rllMatch, intelMatch, override, onSetOverride, onClearOverride }) {
   const [editing, setEditing] = useState(false)
   const [inputVal, setInputVal] = useState('')
   const [inputNote, setInputNote] = useState('')
@@ -37,14 +37,19 @@ export default function LaunchDateHint({ launch, rllMatch, override, onSetOverri
 
   function startEdit() {
     // Pre-fill with existing override or RLL date
-    const prefill = override?.net || rllMatch?.win_open || ''
+    const prefill = override?.net || rllMatch?.win_open || intelMatch?.net || ''
     setInputVal(prefill ? new Date(prefill).toISOString().slice(0, 16) : '')
     setInputNote(override?.note || '')
     setEditing(true)
   }
 
+  // Intel (SpaceFlightNow / Wikipedia)
+  const intelDate = intelMatch?.net
+    ? new Date(intelMatch.net).toLocaleString([], { month:'short', day:'numeric', hour:'2-digit', minute:'2-digit', timeZoneName:'short' })
+    : intelMatch?.window || null
+
   if (isPast) return null
-  if (!rllDate && !override && !isTBC) return null
+  if (!rllDate && !intelDate && !override && !isTBC) return null
 
   return (
     <div className="date-hint-wrap">
@@ -59,6 +64,22 @@ export default function LaunchDateHint({ launch, rllMatch, override, onSetOverri
               {rllDate}{rllClose ? ` – ${rllClose}` : ''}
             </span>
             <span className="date-hint-note">Unconfirmed — not in LL2 API yet</span>
+          </div>
+        </div>
+      )}
+
+      {/* Intel (SpaceFlightNow / Wikipedia) */}
+      {intelDate && !rllDate && !override && (
+        <div className="date-hint intel">
+          <span className="date-hint-icon">🗞</span>
+          <div className="date-hint-body">
+            <span className="date-hint-source">{intelMatch.source}</span>
+            <span className="date-hint-value">{intelDate}</span>
+            <span className="date-hint-note">
+              {intelMatch.confidence === 'high'
+                ? 'Curated source — may not be in the API yet'
+                : 'Community tracking — treat as approximate'}
+            </span>
           </div>
         </div>
       )}

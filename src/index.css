@@ -1196,8 +1196,14 @@ html, body, #root {
   color: var(--text-primary);
 }
 
-.date-hint.rll  .date-hint-value { color: var(--accent); }
-.date-hint.user .date-hint-value { color: var(--yellow); }
+.date-hint.rll   .date-hint-value { color: var(--accent); }
+.date-hint.user  .date-hint-value { color: var(--yellow); }
+.date-hint.intel .date-hint-value { color: var(--purple); }
+
+.date-hint.intel {
+  border-color: rgba(187,134,252,0.25);
+  background: rgba(187,134,252,0.05);
+}
 
 .date-hint-note {
   font-size: 10px;

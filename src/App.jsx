@@ -11,6 +11,7 @@ import { useLaunches } from './hooks/useLaunches'
 import { useFavorites } from './hooks/useFavorites'
 import { useRLLLaunches, matchRLL } from './hooks/useRLLLaunches'
 import { useUserDateOverrides } from './hooks/useUserDateOverrides'
+import { useLaunchIntel, matchIntel } from './hooks/useLaunchIntel'
 
 function useOnlineStatus() {
   const [online, setOnline] = useState(() => navigator.onLine)
@@ -27,7 +28,8 @@ function useOnlineStatus() {
 export default function App() {
   const { upcoming, previous, loading, error, lastUpdated, refetch } = useLaunches()
   const { favs, toggle: toggleFavorite } = useFavorites()
-  const rllLaunches = useRLLLaunches()
+  const rllLaunches  = useRLLLaunches()
+  const intelLaunches = useLaunchIntel()
   const { overrides, set: setOverride, clear: clearOverride } = useUserDateOverrides()
   const [selectedLaunch, setSelectedLaunch] = useState(null)
   const [videoState, setVideoState]         = useState(null)
@@ -194,6 +196,7 @@ export default function App() {
             onPlayVideo={handlePlayVideo}
             onCinematic={() => setCinematicLaunch(selectedLaunch)}
             rllMatch={matchRLL(selectedLaunch, rllLaunches)}
+            intelMatch={matchIntel(selectedLaunch, intelLaunches)}
             override={overrides[selectedLaunch.id] || null}
             onSetOverride={setOverride}
             onClearOverride={clearOverride}
@@ -209,6 +212,7 @@ export default function App() {
           onPlayVideo={handlePlayVideo}
           onCinematic={() => setCinematicLaunch(selectedLaunch)}
           rllMatch={matchRLL(selectedLaunch, rllLaunches)}
+          intelMatch={matchIntel(selectedLaunch, intelLaunches)}
           override={overrides[selectedLaunch.id] || null}
           onSetOverride={setOverride}
           onClearOverride={clearOverride}
