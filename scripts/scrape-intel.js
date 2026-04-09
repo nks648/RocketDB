@@ -17,16 +17,17 @@ const __dir = dirname(fileURLToPath(import.meta.url))
 const OUT   = join(__dir, '../public/launch-intel.json')
 const YEAR  = new Date().getUTCFullYear()
 
-const UA = 'RocketDB-Intel/1.0 (nks648.github.io/RocketDB; educational, low-frequency)'
+const UA = 'Mozilla/5.0 (compatible; RocketDB-Intel/1.0; +https://nks648.github.io/RocketDB)'
 
 // ─────────────────────────────────────────────────────────────────────────────
-// HTTP helper
+// HTTP helpers
 // ─────────────────────────────────────────────────────────────────────────────
 async function get(url, json = false) {
   const r = await fetch(url, {
     headers: {
       'User-Agent': UA,
       'Accept': json ? 'application/json' : 'text/html,application/xhtml+xml,*/*',
+      'Accept-Language': 'en-US,en;q=0.9',
     },
     signal: AbortSignal.timeout(25_000),
   })
@@ -38,50 +39,59 @@ async function get(url, json = false) {
 // Date / time helpers
 // ─────────────────────────────────────────────────────────────────────────────
 const MONTHS = {
-  january:0, february:1, march:2, april:3, may:4, june:5,
-  july:6, august:7, september:8, october:9, november:10, december:11,
-  jan:0, feb:1, mar:2, apr:3, jun:5, jul:6, aug:7, sep:8, oct:9, nov:10, dec:11,
+  january:0,  february:1, march:2,    april:3,
+  may:4,      june:5,     july:6,     august:7,
+  september:8,october:9,  november:10,december:11,
+  jan:0, feb:1, mar:2, apr:3, jun:5, jul:6,
+  aug:7, sep:8, oct:9, nov:10, dec:11,
 }
 
 const TZ_OFFSET = {
   UTC:0, GMT:0, Z:0,
   EDT:-4, EST:-5, CDT:-5, CST:-6,
   MDT:-6, MST:-7, PDT:-7, PST:-8,
-  CEST:2, CET:1, BST:1, IST:5.5,
+  CEST:2, CET:1, BST:1,
 }
 
-/** "April 9" → Date (UTC midnight) — handles year roll-over */
+/** "April 9" or "9 April" or "April 9, 2025" → Date UTC midnight */
 function parseDateStr(str) {
-  const m = str.match(/([A-Za-z]+)\s+(\d{1,2})/)
+  if (!str) return null
+  const s = str.trim().replace(/,?\s*\d{4}/, '') // strip year
+  // "April 9" or "Apr 9"
+  let m = s.match(/([A-Za-z]+)\s+(\d{1,2})/)
+  if (!m) {
+    // "9 April"
+    m = s.match(/(\d{1,2})\s+([A-Za-z]+)/)
+    if (m) m = [m[0], m[2], m[1]] // reorder to [full, month, day]
+  }
   if (!m) return null
   const month = MONTHS[m[1].toLowerCase()]
   if (month === undefined) return null
   const day = parseInt(m[2], 10)
   const now = new Date()
-  // If parsed month is ≥2 months in the past → must be next year
-  const year = (month < now.getUTCMonth() - 1) ? YEAR + 1 : YEAR
+  const year = (month < now.getUTCMonth() - 2) ? YEAR + 1 : YEAR
   return new Date(Date.UTC(year, month, day))
 }
 
-/** Extract best UTC ISO from a SFN-style time string + a base date */
+/** Extract UTC ISO from a time string + a base Date */
 function resolveUTC(baseDate, timeStr) {
-  if (!baseDate || !timeStr) return null
+  if (!baseDate) return null
+  if (!timeStr) return baseDate.toISOString()
   const ts = timeStr.replace(/\u00a0/g, ' ')
 
-  // Prefer explicit UTC/GMT in parentheses: "(2000 UTC)" or "(2000 GMT)"
+  // Prefer "(2000 UTC)" or "(2000 GMT)" in parentheses
   const utcParen = ts.match(/\(\s*(\d{4})\s*(GMT|UTC)\s*\)/)
   if (utcParen) {
     const h = parseInt(utcParen[1].slice(0, 2), 10)
     const mn = parseInt(utcParen[1].slice(2), 10)
-    const d = new Date(baseDate)
-    d.setUTCHours(h, mn, 0, 0)
+    const d = new Date(baseDate); d.setUTCHours(h, mn, 0, 0)
     return d.toISOString()
   }
 
-  // Try local time "8:00 p.m. EDT" or "8 p.m. EDT"
+  // "8:00 p.m. EDT" or "8 p.m. EDT"
   const local = ts.match(/(\d{1,2})(?::(\d{2}))?\s*(a\.?m\.?|p\.?m\.?)\s+([A-Z]{2,5})/i)
   if (local) {
-    let h  = parseInt(local[1], 10)
+    let h = parseInt(local[1], 10)
     const mn = parseInt(local[2] || '0', 10)
     const ap = local[3].replace(/\./g, '').toLowerCase()
     const tz = local[4].toUpperCase()
@@ -90,23 +100,20 @@ function resolveUTC(baseDate, timeStr) {
     const offset = TZ_OFFSET[tz] ?? 0
     const utcH = h - offset
     const d = new Date(baseDate)
-    // Adjust day if UTC hour overflows
     d.setUTCDate(d.getUTCDate() + Math.floor(utcH / 24))
     d.setUTCHours(((utcH % 24) + 24) % 24, mn, 0, 0)
     return d.toISOString()
   }
 
-  // Time as "HHMM UTC" standalone
+  // "2000 UTC" standalone
   const bare = ts.match(/(\d{4})\s*(UTC|GMT)/)
   if (bare) {
     const h = parseInt(bare[1].slice(0, 2), 10)
     const mn = parseInt(bare[1].slice(2), 10)
-    const d = new Date(baseDate)
-    d.setUTCHours(h, mn, 0, 0)
+    const d = new Date(baseDate); d.setUTCHours(h, mn, 0, 0)
     return d.toISOString()
   }
 
-  // Just return midnight UTC for the date
   return baseDate.toISOString()
 }
 
@@ -116,148 +123,203 @@ function resolveUTC(baseDate, timeStr) {
 async function scrapeSpaceFlightNow() {
   const html = await get('https://spaceflightnow.com/launch-schedule/')
   const root = parseHTML(html)
+
+  // ── Debug: log top-level class names so we can see the actual structure ──
+  const allClasses = new Set()
+  root.querySelectorAll('[class]').forEach(el => {
+    String(el.classNames || el.getAttribute?.('class') || '').split(/\s+/).forEach(c => { if (c) allClasses.add(c) })
+  })
+  console.log('  SFN classes found:', [...allClasses].slice(0, 40).join(', '))
+
   const launches = []
 
-  // SFN page structure:
-  //   <div class="datename">…date text…</div>
-  //   <div class="missionname"><h5>Rocket / Mission</h5></div>
-  //   <div class="missiondata">…time, site, vehicle…</div>
-  // Blocks repeat for each launch.
+  // ── Strategy A: look for .datename blocks (original approach) ──
+  const dateBlocks = root.querySelectorAll('.datename')
+  console.log(`  SFN strategy A (.datename): ${dateBlocks.length} blocks`)
 
-  const dateBlocks = root.querySelectorAll('.datename, [class*="datename"]')
-  console.log(`  SFN: found ${dateBlocks.length} date blocks`)
+  if (dateBlocks.length > 0) {
+    for (const dateBlock of dateBlocks) {
+      const rawDate = dateBlock.text.trim().replace(/\s+/g, ' ')
+      const baseDate = parseDateStr(rawDate)
+      if (!baseDate) continue
 
-  for (const dateBlock of dateBlocks) {
-    const rawDate = dateBlock.text.trim().replace(/\s+/g, ' ')
-    if (!rawDate || /no launch|tbd/i.test(rawDate)) continue
-    const baseDate = parseDateStr(rawDate)
+      let node = dateBlock.nextElementSibling
+      let missionName = '', timeStr = '', site = ''
+      let limit = 8
+      while (node && limit-- > 0) {
+        const cls = String(node.classNames || '')
+        if (cls.includes('datename')) break
+        if (cls.includes('missionname') || cls.includes('mission')) {
+          missionName = (node.querySelector('a') || node).text.trim()
+        }
+        if (cls.includes('missiondata') || cls.includes('data')) {
+          const txt = node.text.replace(/\s+/g, ' ')
+          const tM = txt.match(/(?:time|window|liftoff)[:\s]+([^\n|,]{5,40})/i)
+          const sM = txt.match(/(?:site|pad)[:\s]+([^\n|]{5,80})/i)
+          if (tM) timeStr = tM[1].trim()
+          if (sM) site    = sM[1].trim()
+        }
+        node = node.nextElementSibling
+      }
+      if (!missionName) continue
+      const slash = missionName.indexOf('/')
+      const rocket  = (slash > -1 ? missionName.slice(0, slash) : missionName).trim()
+      const mission = (slash > -1 ? missionName.slice(slash + 1) : missionName).trim()
+      launches.push({
+        rocket, mission, provider:'', site,
+        net: resolveUTC(baseDate, timeStr),
+        window: timeStr || rawDate,
+        source: 'SpaceFlightNow',
+        sourceUrl: 'https://spaceflightnow.com/launch-schedule/',
+        confidence: timeStr ? 'high' : 'low',
+      })
+    }
+    if (launches.length > 0) return launches
+  }
+
+  // ── Strategy B: look for <h5> tags containing month names ──
+  console.log('  SFN strategy B (h5 date scan)...')
+  const h5s = root.querySelectorAll('h5, h4, h3')
+  const monthRe = /\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s+\d{1,2}/i
+  for (const h of h5s) {
+    const txt = h.text.trim()
+    if (!monthRe.test(txt)) continue
+    const baseDate = parseDateStr(txt)
     if (!baseDate) continue
 
-    // Walk forward to find the next .missionname and .missiondata siblings
-    let node = dateBlock.nextElementSibling
-    let missionName = ''
-    let timeStr     = ''
-    let site        = ''
-    let vehicle     = ''
-    let safetyLimit = 0
-
-    while (node && safetyLimit++ < 8) {
-      const cls = (node.classNames || '').toString()
-
-      if (cls.includes('datename')) break           // next launch block
-
-      if (cls.includes('missionname') || cls.includes('mission-name')) {
-        missionName = (node.querySelector('a') || node).text.trim()
+    // Look at next siblings for mission info
+    let sib = h.nextElementSibling
+    let missionText = '', limit = 6
+    while (sib && limit-- > 0) {
+      const sibTxt = sib.text.trim()
+      if (monthRe.test(sibTxt)) break
+      if (sibTxt.length > 3 && sibTxt.length < 120) {
+        missionText = sibTxt; break
       }
-
-      if (cls.includes('missiondata') || cls.includes('mission-data') || cls.includes('missionDetails')) {
-        const txt = node.text.replace(/\s+/g, ' ')
-        const timeM = txt.match(/[Ll]aunch\s+time[:\s]+([^|,\n]{5,40})/i)
-          || txt.match(/[Ww]indow[:\s]+([^|,\n]{5,40})/i)
-          || txt.match(/[Ll]iftoff[:\s]+([^|,\n]{5,40})/i)
-        const siteM  = txt.match(/[Ll]aunch\s+site[:\s]+([^\n|]{5,80})/i)
-          || txt.match(/[Ss]ite[:\s]+([^\n|]{5,80})/i)
-        const vehM   = txt.match(/[Vv]ehicle[:\s]+([^\n|]{3,50})/i)
-          || txt.match(/[Rr]ocket[:\s]+([^\n|]{3,50})/i)
-        timeStr = timeM?.[1]?.trim() || ''
-        site    = siteM?.[1]?.trim() || ''
-        vehicle = vehM?.[1]?.trim()  || ''
-      }
-
-      node = node.nextElementSibling
+      sib = sib.nextElementSibling
     }
-
-    if (!missionName) continue
-
-    // "Spectrum / Onward and Upward" → rocket=Spectrum, mission=Onward and Upward
-    const slash = missionName.indexOf('/')
-    let rocket  = (slash > -1 ? missionName.slice(0, slash) : missionName).trim()
-    let mission = (slash > -1 ? missionName.slice(slash + 1) : missionName).trim()
-    if (vehicle && !rocket) rocket = vehicle
-
-    const net = resolveUTC(baseDate, timeStr)
-
+    if (!missionText) continue
+    const slash = missionText.indexOf('/')
+    const rocket  = (slash > -1 ? missionText.slice(0, slash) : missionText).trim()
+    const mission = (slash > -1 ? missionText.slice(slash + 1) : missionText).trim()
     launches.push({
-      rocket,
-      mission,
-      provider: '',
-      site,
-      net,
-      window: timeStr || rawDate,
+      rocket, mission, provider:'', site:'',
+      net: baseDate.toISOString(), window: txt,
       source: 'SpaceFlightNow',
       sourceUrl: 'https://spaceflightnow.com/launch-schedule/',
-      confidence: timeStr && net ? 'high' : 'low',
+      confidence: 'low',
     })
+  }
+  console.log(`  SFN strategy B: ${launches.length} launches`)
+
+  // ── Strategy C: plain text scan ──
+  if (launches.length === 0) {
+    console.log('  SFN strategy C (text scan)...')
+    const bodyText = root.querySelector('article, .entry-content, main, body')?.text || root.text
+    // Find blocks: "Month Day" then next line with rocket name
+    const blockRe = /\b(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(\d{1,2})\b([^]*?)(?=\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2}\b|$)/gi
+    let bm
+    while ((bm = blockRe.exec(bodyText)) !== null && launches.length < 50) {
+      const dateStr = `${bm[1]} ${bm[2]}`
+      const baseDate = parseDateStr(dateStr)
+      if (!baseDate) continue
+      const block = bm[3].trim().slice(0, 300)
+      // Try to extract rocket name — look for known patterns
+      const vehM = block.match(/(?:vehicle|rocket)[:\s]+([A-Za-z0-9 \-]+)/i)
+        || block.match(/^([A-Z][A-Za-z0-9 \-]{2,30})\s*[\/|]/)
+      if (!vehM) continue
+      const rocket = vehM[1].trim()
+      const timeM = block.match(/\d{4}\s*(?:UTC|GMT)/i) || block.match(/\d{1,2}(?::\d{2})?\s*[ap]\.?m\.?\s+[A-Z]{2,4}/i)
+      const timeStr = timeM?.[0] || ''
+      launches.push({
+        rocket, mission: rocket, provider:'', site:'',
+        net: resolveUTC(baseDate, timeStr),
+        window: timeStr || dateStr,
+        source: 'SpaceFlightNow',
+        sourceUrl: 'https://spaceflightnow.com/launch-schedule/',
+        confidence: 'low',
+      })
+    }
+    console.log(`  SFN strategy C: ${launches.length} launches`)
   }
 
   return launches
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Source 2 — Wikipedia "List of orbital launches of YEAR"
+// Source 2 — Wikipedia orbital launches list (HTML table parsing)
 // ─────────────────────────────────────────────────────────────────────────────
 async function scrapeWikipedia() {
+  // Use the HTML version of the article — far more reliable than raw wikitext
   const url =
     `https://en.wikipedia.org/w/api.php` +
     `?action=parse&page=List_of_orbital_launches_of_${YEAR}` +
-    `&prop=wikitext&formatversion=2&format=json`
+    `&prop=text&formatversion=2&format=json&disableeditsection=1`
 
   const data = await get(url, true)
-  const wikitext = data?.parse?.wikitext
-  if (!wikitext) throw new Error('No wikitext returned')
+  const articleHtml = data?.parse?.text
+  if (!articleHtml) throw new Error('No article HTML returned')
 
+  const root = parseHTML(articleHtml)
   const launches = []
 
-  // Rows look like:
-  // | {{dts|2025|4|9}} || Spectrum || Onward and Upward || Andøya || ISAR || ...
-  // or
-  // | {{date|2025|April|9|...}} || ...
-  const rowRe = /\|\s*\{\{(?:dts|date)\|(\d{4})\|(\w+)\|(\d{1,2})[^}]*\}\}\s*\|\|([^\n]+)/g
-  let m
-  while ((m = rowRe.exec(wikitext)) !== null) {
-    const [, yr, mon, day, rest] = m
-    const monthNum = MONTHS[mon.toLowerCase()] ?? (parseInt(mon, 10) - 1)
-    if (monthNum === undefined || isNaN(monthNum)) continue
+  // Wikipedia orbital launch tables have structure:
+  // <table class="wikitable">
+  //   <tr> <th>Date</th> <th>Rocket</th> <th>Payload</th> ... </tr>
+  //   <tr> <td>9 April</td> <td>Spectrum</td> <td>Onward and Upward</td> ... </tr>
+  // </table>
+  const tables = root.querySelectorAll('table.wikitable, table.sortable')
+  console.log(`  Wikipedia: ${tables.length} wikitables found`)
 
-    const cells = rest.split('||').map(c =>
-      c.replace(/\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/g, '$1')
-       .replace(/\{\{[^}]+\}\}/g, '')
-       .replace(/[*'<>]/g, '')
-       .trim()
-    )
+  for (const table of tables) {
+    const rows = table.querySelectorAll('tr')
+    if (rows.length < 2) continue
 
-    const rocket   = cells[0] || ''
-    const mission  = cells[1] || ''
-    const site     = cells[2] || ''
-    const provider = cells[3] || ''
+    // Detect column positions from header row
+    const headerRow = rows[0]
+    const headers = headerRow.querySelectorAll('th').map(th => th.text.trim().toLowerCase())
+    console.log(`  Wikipedia table headers: ${headers.slice(0,8).join(' | ')}`)
 
-    if (!rocket || rocket.length < 2) continue
+    // Flexible column detection
+    const dateCol    = headers.findIndex(h => /date|day/.test(h))
+    const rocketCol  = headers.findIndex(h => /rocket|vehicle|launch vehicle|carrier/.test(h))
+    const payloadCol = headers.findIndex(h => /payload|mission|spacecraft/.test(h))
+    const siteCol    = headers.findIndex(h => /site|pad|location/.test(h))
+    const opCol      = headers.findIndex(h => /operator|provider|agency/.test(h))
 
-    const net = new Date(Date.UTC(parseInt(yr, 10), monthNum, parseInt(day, 10))).toISOString()
+    if (dateCol === -1 && rocketCol === -1) continue // not a launch table
 
-    launches.push({
-      rocket:  rocket.slice(0, 60),
-      mission: mission.slice(0, 80),
-      provider: provider.slice(0, 60),
-      site:    site.slice(0, 80),
-      net,
-      window:  '',
-      source:  'Wikipedia',
-      sourceUrl: `https://en.wikipedia.org/wiki/List_of_orbital_launches_of_${YEAR}`,
-      confidence: 'low',   // Wikipedia dates are often approximate
-    })
+    for (let i = 1; i < rows.length; i++) {
+      const cells = rows[i].querySelectorAll('td')
+      if (cells.length < 2) continue
+
+      const getCell = idx => idx >= 0 && idx < cells.length
+        ? cells[idx].text.replace(/\[[\d\s]+\]/g, '').replace(/\s+/g, ' ').trim()
+        : ''
+
+      const rawDate   = getCell(dateCol   >= 0 ? dateCol   : 0)
+      const rocket    = getCell(rocketCol >= 0 ? rocketCol : 1).slice(0, 60)
+      const payload   = getCell(payloadCol >= 0 ? payloadCol : 2).slice(0, 80)
+      const site      = getCell(siteCol   >= 0 ? siteCol   : -1).slice(0, 80)
+      const provider  = getCell(opCol     >= 0 ? opCol     : -1).slice(0, 60)
+
+      const baseDate = parseDateStr(rawDate)
+      if (!baseDate || !rocket || rocket.length < 2) continue
+
+      // Skip past launches (more than 3 days ago)
+      if (baseDate.getTime() < Date.now() - 3 * 86400000) continue
+
+      launches.push({
+        rocket, mission: payload || rocket, provider, site,
+        net: baseDate.toISOString(), window: '',
+        source: 'Wikipedia',
+        sourceUrl: `https://en.wikipedia.org/wiki/List_of_orbital_launches_of_${YEAR}`,
+        confidence: 'low',
+      })
+    }
   }
 
   return launches
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Source 3 — NASASpaceFlight (NSF) launch schedule JSON
-// They expose a machine-readable endpoint used by their own site
-// ─────────────────────────────────────────────────────────────────────────────
-async function scrapeNSF() {
-  // NSF doesn't have a public API; skip gracefully
-  return []
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -266,7 +328,7 @@ async function scrapeNSF() {
 function dedup(launches) {
   const map = new Map()
   for (const l of launches) {
-    const key = `${l.rocket.toLowerCase()}|${l.mission.toLowerCase()}`
+    const key = `${l.rocket.toLowerCase()}|${l.mission.toLowerCase().slice(0, 30)}`
     const existing = map.get(key)
     if (!existing || l.confidence === 'high') map.set(key, l)
   }
@@ -280,7 +342,6 @@ async function main() {
   const sources = [
     { name: 'SpaceFlightNow', fn: scrapeSpaceFlightNow },
     { name: 'Wikipedia',      fn: scrapeWikipedia },
-    { name: 'NSF',            fn: scrapeNSF },
   ]
 
   const all = []
@@ -296,8 +357,6 @@ async function main() {
 
   const valid    = all.filter(l => l.rocket && l.rocket.length > 1)
   const combined = dedup(valid)
-
-  // Sort by net date ascending
   combined.sort((a, b) => (a.net || '').localeCompare(b.net || ''))
 
   const output = {
