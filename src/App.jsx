@@ -46,6 +46,13 @@ export default function App() {
     localStorage.setItem('rocketdb:theme', theme)
   }, [theme])
 
+  // Keep selectedLaunch in sync when API data refreshes
+  useEffect(() => {
+    if (!selectedLaunch) return
+    const fresh = [...upcoming, ...previous].find(l => l.id === selectedLaunch.id)
+    if (fresh && fresh !== selectedLaunch) setSelectedLaunch(fresh)
+  }, [upcoming, previous]) // eslint-disable-line react-hooks/exhaustive-deps
+
   // Auto-select on first data load — prefer URL ?id=, else first upcoming
   useEffect(() => {
     if (initialSelectDone || loading) return

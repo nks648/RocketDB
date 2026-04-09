@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'
 
 const LL2_BASE  = 'https://lldev.thespacedevs.com/2.2.0' // dev server — higher rate limits, same data
-const CACHE_TTL = 15 * 60 * 1000  // 15 min → 8 req/hr (limit: 15/hr)
+const CACHE_TTL = 10 * 60 * 1000  // 10 min → 12 req/hr (limit: 15/hr on dev server)
 const LS_PREFIX = 'rocketdb:ll2:v2:'  // bump version to clear stale cache
 
 // ── Persistent cache (survives page refresh) ──────────────────────────────
@@ -20,11 +20,11 @@ function lsSet(url, data) {
 }
 
 // ── Fetch with localStorage-backed TTL cache ──────────────────────────────
-async function fetchWithCache(url) {
+async function fetchWithCache(url, force = false) {
   const stored = lsGet(url)
 
-  // Fresh cache hit — no network needed
-  if (stored && Date.now() - stored.ts < CACHE_TTL) {
+  // Fresh cache hit — no network needed (unless forced)
+  if (!force && stored && Date.now() - stored.ts < CACHE_TTL) {
     return stored.data
   }
 
@@ -50,6 +50,15 @@ async function fetchWithCache(url) {
   return data
 }
 
+/** Clear all LL2 cache entries so the next fetch is guaranteed fresh. */
+function clearCache() {
+  try {
+    Object.keys(localStorage)
+      .filter(k => k.startsWith(LS_PREFIX))
+      .forEach(k => localStorage.removeItem(k))
+  } catch { /* ignore */ }
+}
+
 // Statuses that mean a launch is truly over
 const FINAL_STATUSES = new Set([3, 4, 7]) // Success, Failure, Partial Failure
 
@@ -67,13 +76,13 @@ export function useLaunches() {
   const [error,       setError]       = useState(null)
   const [lastUpdated, setLastUpdated] = useState(null)
 
-  const fetchAll = useCallback(async () => {
+  const fetchAll = useCallback(async (force = false) => {
     setLoading(true)
     setError(null)
     try {
       const [upRes, prevRes] = await Promise.all([
-        fetchWithCache(`${LL2_BASE}/launch/upcoming/?format=json&limit=50&mode=detailed`),
-        fetchWithCache(`${LL2_BASE}/launch/previous/?format=json&limit=30&ordering=-net&mode=detailed`),
+        fetchWithCache(`${LL2_BASE}/launch/upcoming/?format=json&limit=50&mode=detailed`, force),
+        fetchWithCache(`${LL2_BASE}/launch/previous/?format=json&limit=30&ordering=-net&mode=detailed`, force),
       ])
 
       const upcomingResults = upRes.results || []
@@ -125,5 +134,10 @@ export function useLaunches() {
     return () => clearInterval(interval)
   }, [fetchAll])
 
-  return { upcoming, previous, loading, error, lastUpdated, refetch: fetchAll }
+  const forceRefetch = useCallback(() => {
+    clearCache()
+    return fetchAll(true)
+  }, [fetchAll])
+
+  return { upcoming, previous, loading, error, lastUpdated, refetch: forceRefetch }
 }
