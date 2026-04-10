@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T18:52:45.053Z",
+  "updated": "2026-04-10T01:47:13.268Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -205,17 +205,6 @@
       "confidence": "low"
     },
     {
-      "rocket": "Spectrum • ‘Onward and Upward’",
-      "mission": "Spectrum • ‘Onward and Upward’",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-09T00:00:00.000Z",
-      "window": "April 9",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
       "rocket": "Falcon 9 • Starlink 17-21",
       "mission": "Falcon 9 • Starlink 17-21",
       "provider": "",
@@ -225,17 +214,6 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\nWindow opens at 10 p.m. CEST (4 p.m. EDT",
-      "mission": "2000 UTC)\n\n\n\nLaunch site: Launch Complex 1, Andøya Spaceport, Norway",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-09T20:00:00.000Z",
-      "window": "Window opens at 10 p.m. CEST (4 p.m. EDT",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Launch time: \n\nWindow opens 7:39 p.m. PDT (10:39 p.m. EDT",
