@@ -1,4 +1,7 @@
 import React, { useMemo } from 'react'
+import {
+  BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell,
+} from 'recharts'
 
 export default function StatsPanel({ upcoming, previous }) {
   const stats = useMemo(() => {
@@ -68,8 +71,6 @@ export default function StatsPanel({ upcoming, previous }) {
 
     return { successes, failures, successRate, topAgencies, next, nextInHours, scrubbed, topOrbits, months }
   }, [upcoming, previous])
-
-  const maxCount = Math.max(...stats.months.map(m => m.count), 1)
 
   return (
     <div className="stats-panel">
@@ -156,20 +157,47 @@ export default function StatsPanel({ upcoming, previous }) {
       {/* Monthly launch rate chart — last 6 months */}
       {stats.months.some(m => m.count > 0) && (
         <div className="stats-chart" title="Launches per month (last 6 months)">
-          {stats.months.map((m, i) => (
-            <div key={i} className="chart-col">
-              <div className="chart-bar-wrap">
-                <div
-                  className="chart-bar"
-                  style={{ height: `${Math.max((m.count / maxCount) * 100, m.count > 0 ? 8 : 0)}%` }}
-                  title={`${m.label}: ${m.count} launches (${m.success} success)`}
-                />
-              </div>
-              <div className="chart-label">{m.label}</div>
-              {m.count > 0 && <div className="chart-count">{m.count}</div>}
-            </div>
-          ))}
           <div className="chart-title">Launches / month</div>
+          <ResponsiveContainer width="100%" height={80}>
+            <BarChart data={stats.months} margin={{ top: 4, right: 4, left: -28, bottom: 0 }} barCategoryGap="20%">
+              <XAxis
+                dataKey="label"
+                tick={{ fontSize: 9, fill: 'var(--text-muted)' }}
+                axisLine={false}
+                tickLine={false}
+              />
+              <YAxis
+                allowDecimals={false}
+                tick={{ fontSize: 9, fill: 'var(--text-muted)' }}
+                axisLine={false}
+                tickLine={false}
+                width={32}
+              />
+              <Tooltip
+                cursor={{ fill: 'rgba(255,255,255,0.05)' }}
+                contentStyle={{
+                  background: 'var(--bg-card)',
+                  border: '1px solid var(--border)',
+                  borderRadius: 6,
+                  fontSize: 11,
+                  color: 'var(--text)',
+                }}
+                formatter={(value, name, props) => [
+                  `${value} launches (${props.payload.success} success)`,
+                  props.payload.label,
+                ]}
+                labelFormatter={() => ''}
+              />
+              <Bar dataKey="count" radius={[3, 3, 0, 0]}>
+                {stats.months.map((m, i) => (
+                  <Cell
+                    key={i}
+                    fill={m.success === m.count && m.count > 0 ? 'var(--green)' : 'var(--accent)'}
+                  />
+                ))}
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
         </div>
       )}
     </div>
