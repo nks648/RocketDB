@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-13T13:05:02.287Z",
+  "updated": "2026-04-13T19:03:45.275Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -203,50 +203,6 @@
       "source": "SpaceX API",
       "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
       "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9 • Starlink 17-21",
-      "mission": "Falcon 9 • Starlink 17-21",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-10T00:00:00.000Z",
-      "window": "April 10/11",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n10:04:19 p.m. PDT (1:04:19 a.m. EDT",
-      "mission": "0504:19 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-10T23:19:00.000Z",
-      "window": "10:04:19 p.m. PDT (1:04:19 a.m. EDT / 05",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Falcon 9 • NG-24",
-      "mission": "Falcon 9 • NG-24",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-11T00:00:00.000Z",
-      "window": "April 11",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n7:41 a.m. EDT (1141 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\n7:41 a.m. EDT (1141 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-11T11:41:00.000Z",
-      "window": "7:41 a.m. EDT (1141 UTC) Launch site: SL",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: Launch Complex 36, Cape Canaveral Space Force Station",
