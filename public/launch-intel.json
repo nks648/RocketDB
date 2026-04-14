@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-14T07:19:55.836Z",
+  "updated": "2026-04-14T13:06:15.758Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -205,6 +205,17 @@
       "confidence": "low"
     },
     {
+      "rocket": "Falcon 9 • Starlink 17-27",
+      "mission": "Falcon 9 • Starlink 17-27",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-14T00:00:00.000Z",
+      "window": "April 14/15",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
       "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: Launch Complex 36, Cape Canaveral Space Force Station",
       "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: Launch Complex 36, Cape Canaveral Space Force Station",
       "provider": "",
@@ -225,6 +236,17 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n7:30:40 p.m. PDT (10:30:40 p.m. EDT",
+      "mission": "0230:40 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-16T01:40:00.000Z",
+      "window": "7:30:40 p.m. PDT (10:30:40 p.m. EDT / 02",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     },
     {
       "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
