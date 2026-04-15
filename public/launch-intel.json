@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-15T01:45:01.099Z",
+  "updated": "2026-04-15T07:20:16.667Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -205,45 +205,23 @@
       "confidence": "low"
     },
     {
-      "rocket": "Falcon 9 • Starlink 17-27",
-      "mission": "Falcon 9 • Starlink 17-27",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-14T00:00:00.000Z",
-      "window": "April 14/15",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: Launch Complex 36, Cape Canaveral Space Force Station",
-      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: Launch Complex 36, Cape Canaveral Space Force Station",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-16T00:00:00.000Z",
-      "window": "TBD Launch site: Launch Complex 36",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
       "rocket": "New Glenn • BlueBird 7",
       "mission": "New Glenn • BlueBird 7",
       "provider": "",
       "site": "",
-      "net": "2026-04-16T00:00:00.000Z",
-      "window": "NET April 16",
+      "net": "2026-04-18T00:00:00.000Z",
+      "window": "NET April 18",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\n9:29:49 p.m. PDT (12:29:49 a.m. EDT",
-      "mission": "0429:49 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "rocket": "Launch time: \n\nWindow opens 6:45 a.m. EDT (1045 UTC)\n\n\n\nLaunch site: Launch Complex 36, Cape Canaveral Space Force Station",
+      "mission": "Launch time: \n\nWindow opens 6:45 a.m. EDT (1045 UTC)\n\n\n\nLaunch site: Launch Complex 36, Cape Canaveral Space Force Station",
       "provider": "",
       "site": "",
-      "net": "2026-04-16T00:49:00.000Z",
-      "window": "9:29:49 p.m. PDT (12:29:49 a.m. EDT / 04",
+      "net": "2026-04-18T10:45:00.000Z",
+      "window": "Window opens 6:45 a.m. EDT (1045 UTC) La",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
