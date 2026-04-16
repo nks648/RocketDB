@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-16T07:21:12.721Z",
+  "updated": "2026-04-16T13:10:49.674Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -209,8 +209,8 @@
       "mission": "New Glenn • BlueBird 7",
       "provider": "",
       "site": "",
-      "net": "2026-04-18T00:00:00.000Z",
-      "window": "NET April 18",
+      "net": "2026-04-19T00:00:00.000Z",
+      "window": "NET April 19",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
@@ -220,7 +220,7 @@
       "mission": "Launch time: \n\nWindow opens 6:45 a.m. EDT (1045 UTC)\n\n\n\nLaunch site: Launch Complex 36, Cape Canaveral Space Force Station",
       "provider": "",
       "site": "",
-      "net": "2026-04-18T10:45:00.000Z",
+      "net": "2026-04-19T10:45:00.000Z",
       "window": "Window opens 6:45 a.m. EDT (1045 UTC) La",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
