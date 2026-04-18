@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-17T18:45:24.777Z",
+  "updated": "2026-04-18T01:27:44.408Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -205,6 +205,17 @@
       "confidence": "low"
     },
     {
+      "rocket": "Falcon 9 • Starlink 17-22",
+      "mission": "Falcon 9 • Starlink 17-22",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-18T00:00:00.000Z",
+      "window": "April 18",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
       "rocket": "New Glenn • BlueBird 7",
       "mission": "New Glenn • BlueBird 7",
       "provider": "",
@@ -225,6 +236,193 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\n7:33:40 a.m. PDT (10:33:40 a.m. EDT",
+      "mission": "1433:40 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-19T16:40:00.000Z",
+      "window": "7:33:40 a.m. PDT (10:33:40 a.m. EDT / 14",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • GPS III-8",
+      "mission": "Falcon 9 • GPS III-8",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-20T00:00:00.000Z",
+      "window": "NET April 20",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n2:57 a.m. EDT (0657 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\n2:57 a.m. EDT (0657 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-20T06:57:00.000Z",
+      "window": "2:57 a.m. EDT (0657 UTC) Launch site: SL",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Starlink 17-14",
+      "mission": "Falcon 9 • Starlink 17-14",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-21T00:00:00.000Z",
+      "window": "April 21/22",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Electron • ‘Kakushin Rising’",
+      "mission": "Electron • ‘Kakushin Rising’",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-22T00:00:00.000Z",
+      "window": "April 22/23",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 7 p.m. PDT (10 p.m. EDT",
+      "mission": "0200 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-22T02:00:00.000Z",
+      "window": "Window opens at 7 p.m. PDT (10 p.m. EDT",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\n3:09 p.m. NZST",
+      "mission": "0309 UTC on April 23 (11:09 p.m. EDT on April 22)\n\n\n\nLaunch site: Launch Complex 1, Mahia, New Zealand",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-22T15:09:00.000Z",
+      "window": "3:09 p.m. NZST / 0309 UTC on April 23 (1",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Starlink 17-16",
+      "mission": "Falcon 9 • Starlink 17-16",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-25T00:00:00.000Z",
+      "window": "April 25",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Soyuz 2.1a • Progress MS-34",
+      "mission": "95P",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-25T00:00:00.000Z",
+      "window": "April 25/26",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n1:21 a.m. MSK on April 26 (6:21 p.m. EDT",
+      "mission": "2221 UTC on April 25)\n\n\n\nLaunch site: Site 31/6, Baikonur Cosmodrome, Kazakhstan",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-25T01:21:00.000Z",
+      "window": "1:21 a.m. MSK on April 26 (6:21 p.m. EDT",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 7 a.m. PDT (10 a.m. EDT",
+      "mission": "1400 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-25T14:00:00.000Z",
+      "window": "Window opens at 7 a.m. PDT (10 a.m. EDT",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-27T00:00:00.000Z",
+      "window": "TBD Launch site: SLC-41",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Atlas 5 • Amazon Leo 6",
+      "mission": "Atlas 5 • Amazon Leo 6",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-27T00:00:00.000Z",
+      "window": "NET April 27",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Ariane 6 • Leo Europe 2 (LE-02)",
+      "mission": "Ariane 6 • Leo Europe 2 (LE-02)",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-28T00:00:00.000Z",
+      "window": "NET April 28",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n5:51 a.m. Kourou time (4:51 a.m. EDT",
+      "mission": "0851 UTC)\n\n\n\nLaunch site: Europe's Spaceport, Kourou, French Guiana",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-28T05:51:00.000Z",
+      "window": "5:51 a.m. Kourou time (4:51 a.m. EDT / 0",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-29T00:00:00.000Z",
+      "window": "TBD Launch site: SLC-4E",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Starlink 17-36",
+      "mission": "Falcon 9 • Starlink 17-36",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-29T00:00:00.000Z",
+      "window": "April 29",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
     },
     {
       "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
