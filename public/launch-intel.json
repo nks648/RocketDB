@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-18T01:27:44.408Z",
+  "updated": "2026-04-18T06:57:54.025Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -216,6 +216,17 @@
       "confidence": "low"
     },
     {
+      "rocket": "Launch time: \n\n9:01:20 a.m. PDT (12:01:20 p.m. EDT",
+      "mission": "1601:20 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-18T08:20:00.000Z",
+      "window": "9:01:20 a.m. PDT (12:01:20 p.m. EDT / 16",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
       "rocket": "New Glenn • BlueBird 7",
       "mission": "New Glenn • BlueBird 7",
       "provider": "",
@@ -233,17 +244,6 @@
       "site": "",
       "net": "2026-04-19T10:45:00.000Z",
       "window": "Window opens 6:45 a.m. EDT (1045 UTC) La",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Launch time: \n\n7:33:40 a.m. PDT (10:33:40 a.m. EDT",
-      "mission": "1433:40 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-19T16:40:00.000Z",
-      "window": "7:33:40 a.m. PDT (10:33:40 a.m. EDT / 14",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
