@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-19T12:40:34.735Z",
+  "updated": "2026-04-19T18:36:30.538Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -203,50 +203,6 @@
       "source": "SpaceX API",
       "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
       "confidence": "low"
-    },
-    {
-      "rocket": "New Glenn • BlueBird 7",
-      "mission": "New Glenn • BlueBird 7",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-19T00:00:00.000Z",
-      "window": "NET April 19",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9 • Starlink 17-22",
-      "mission": "Falcon 9 • Starlink 17-22",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-19T00:00:00.000Z",
-      "window": "April 19",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\nWindow opens at 6:45 a.m. EDT (1045 UTC)\n\n\n\nLaunch site: Launch Complex 36, Cape Canaveral Space Force Station",
-      "mission": "Launch time: \n\nWindow opens at 6:45 a.m. EDT (1045 UTC)\n\n\n\nLaunch site: Launch Complex 36, Cape Canaveral Space Force Station",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-19T10:45:00.000Z",
-      "window": "Window opens at 6:45 a.m. EDT (1045 UTC)",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Launch time: \n\nWindow opens 7 a.m. PDT (10am EDT",
-      "mission": "1400 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-19T14:00:00.000Z",
-      "window": "Window opens 7 a.m. PDT (10am EDT / 1400",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Falcon 9 • GPS III-8",
