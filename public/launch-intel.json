@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-18T18:36:05.132Z",
+  "updated": "2026-04-19T01:52:47.658Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -227,12 +227,12 @@
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens 6:45 a.m. EDT (1045 UTC)\n\n\n\nLaunch site: Launch Complex 36, Cape Canaveral Space Force Station",
-      "mission": "Launch time: \n\nWindow opens 6:45 a.m. EDT (1045 UTC)\n\n\n\nLaunch site: Launch Complex 36, Cape Canaveral Space Force Station",
+      "rocket": "Launch time: \n\nWindow opens at 6:45 a.m. EDT (1045 UTC)\n\n\n\nLaunch site: Launch Complex 36, Cape Canaveral Space Force Station",
+      "mission": "Launch time: \n\nWindow opens at 6:45 a.m. EDT (1045 UTC)\n\n\n\nLaunch site: Launch Complex 36, Cape Canaveral Space Force Station",
       "provider": "",
       "site": "",
       "net": "2026-04-19T10:45:00.000Z",
-      "window": "Window opens 6:45 a.m. EDT (1045 UTC) La",
+      "window": "Window opens at 6:45 a.m. EDT (1045 UTC)",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
