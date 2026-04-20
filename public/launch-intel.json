@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-20T13:09:25.352Z",
+  "updated": "2026-04-20T18:54:08.243Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -315,19 +315,8 @@
       "confidence": "high"
     },
     {
-      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-27T00:00:00.000Z",
-      "window": "TBD Launch site: SLC-41",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Atlas 5 • Amazon Leo 6",
-      "mission": "Atlas 5 • Amazon Leo 6",
+      "rocket": "Falcon Heavy • Viasat-3 F3",
+      "mission": "Falcon Heavy • Viasat-3 F3",
       "provider": "",
       "site": "",
       "net": "2026-04-27T00:00:00.000Z",
@@ -335,6 +324,39 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "Atlas 5 • Amazon Leo 6",
+      "mission": "Atlas 5 • Amazon Leo 6",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-27T00:00:00.000Z",
+      "window": "NET April 27/28",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 8:52 p.m. EDT (0052 UTC)\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\nWindow opens at 8:52 p.m. EDT (0052 UTC)\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-27T00:52:00.000Z",
+      "window": "Window opens at 8:52 p.m. EDT (0052 UTC)",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 10:21 a.m. EDT (1421 UTC)\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
+      "mission": "Launch time: \n\nWindow opens at 10:21 a.m. EDT (1421 UTC)\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-27T14:21:00.000Z",
+      "window": "Window opens at 10:21 a.m. EDT (1421 UTC",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     },
     {
       "rocket": "Ariane 6 • Leo Europe 2 (LE-02)",
