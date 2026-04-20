@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-19T18:36:30.538Z",
+  "updated": "2026-04-20T01:54:17.571Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -209,22 +209,11 @@
       "mission": "Falcon 9 • GPS III-8",
       "provider": "",
       "site": "",
-      "net": "2026-04-20T00:00:00.000Z",
-      "window": "NET April 20",
+      "net": "2026-04-21T00:00:00.000Z",
+      "window": "NET April 21",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n2:57 a.m. EDT (0657 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\n2:57 a.m. EDT (0657 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-20T06:57:00.000Z",
-      "window": "2:57 a.m. EDT (0657 UTC) Launch site: SL",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Falcon 9 • Starlink 17-14",
@@ -236,6 +225,17 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n2:43 a.m. EDT (0643 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\n2:43 a.m. EDT (0643 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-21T06:43:00.000Z",
+      "window": "2:43 a.m. EDT (0643 UTC) Launch site: SL",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     },
     {
       "rocket": "Electron • ‘Kakushin Rising’",
