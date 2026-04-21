@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-21T13:04:05.249Z",
+  "updated": "2026-04-21T19:00:05.837Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -205,17 +205,6 @@
       "confidence": "low"
     },
     {
-      "rocket": "Falcon 9 • GPS III-8",
-      "mission": "Falcon 9 • GPS III-8",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-21T00:00:00.000Z",
-      "window": "April 21",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
       "rocket": "Falcon 9 • Starlink 17-14",
       "mission": "Falcon 9 • Starlink 17-14",
       "provider": "",
@@ -255,17 +244,6 @@
       "site": "",
       "net": "2026-04-22T15:09:00.000Z",
       "window": "3:09 p.m. NZST / 0309 UTC on April 23 (1",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Launch time: \n\n2:53:25 a.m. EDT (0653:25 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\n2:53:25 a.m. EDT (0653:25 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-23T09:25:00.000Z",
-      "window": "2:53:25 a.m. EDT (0653:25 UTC) Launch si",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
