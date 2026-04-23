@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-23T13:05:15.017Z",
+  "updated": "2026-04-23T18:57:17.381Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -203,28 +203,6 @@
       "source": "SpaceX API",
       "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
       "confidence": "low"
-    },
-    {
-      "rocket": "Electron • ‘Kakushin Rising’",
-      "mission": "Electron • ‘Kakushin Rising’",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-22T00:00:00.000Z",
-      "window": "April 22/23",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n3:09 p.m. NZST",
-      "mission": "0309 UTC on April 23 (11:09 p.m. EDT on April 22)\n\n\n\nLaunch site: Launch Complex 1, Mahia, New Zealand",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-22T15:09:00.000Z",
-      "window": "3:09 p.m. NZST / 0309 UTC on April 23 (1",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Falcon 9 • Starlink 17-16",
