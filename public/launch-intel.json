@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-22T19:01:10.083Z",
+  "updated": "2026-04-23T01:52:35.742Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -209,8 +209,8 @@
       "mission": "Falcon 9 • Starlink 17-14",
       "provider": "",
       "site": "",
-      "net": "2026-04-21T00:00:00.000Z",
-      "window": "April 21/22",
+      "net": "2026-04-22T00:00:00.000Z",
+      "window": "April 22/23",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
@@ -225,17 +225,6 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\nWindow opens at 7 p.m. PDT (10 p.m. EDT",
-      "mission": "0200 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-22T02:00:00.000Z",
-      "window": "Window opens at 7 p.m. PDT (10 p.m. EDT",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Launch time: \n\n3:09 p.m. NZST",
@@ -277,6 +266,17 @@
       "site": "",
       "net": "2026-04-25T01:21:00.000Z",
       "window": "1:21 a.m. MSK on April 26 (6:21 p.m. EDT",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\n7:56:39 p.m. PDT (10:56:39 p.m. EDT",
+      "mission": "0256:39 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-25T03:39:00.000Z",
+      "window": "7:56:39 p.m. PDT (10:56:39 p.m. EDT / 02",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
