@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-23T18:57:17.381Z",
+  "updated": "2026-04-24T01:52:41.741Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -335,6 +335,28 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "Vega-C • Smile",
+      "mission": "Vega-C • Smile",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-18T00:00:00.000Z",
+      "window": "NET May 18/19",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n12:52 a.m. local time (11:52 p.m. EDT",
+      "mission": "0352 UTC)\n\n\n\nLaunch site: ZLV pad, Europe's Spaceport, Kourou, French Guiana",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-18T00:52:00.000Z",
+      "window": "12:52 a.m. local time (11:52 p.m. EDT /",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     },
     {
       "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
