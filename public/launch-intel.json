@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-26T07:17:58.223Z",
+  "updated": "2026-04-26T12:44:46.672Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -205,28 +205,6 @@
       "confidence": "low"
     },
     {
-      "rocket": "Soyuz 2.1a • Progress MS-34",
-      "mission": "95P",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-25T00:00:00.000Z",
-      "window": "April 25/26",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n1:21 a.m. MSK on April 26 (6:21 p.m. EDT",
-      "mission": "2221 UTC on April 25)\n\n\n\nLaunch site: Site 31/6, Baikonur Cosmodrome, Kazakhstan",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-25T01:21:00.000Z",
-      "window": "1:21 a.m. MSK on April 26 (6:21 p.m. EDT",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
       "rocket": "Falcon 9 • Starlink 17-16",
       "mission": "Falcon 9 • Starlink 17-16",
       "provider": "",
@@ -282,12 +260,12 @@
       "confidence": "high"
     },
     {
-      "rocket": "Launch time: \n\n7:36:50 a.m. PDT (10:36:50 am EDT",
-      "mission": "1436:50 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "rocket": "Launch time: \n\n7:37:09 a.m. PDT (10:37:09 am EDT",
+      "mission": "1437:09 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "provider": "",
       "site": "",
-      "net": "2026-04-27T19:50:00.000Z",
-      "window": "7:36:50 a.m. PDT (10:36:50 am EDT / 1436",
+      "net": "2026-04-27T20:09:00.000Z",
+      "window": "7:37:09 a.m. PDT (10:37:09 am EDT / 1437",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
