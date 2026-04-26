@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-25T18:38:07.610Z",
+  "updated": "2026-04-26T01:55:36.823Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -238,17 +238,6 @@
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens at 7 a.m. PDT (10 a.m. EDT",
-      "mission": "1400 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-26T14:00:00.000Z",
-      "window": "Window opens at 7 a.m. PDT (10 a.m. EDT",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
       "rocket": "Falcon Heavy • Viasat-3 F3",
       "mission": "Falcon Heavy • Viasat-3 F3",
       "provider": "",
@@ -288,6 +277,17 @@
       "site": "",
       "net": "2026-04-27T14:21:00.000Z",
       "window": "Window opens at 10:21 a.m. EDT (1421 UTC",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\n7:36:50 a.m. PDT (10:36:50 am EDT",
+      "mission": "1436:50 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-04-27T19:50:00.000Z",
+      "window": "7:36:50 a.m. PDT (10:36:50 am EDT / 1436",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
