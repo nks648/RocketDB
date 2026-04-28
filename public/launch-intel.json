@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-28T02:05:40.386Z",
+  "updated": "2026-04-28T08:09:45.763Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -205,17 +205,6 @@
       "confidence": "low"
     },
     {
-      "rocket": "Atlas 5 • Amazon Leo 6",
-      "mission": "Atlas 5 • Amazon Leo 6",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-27T00:00:00.000Z",
-      "window": "NET April 27/28",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
       "rocket": "Falcon Heavy • Viasat-3 F3",
       "mission": "Falcon Heavy • Viasat-3 F3",
       "provider": "",
@@ -244,17 +233,6 @@
       "site": "",
       "net": "2026-04-29T14:13:00.000Z",
       "window": "Window opens at 10:13 a.m. EDT (1413 UTC",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Launch time: \n\n8:53:30 p.m. EDT (0053:30 UTC)\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\n8:53:30 p.m. EDT (0053:30 UTC)\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-29T21:30:00.000Z",
-      "window": "8:53:30 p.m. EDT (0053:30 UTC) Launch si",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
