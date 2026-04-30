@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-30T02:06:58.719Z",
+  "updated": "2026-04-30T08:06:44.137Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -205,17 +205,6 @@
       "confidence": "low"
     },
     {
-      "rocket": "Falcon 9 • Starlink 17-36",
-      "mission": "Falcon 9 • Starlink 17-36",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-29T00:00:00.000Z",
-      "window": "April 29/30",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
       "rocket": "Ariane 6 • Leo Europe 2 (LE-02)",
       "mission": "Ariane 6 • Leo Europe 2 (LE-02)",
       "provider": "",
@@ -247,17 +236,6 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n7:42:49 pm PDT (10:42:49 pm EDT",
-      "mission": "0242:49 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-01T13:49:00.000Z",
-      "window": "7:42:49 pm PDT (10:42:49 pm EDT / 0242:4",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Launch time: \n\nWindow opens at 1:33 p.m. EDT (1733 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
