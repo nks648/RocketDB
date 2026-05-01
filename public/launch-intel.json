@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-01T12:58:56.626Z",
+  "updated": "2026-05-01T18:59:12.038Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -205,28 +205,6 @@
       "confidence": "low"
     },
     {
-      "rocket": "Ariane 6 • Leo Europe 2 (LE-02)",
-      "mission": "Ariane 6 • Leo Europe 2 (LE-02)",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-30T00:00:00.000Z",
-      "window": "NET April 30",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n5:08 a.m. Kourou time (4:08 a.m. EDT",
-      "mission": "0808 UTC)\n\n\n\nLaunch site: Europe's Spaceport, Kourou, French Guiana",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-30T05:08:00.000Z",
-      "window": "5:08 a.m. Kourou time (4:08 a.m. EDT / 0",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
       "rocket": "Falcon 9 • Starlink 10-38",
       "mission": "Falcon 9 • Starlink 10-38",
       "provider": "",
@@ -238,12 +216,12 @@
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens at 1:33 p.m. EDT (1733 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\nWindow opens at 1:33 p.m. EDT (1733 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "rocket": "Launch time: \n\n2:06:10 p.m. EDT (1806:10 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\n2:06:10 p.m. EDT (1806:10 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
       "provider": "",
       "site": "",
-      "net": "2026-05-01T17:33:00.000Z",
-      "window": "Window opens at 1:33 p.m. EDT (1733 UTC)",
+      "net": "2026-05-01T22:10:00.000Z",
+      "window": "2:06:10 p.m. EDT (1806:10 UTC) Launch si",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
@@ -315,6 +293,28 @@
       "confidence": "high"
     },
     {
+      "rocket": "Falcon 9 • CRS-34",
+      "mission": "Falcon 9 • CRS-34",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-12T00:00:00.000Z",
+      "window": "NET May 12",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n7:16 p.m. EDT (2316 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\n7:16 p.m. EDT (2316 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-12T23:16:00.000Z",
+      "window": "7:16 p.m. EDT (2316 UTC) Launch site: SL",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
       "rocket": "Vega-C • Smile",
       "mission": "Vega-C • Smile",
       "provider": "",
@@ -332,6 +332,50 @@
       "site": "",
       "net": "2026-05-18T00:52:00.000Z",
       "window": "12:52 a.m. local time (11:52 p.m. EDT /",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-22T00:00:00.000Z",
+      "window": "TBD Launch site: SLC-41",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Atlas 5 • Leo Atlas 07",
+      "mission": "Atlas 5 • Leo Atlas 07",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-22T00:00:00.000Z",
+      "window": "NET May 22",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Electron • ‘Viva La StriX’",
+      "mission": "Electron • ‘Viva La StriX’",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-22T00:00:00.000Z",
+      "window": "NET May 22",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n9:30 p.m. NZST (5:30 a.m. EDT",
+      "mission": "0930 UTC)\n\n\n\nLaunch site: Launch Complex 1, Mahia, New Zealand",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-22T21:30:00.000Z",
+      "window": "9:30 p.m. NZST (5:30 a.m. EDT / 0930 UTC",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
