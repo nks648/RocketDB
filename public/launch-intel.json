@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-01T18:59:12.038Z",
+  "updated": "2026-05-02T01:58:26.401Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -203,28 +203,6 @@
       "source": "SpaceX API",
       "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
       "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9 • Starlink 10-38",
-      "mission": "Falcon 9 • Starlink 10-38",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-01T00:00:00.000Z",
-      "window": "May 1",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n2:06:10 p.m. EDT (1806:10 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\n2:06:10 p.m. EDT (1806:10 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-01T22:10:00.000Z",
-      "window": "2:06:10 p.m. EDT (1806:10 UTC) Launch si",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Falcon 9 • CAS500-2",
