@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-04T13:24:24.243Z",
+  "updated": "2026-05-04T19:16:21.562Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -217,7 +217,7 @@
     },
     {
       "rocket": "Launch time: \n\nWindow opens at 7 p.m. PDT (10 p.m. EDT",
-      "mission": "0200 UTC)\n\n\n\nLaunch site:",
+      "mission": "0200 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "provider": "",
       "site": "",
       "net": "2026-05-06T02:00:00.000Z",
@@ -249,6 +249,28 @@
       "confidence": "high"
     },
     {
+      "rocket": "Falcon 9 • NROL-172",
+      "mission": "Falcon 9 • NROL-172",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-12T00:00:00.000Z",
+      "window": "NET May 12",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Starship • Flight 12",
+      "mission": "Starship • Flight 12",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-12T00:00:00.000Z",
+      "window": "NET May 12",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
       "rocket": "Falcon 9 • CRS-34",
       "mission": "Falcon 9 • CRS-34",
       "provider": "",
@@ -260,6 +282,28 @@
       "confidence": "low"
     },
     {
+      "rocket": "Launch time: \n\nWindow opens at 3:15 p.m. PDT (6:15 p.m. EDT",
+      "mission": "2215 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-12T22:15:00.000Z",
+      "window": "Window opens at 3:15 p.m. PDT (6:15 p.m.",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 5:30 p.m. CDT (6:30 p.m. EDT",
+      "mission": "2230 UTC)\n\n\n\nLaunch site: OLP-B, Starbase, Texas",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-12T22:30:00.000Z",
+      "window": "Window opens at 5:30 p.m. CDT (6:30 p.m.",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
       "rocket": "Launch time: \n\n7:16 p.m. EDT (2316 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
       "mission": "Launch time: \n\n7:16 p.m. EDT (2316 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
       "provider": "",
@@ -269,6 +313,28 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-16T00:00:00.000Z",
+      "window": "TBD Launch site: SLC-4E",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Starlink 17-42",
+      "mission": "Falcon 9 • Starlink 17-42",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-16T00:00:00.000Z",
+      "window": "May 16",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
     },
     {
       "rocket": "Vega-C • Smile",
