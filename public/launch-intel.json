@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-06T02:01:23.873Z",
+  "updated": "2026-05-06T08:09:52.305Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -203,28 +203,6 @@
       "source": "SpaceX API",
       "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
       "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9 • Starlink 17-29",
-      "mission": "Falcon 9 • Starlink 17-29",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-05T00:00:00.000Z",
-      "window": "May 5/6",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n8:59:19 p.m. PDT (11:59:19 p.m. EDT",
-      "mission": "0359:19 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-08T06:19:00.000Z",
-      "window": "8:59:19 p.m. PDT (11:59:19 p.m. EDT / 03",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Falcon 9 • Starlink 17-37",
