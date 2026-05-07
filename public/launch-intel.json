@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-06T19:24:51.475Z",
+  "updated": "2026-05-07T02:04:36.734Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -260,12 +260,12 @@
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens at 3:01 p.m. PDT (6:01 p.m. EDT",
+      "rocket": "Launch time: \n\n3:01 p.m. PDT (6:01 p.m. EDT",
       "mission": "2201 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "provider": "",
       "site": "",
       "net": "2026-05-13T22:01:00.000Z",
-      "window": "Window opens at 3:01 p.m. PDT (6:01 p.m.",
+      "window": "3:01 p.m. PDT (6:01 p.m. EDT / 2201 UTC)",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
