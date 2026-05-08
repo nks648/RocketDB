@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-08T13:11:33.867Z",
+  "updated": "2026-05-08T19:05:31.507Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -293,28 +293,6 @@
       "confidence": "high"
     },
     {
-      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-18T00:00:00.000Z",
-      "window": "TBD Launch site: SLC-4E",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Falcon 9 • Starlink 17-42",
-      "mission": "Falcon 9 • Starlink 17-42",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-18T00:00:00.000Z",
-      "window": "May 18",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
       "rocket": "Vega-C • Smile",
       "mission": "Vega-C • Smile",
       "provider": "",
@@ -335,6 +313,28 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-19T00:00:00.000Z",
+      "window": "TBD Launch site: SLC-4E",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Starlink 17-42",
+      "mission": "Falcon 9 • Starlink 17-42",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-19T00:00:00.000Z",
+      "window": "NET May 19",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
     },
     {
       "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
