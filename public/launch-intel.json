@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-08T19:05:31.507Z",
+  "updated": "2026-05-09T02:04:54.629Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -288,6 +288,28 @@
       "site": "",
       "net": "2026-05-15T22:30:00.000Z",
       "window": "Window opens at 5:30 p.m. CDT (6:30 p.m.",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Globalstar 2-R Launch 1",
+      "mission": "Falcon 9 • Globalstar 2-R Launch 1",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-17T00:00:00.000Z",
+      "window": "NET May 17",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 8:50 a.m. EDT (1250 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\nWindow opens at 8:50 a.m. EDT (1250 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-17T12:50:00.000Z",
+      "window": "Window opens at 8:50 a.m. EDT (1250 UTC)",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
