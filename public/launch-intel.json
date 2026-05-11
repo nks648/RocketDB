@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-11T14:29:58.793Z",
+  "updated": "2026-05-11T19:28:36.606Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -210,21 +210,10 @@
       "provider": "",
       "site": "",
       "net": "2026-05-11T00:00:00.000Z",
-      "window": "NET May 11",
+      "window": "NET May 11/12",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n3:28 p.m. PDT (6:28 p.m. EDT",
-      "mission": "2228 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-11T22:28:00.000Z",
-      "window": "3:28 p.m. PDT (6:28 p.m. EDT / 2228 UTC)",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Falcon 9 • CRS-34",
@@ -236,6 +225,17 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n7:13:50 p.m. PDT (10:13:50 p.m. EDT",
+      "mission": "0213:50 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-12T08:50:00.000Z",
+      "window": "7:13:50 p.m. PDT (10:13:50 p.m. EDT / 02",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     },
     {
       "rocket": "Launch time: \n\n7:16 p.m. EDT (2316 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
