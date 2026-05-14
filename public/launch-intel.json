@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-14T13:49:11.631Z",
+  "updated": "2026-05-14T19:28:29.552Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -249,17 +249,6 @@
       "confidence": "high"
     },
     {
-      "rocket": "Falcon 9 • Globalstar 2-R Launch 1",
-      "mission": "Falcon 9 • Globalstar 2-R Launch 1",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-18T00:00:00.000Z",
-      "window": "May 18",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
       "rocket": "Falcon 9 • Starlink 17-42",
       "mission": "Falcon 9 • Starlink 17-42",
       "provider": "",
@@ -293,17 +282,6 @@
       "confidence": "high"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens at 8:35 a.m. EDT (1235 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\nWindow opens at 8:35 a.m. EDT (1235 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-18T12:35:00.000Z",
-      "window": "Window opens at 8:35 a.m. EDT (1235 UTC)",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
       "rocket": "Starship • Flight 12",
       "mission": "Starship • Flight 12",
       "provider": "",
@@ -332,6 +310,28 @@
       "site": "",
       "net": "2026-05-19T22:30:00.000Z",
       "window": "Window opens at 5:30 p.m. CDT (6:30 p.m.",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Globalstar 2-R Launch 1",
+      "mission": "Falcon 9 • Globalstar 2-R Launch 1",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-20T00:00:00.000Z",
+      "window": "May 20",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 8:04 a.m. EDT (1204 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\nWindow opens at 8:04 a.m. EDT (1204 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-20T12:04:00.000Z",
+      "window": "Window opens at 8:04 a.m. EDT (1204 UTC)",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
