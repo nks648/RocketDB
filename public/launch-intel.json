@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-18T09:42:00.052Z",
+  "updated": "2026-05-18T14:55:48.620Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -227,17 +227,6 @@
       "confidence": "high"
     },
     {
-      "rocket": "Starship • Flight 12",
-      "mission": "Starship • Flight 12",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-19T00:00:00.000Z",
-      "window": "NET May 19",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
       "rocket": "Falcon 9 • Starlink 17-42",
       "mission": "Falcon 9 • Starlink 17-42",
       "provider": "",
@@ -249,23 +238,12 @@
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens at 5:30 p.m. CDT (6:30 p.m. EDT",
-      "mission": "2230 UTC)\n\n\n\nLaunch site: OLP-B, Starbase, Texas",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-19T22:30:00.000Z",
-      "window": "Window opens at 5:30 p.m. CDT (6:30 p.m.",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Falcon 9 • Globalstar 2-R Launch 1",
-      "mission": "Falcon 9 • Globalstar 2-R Launch 1",
+      "rocket": "Starship • Flight 12",
+      "mission": "Starship • Flight 12",
       "provider": "",
       "site": "",
       "net": "2026-05-20T00:00:00.000Z",
-      "window": "May 20",
+      "window": "NET May 20",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
@@ -282,12 +260,12 @@
       "confidence": "high"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens at 8:04 a.m. EDT (1204 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\nWindow opens at 8:04 a.m. EDT (1204 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "rocket": "Launch time: \n\nWindow opens at 5:30 p.m. CDT (6:30 p.m. EDT",
+      "mission": "2230 UTC)\n\n\n\nLaunch site: OLP-B, Starbase, Texas",
       "provider": "",
       "site": "",
-      "net": "2026-05-20T12:04:00.000Z",
-      "window": "Window opens at 8:04 a.m. EDT (1204 UTC)",
+      "net": "2026-05-20T22:30:00.000Z",
+      "window": "Window opens at 5:30 p.m. CDT (6:30 p.m.",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
@@ -297,11 +275,22 @@
       "mission": "Falcon 9 • Starlink 10-31",
       "provider": "",
       "site": "",
-      "net": "2026-05-22T00:00:00.000Z",
-      "window": "May 22",
+      "net": "2026-05-21T00:00:00.000Z",
+      "window": "May 21",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nLaunch window opens 5:26 a.m. EDT (0926 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\nLaunch window opens 5:26 a.m. EDT (0926 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-21T09:26:00.000Z",
+      "window": "Launch window opens 5:26 a.m. EDT (0926",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     },
     {
       "rocket": "Electron • ‘Viva La StriX’",
@@ -313,28 +302,6 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Atlas 5 • Leo Atlas 07",
-      "mission": "Atlas 5 • Leo Atlas 07",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-22T00:00:00.000Z",
-      "window": "NET May 22",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\nLaunch window opens 5:04 a.m. EDT (0904 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\nLaunch window opens 5:04 a.m. EDT (0904 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-22T09:04:00.000Z",
-      "window": "Launch window opens 5:04 a.m. EDT (0904",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Launch time: \n\n9:30 p.m. NZST (5:30 a.m. EDT",
@@ -359,23 +326,45 @@
       "confidence": "low"
     },
     {
+      "rocket": "Falcon 9 • Starlink 17-41",
+      "mission": "Falcon 9 • Starlink 17-41",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-27T00:00:00.000Z",
+      "window": "May 27",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
       "rocket": "Launch time: \n\nWindow opens at 7 a.m. PDT (10 a.m. EDT",
       "mission": "1400 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "provider": "",
       "site": "",
-      "net": "2026-05-23T14:00:00.000Z",
+      "net": "2026-05-27T14:00:00.000Z",
       "window": "Window opens at 7 a.m. PDT (10 a.m. EDT",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens at 2:56:30 p.m. EDT (1856:30 UTC)\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\nWindow opens at 2:56:30 p.m. EDT (1856:30 UTC)\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
+      "rocket": "Atlas 5 • Leo Atlas 07",
+      "mission": "Atlas 5 • Leo Atlas 07",
       "provider": "",
       "site": "",
-      "net": "2026-05-25T00:30:00.000Z",
-      "window": "Window opens at 2:56:30 p.m. EDT (1856:3",
+      "net": "2026-05-29T00:00:00.000Z",
+      "window": "NET May 29",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 12:27 p.m. EDT (1627 UTC)\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\nWindow opens at 12:27 p.m. EDT (1627 UTC)\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-29T16:27:00.000Z",
+      "window": "Window opens at 12:27 p.m. EDT (1627 UTC",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
