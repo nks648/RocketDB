@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-19T19:44:00.832Z",
+  "updated": "2026-05-20T02:32:00.124Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -205,48 +205,15 @@
       "confidence": "low"
     },
     {
-      "rocket": "Vega-C • Smile",
-      "mission": "Vega-C • Smile",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-18T00:00:00.000Z",
-      "window": "NET May 18/19",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n12:52 a.m. local time (11:52 p.m. EDT",
-      "mission": "0352 UTC)\n\n\n\nLaunch site: ZLV pad, Europe's Spaceport, Kourou, French Guiana",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-18T00:52:00.000Z",
-      "window": "12:52 a.m. local time (11:52 p.m. EDT /",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
       "rocket": "Falcon 9 • Starlink 17-42",
       "mission": "Falcon 9 • Starlink 17-42",
       "provider": "",
       "site": "",
       "net": "2026-05-19T00:00:00.000Z",
-      "window": "NET May 19/20",
+      "window": "May 19/20",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\nWindow opens at 7:11 p.m. PDT (10:11 p.m. EDT",
-      "mission": "0211 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-20T02:11:00.000Z",
-      "window": "Window opens at 7:11 p.m. PDT (10:11 p.m",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Falcon 9 • Starlink 10-31",
@@ -277,6 +244,17 @@
       "site": "",
       "net": "2026-05-21T09:26:00.000Z",
       "window": "Launch window opens 5:26 a.m. EDT (0926",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\n7:46:19 p.m. PDT (10:46:19 p.m. EDT",
+      "mission": "0246:19 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-21T17:19:00.000Z",
+      "window": "7:46:19 p.m. PDT (10:46:19 p.m. EDT / 02",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
