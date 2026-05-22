@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-21T19:44:09.174Z",
+  "updated": "2026-05-22T02:34:22.044Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -205,30 +205,19 @@
       "confidence": "low"
     },
     {
-      "rocket": "Starship • Flight 12",
-      "mission": "Starship • Flight 12",
+      "rocket": "Electron • ‘Viva La StriX’",
+      "mission": "Electron • ‘Viva La StriX’",
       "provider": "",
       "site": "",
-      "net": "2026-05-21T00:00:00.000Z",
-      "window": "NET May 21",
+      "net": "2026-05-22T00:00:00.000Z",
+      "window": "NET May 22",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens at 5:30 p.m. CDT (6:30 p.m. EDT",
-      "mission": "2230 UTC)\n\n\n\nLaunch site: OLP-B, Starbase, Texas",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-21T22:30:00.000Z",
-      "window": "Window opens at 5:30 p.m. CDT (6:30 p.m.",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Electron • ‘Viva La StriX’",
-      "mission": "Electron • ‘Viva La StriX’",
+      "rocket": "Starship • Flight 12",
+      "mission": "Starship • Flight 12",
       "provider": "",
       "site": "",
       "net": "2026-05-22T00:00:00.000Z",
@@ -244,6 +233,17 @@
       "site": "",
       "net": "2026-05-22T21:30:00.000Z",
       "window": "9:30 p.m. NZST (5:30 a.m. EDT / 0930 UTC",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 5:30 p.m. CDT (6:30 p.m. EDT",
+      "mission": "2230 UTC)\n\n\n\nLaunch site: OLP-B, Starbase, Texas",
+      "provider": "",
+      "site": "",
+      "net": "2026-05-22T22:30:00.000Z",
+      "window": "Window opens at 5:30 p.m. CDT (6:30 p.m.",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
