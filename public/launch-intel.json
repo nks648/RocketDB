@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-26T14:47:40.390Z",
+  "updated": "2026-05-26T19:58:07.964Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -205,28 +205,6 @@
       "confidence": "low"
     },
     {
-      "rocket": "Falcon 9 • Starlink 17-37",
-      "mission": "Falcon 9 • Starlink 17-37",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-26T00:00:00.000Z",
-      "window": "May 26",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n7:50:34 a.m. PDT (10:50:34 a.m. EDT",
-      "mission": "1450:34 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-28T09:34:00.000Z",
-      "window": "7:50:34 a.m. PDT (10:50:34 a.m. EDT / 14",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
       "rocket": "Falcon 9 • Starlink 10-53",
       "mission": "Falcon 9 • Starlink 10-53",
       "provider": "",
@@ -260,12 +238,12 @@
       "confidence": "high"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens at 12:27 p.m. EDT (1627 UTC)\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\nWindow opens at 12:27 p.m. EDT (1627 UTC)\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
+      "rocket": "Launch time: \n\nWindow opens at 7:33 p.m. EDT (2333 UTC)\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\nWindow opens at 7:33 p.m. EDT (2333 UTC)\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
       "provider": "",
       "site": "",
-      "net": "2026-05-29T16:27:00.000Z",
-      "window": "Window opens at 12:27 p.m. EDT (1627 UTC",
+      "net": "2026-05-29T23:33:00.000Z",
+      "window": "Window opens at 7:33 p.m. EDT (2333 UTC)",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
