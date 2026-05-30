@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-29T20:09:37.218Z",
+  "updated": "2026-05-30T02:13:14.899Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -203,28 +203,6 @@
       "source": "SpaceX API",
       "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
       "confidence": "low"
-    },
-    {
-      "rocket": "Atlas 5 • Leo Atlas 07",
-      "mission": "Atlas 5 • Leo Atlas 07",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-29T00:00:00.000Z",
-      "window": "NET May 29",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\nWindow opens at 7:33 p.m. EDT (2333 UTC)\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\nWindow opens at 7:33 p.m. EDT (2333 UTC)\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-05-29T23:33:00.000Z",
-      "window": "Window opens at 7:33 p.m. EDT (2333 UTC)",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Falcon 9 • Starlink 17-41",
