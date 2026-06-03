@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-03T16:19:47.935Z",
+  "updated": "2026-06-03T20:47:47.567Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -227,12 +227,12 @@
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens 4 a.m. EDT (0800 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\nWindow opens 4 a.m. EDT (0800 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "rocket": "Launch time: \n\n5:53 a.m. EDT (0953 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\n5:53 a.m. EDT (0953 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
       "provider": "",
       "site": "",
-      "net": "2026-06-04T08:00:00.000Z",
-      "window": "Window opens 4 a.m. EDT (0800 UTC) Launc",
+      "net": "2026-06-04T09:53:00.000Z",
+      "window": "5:53 a.m. EDT (0953 UTC) Launch site: SL",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
