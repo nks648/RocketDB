@@ -1,33 +1,11 @@
 {
-  "updated": "2026-06-08T10:19:52.573Z",
+  "updated": "2026-06-08T15:32:23.526Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
     "SpaceX API"
   ],
   "launches": [
-    {
-      "rocket": "Falcon 9 • Starlink 10-35",
-      "mission": "Falcon 9 • Starlink 10-35",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-08T00:00:00.000Z",
-      "window": "June 8",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n6:13:50 a.m. EDT (1013:50 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\n6:13:50 a.m. EDT (1013:50 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-08T17:50:00.000Z",
-      "window": "6:13:50 a.m. EDT (1013:50 UTC) Launch si",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
     {
       "rocket": "H3 • 30 Morphological Tester",
       "mission": "H3 • 30 Morphological Tester",
