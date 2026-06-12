@@ -1,22 +1,11 @@
 {
-  "updated": "2026-06-12T02:43:22.644Z",
+  "updated": "2026-06-12T09:58:19.631Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
     "SpaceX API"
   ],
   "launches": [
-    {
-      "rocket": "H3 • 30 Morphological Tester",
-      "mission": "H3 • 30 Morphological Tester",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-11T00:00:00.000Z",
-      "window": "June 11/12",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
     {
       "rocket": "Falcon 9 • Starlink 10-54",
       "mission": "Falcon 9 • Starlink 10-54",
@@ -35,17 +24,6 @@
       "site": "",
       "net": "2026-06-12T12:37:00.000Z",
       "window": "8:37 a.m. EDT (1237 UTC) Launch site: SL",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Launch time: \n\n9:53:59 a.m. JST",
-      "mission": "0053:59 UTC on June 12 (8:53:59 p.m. EDT on June 11)\n\n\n\nLaunch site: Tanegashima Space Center",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-13T05:59:00.000Z",
-      "window": "9:53:59 a.m. JST / 0053:59 UTC on June 1",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
