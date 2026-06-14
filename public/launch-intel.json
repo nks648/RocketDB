@@ -1,11 +1,55 @@
 {
-  "updated": "2026-06-14T09:19:43.534Z",
+  "updated": "2026-06-14T13:41:41.235Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
     "SpaceX API"
   ],
   "launches": [
+    {
+      "rocket": "Spectrum • ‘Onward and Upward’",
+      "mission": "Spectrum • ‘Onward and Upward’",
+      "provider": "",
+      "site": "",
+      "net": "2026-06-15T00:00:00.000Z",
+      "window": "NET June 15",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 10 p.m. CEST (4 p.m. EDT",
+      "mission": "2000 UTC)\n\n\n\nLaunch site: Launch Complex 1, Andøya Spaceport, Norway",
+      "provider": "",
+      "site": "",
+      "net": "2026-06-15T20:00:00.000Z",
+      "window": "Window opens at 10 p.m. CEST (4 p.m. EDT",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Atlas 5 • Leo Atlas 08",
+      "mission": "Atlas 5 • Leo Atlas 08",
+      "provider": "",
+      "site": "",
+      "net": "2026-07-03T00:00:00.000Z",
+      "window": "NET July 3",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 12:03 a.m. EDT (0403 UTC)\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\nWindow opens at 12:03 a.m. EDT (0403 UTC)\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-07-03T04:03:00.000Z",
+      "window": "Window opens at 12:03 a.m. EDT (0403 UTC",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
     {
       "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
       "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
