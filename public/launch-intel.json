@@ -1,11 +1,22 @@
 {
-  "updated": "2026-06-14T19:11:06.545Z",
+  "updated": "2026-06-15T02:51:46.355Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
     "SpaceX API"
   ],
   "launches": [
+    {
+      "rocket": "Falcon 9 • Starlink 17-54",
+      "mission": "Falcon 9 • Starlink 17-54",
+      "provider": "",
+      "site": "",
+      "net": "2026-06-15T00:00:00.000Z",
+      "window": "June 15",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
     {
       "rocket": "Spectrum • ‘Onward and Upward’",
       "mission": "Spectrum • ‘Onward and Upward’",
@@ -16,6 +27,17 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 7 a.m. PDT (10 a.m. EDT",
+      "mission": "1400 UTC)\n\n\n\nLaunch site: SlC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-06-15T14:00:00.000Z",
+      "window": "Window opens at 7 a.m. PDT (10 a.m. EDT",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     },
     {
       "rocket": "Launch time: \n\nWindow opens at 10 p.m. CEST (4 p.m. EDT",
