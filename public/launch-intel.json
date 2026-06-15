@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T02:51:46.355Z",
+  "updated": "2026-06-15T11:47:47.101Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -29,23 +29,23 @@
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens at 7 a.m. PDT (10 a.m. EDT",
-      "mission": "1400 UTC)\n\n\n\nLaunch site: SlC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-15T14:00:00.000Z",
-      "window": "Window opens at 7 a.m. PDT (10 a.m. EDT",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
       "rocket": "Launch time: \n\nWindow opens at 10 p.m. CEST (4 p.m. EDT",
       "mission": "2000 UTC)\n\n\n\nLaunch site: Launch Complex 1, Andøya Spaceport, Norway",
       "provider": "",
       "site": "",
       "net": "2026-06-15T20:00:00.000Z",
       "window": "Window opens at 10 p.m. CEST (4 p.m. EDT",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\n7:38:40 a.m. PDT (10:38:40 a.m. EDT",
+      "mission": "1438:40 UTC)\n\n\n\nLaunch site: SlC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-06-16T21:40:00.000Z",
+      "window": "7:38:40 a.m. PDT (10:38:40 a.m. EDT / 14",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
