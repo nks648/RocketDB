@@ -1,22 +1,11 @@
 {
-  "updated": "2026-06-17T02:50:04.976Z",
+  "updated": "2026-06-17T10:27:22.039Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
     "SpaceX API"
   ],
   "launches": [
-    {
-      "rocket": "Falcon 9 • BlueBird 8-10",
-      "mission": "Falcon 9 • BlueBird 8-10",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-17T00:00:00.000Z",
-      "window": "June 17",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
     {
       "rocket": "Ariane 6 • Leo Europe 03",
       "mission": "Ariane 6 • Leo Europe 03",
@@ -27,39 +16,6 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Electron • ‘Ten Owl of Ten’",
-      "mission": "Electron • ‘Ten Owl of Ten’",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-17T00:00:00.000Z",
-      "window": "June 17/18",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n2:39 a.m. EDT (0639 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\n2:39 a.m. EDT (0639 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-17T06:39:00.000Z",
-      "window": "2:39 a.m. EDT (0639 UTC) Launch site: SL",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Launch time: \n\nWindow opens at 8:40 a.m. NZT on June 18 (4:40 p.m. EDT",
-      "mission": "2040 UTC on June 17)\n\n\n\nLaunch site: Launch Complex 1, Mahia, New Zealand",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-17T08:40:00.000Z",
-      "window": "Window opens at 8:40 a.m. NZT on June 18",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Launch time: \n\nWindow opens at 8:53 a.m. Kourou time (7:53 a.m. EDT",
