@@ -1,33 +1,11 @@
 {
-  "updated": "2026-06-17T10:27:22.039Z",
+  "updated": "2026-06-17T14:53:23.061Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
     "SpaceX API"
   ],
   "launches": [
-    {
-      "rocket": "Ariane 6 • Leo Europe 03",
-      "mission": "Ariane 6 • Leo Europe 03",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-17T00:00:00.000Z",
-      "window": "June 17",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\nWindow opens at 8:53 a.m. Kourou time (7:53 a.m. EDT",
-      "mission": "1153 UTC)\n\n\n\nLaunch site: Europe's Spaceport, Kourou, French Guiana",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-17T08:53:00.000Z",
-      "window": "Window opens at 8:53 a.m. Kourou time (7",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
     {
       "rocket": "Falcon 9 • NROL-179",
       "mission": "Falcon 9 • NROL-179",
