@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T20:12:20.649Z",
+  "updated": "2026-06-19T03:29:52.534Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -18,26 +18,15 @@
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens at 1:54 a.m. PDT (4:54 a.m. EDT",
-      "mission": "0854 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "rocket": "Launch time: \n\n1:40 a.m. PDT (4:40 a.m. EDT",
+      "mission": "0840 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "provider": "",
       "site": "",
-      "net": "2026-06-18T08:54:00.000Z",
-      "window": "Window opens at 1:54 a.m. PDT (4:54 a.m.",
+      "net": "2026-06-18T08:40:00.000Z",
+      "window": "1:40 a.m. PDT (4:40 a.m. EDT / 0840 UTC)",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
-    },
-    {
-      "rocket": "Falcon 9 • Starfall Demo",
-      "mission": "Falcon 9 • Starfall Demo",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-21T00:00:00.000Z",
-      "window": "June 21",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
     },
     {
       "rocket": "Falcon 9 • Starlink 17-28",
@@ -51,23 +40,34 @@
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens at 6:43 a.m. EDT (1043 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\nWindow opens at 6:43 a.m. EDT (1043 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-21T10:43:00.000Z",
-      "window": "Window opens at 6:43 a.m. EDT (1043 UTC)",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
       "rocket": "Launch time: \n\nWindow opens at 7 a.m. PDT (10 a.m. EDT",
       "mission": "1400 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "provider": "",
       "site": "",
       "net": "2026-06-21T14:00:00.000Z",
       "window": "Window opens at 7 a.m. PDT (10 a.m. EDT",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Starfall Demo",
+      "mission": "Falcon 9 • Starfall Demo",
+      "provider": "",
+      "site": "",
+      "net": "2026-06-23T00:00:00.000Z",
+      "window": "June 23",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 6:43 a.m. EDT (1043 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\nWindow opens at 6:43 a.m. EDT (1043 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-06-23T10:43:00.000Z",
+      "window": "Window opens at 6:43 a.m. EDT (1043 UTC)",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
