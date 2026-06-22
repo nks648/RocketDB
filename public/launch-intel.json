@@ -1,33 +1,11 @@
 {
-  "updated": "2026-06-21T19:17:01.529Z",
+  "updated": "2026-06-22T02:53:24.681Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
     "SpaceX API"
   ],
   "launches": [
-    {
-      "rocket": "Falcon 9 • Starlink 17-28",
-      "mission": "Falcon 9 • Starlink 17-28",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-21T00:00:00.000Z",
-      "window": "June 21",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n9:39:06 a.m. PDT (12:39:06 p.m. EDT",
-      "mission": "1639:06 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-22T22:06:00.000Z",
-      "window": "9:39:06 a.m. PDT (12:39:06 p.m. EDT / 16",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
     {
       "rocket": "Falcon 9 • Starfall Demo",
       "mission": "Falcon 9 • Starfall Demo",
