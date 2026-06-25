@@ -1,33 +1,11 @@
 {
-  "updated": "2026-06-25T02:31:31.373Z",
+  "updated": "2026-06-25T08:48:56.997Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
     "SpaceX API"
   ],
   "launches": [
-    {
-      "rocket": "Falcon 9 • Starlink 17-45",
-      "mission": "Falcon 9 • Starlink 17-45",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-24T00:00:00.000Z",
-      "window": "June 24/25",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n8:30:38 p.m. PDT (11:30:38 p.m. EDT",
-      "mission": "0330:38 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-26T01:38:00.000Z",
-      "window": "8:30:38 p.m. PDT (11:30:38 p.m. EDT / 03",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
     {
       "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: Kwajalein Atoll, Republic of the Marshall Islands",
       "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: Kwajalein Atoll, Republic of the Marshall Islands",
