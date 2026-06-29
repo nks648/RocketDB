@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-29T02:39:43.249Z",
+  "updated": "2026-06-29T10:24:32.679Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -18,34 +18,12 @@
       "confidence": "low"
     },
     {
-      "rocket": "Falcon 9 • SXM-11",
-      "mission": "Falcon 9 • SXM-11",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-28T00:00:00.000Z",
-      "window": "June 28/29",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
       "rocket": "Launch time: \n\n9:09:18 a.m. PDT (12:09:18 p.m. EDT",
       "mission": "1609:18 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "provider": "",
       "site": "",
       "net": "2026-06-28T16:18:00.000Z",
       "window": "9:09:18 a.m. PDT (12:09:18 p.m. EDT / 16",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Launch time: \n\nWindow opens at 10:25 p.m. EDT (0225 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\nWindow opens at 10:25 p.m. EDT (0225 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-29T02:25:00.000Z",
-      "window": "Window opens at 10:25 p.m. EDT (0225 UTC",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
