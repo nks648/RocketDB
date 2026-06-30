@@ -1,33 +1,11 @@
 {
-  "updated": "2026-06-29T19:44:26.983Z",
+  "updated": "2026-06-30T02:34:14.116Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
     "SpaceX API"
   ],
   "launches": [
-    {
-      "rocket": "Falcon 9 • Starlink 17-40",
-      "mission": "Falcon 9 • Starlink 17-40",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-28T00:00:00.000Z",
-      "window": "June 28",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n9:09:18 a.m. PDT (12:09:18 p.m. EDT",
-      "mission": "1609:18 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-28T16:18:00.000Z",
-      "window": "9:09:18 a.m. PDT (12:09:18 p.m. EDT / 16",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
     {
       "rocket": "Pegasus • Swift boost",
       "mission": "Pegasus • Swift boost",
