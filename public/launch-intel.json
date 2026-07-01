@@ -1,33 +1,11 @@
 {
-  "updated": "2026-07-01T09:30:39.896Z",
+  "updated": "2026-07-01T14:11:48.688Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
     "SpaceX API"
   ],
   "launches": [
-    {
-      "rocket": "Pegasus • Swift boost",
-      "mission": "Pegasus • Swift boost",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-30T00:00:00.000Z",
-      "window": "June 30",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n6:23 a.m. EDT (1023 UTC)\n\n\n\nLaunch site: Kwajalein Atoll, Republic of the Marshall Islands",
-      "mission": "Launch time: \n\n6:23 a.m. EDT (1023 UTC)\n\n\n\nLaunch site: Kwajalein Atoll, Republic of the Marshall Islands",
-      "provider": "",
-      "site": "",
-      "net": "2026-06-30T10:23:00.000Z",
-      "window": "6:23 a.m. EDT (1023 UTC) Launch site: Kw",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
     {
       "rocket": "Falcon 9 • Starlink 17-46",
       "mission": "Falcon 9 • Starlink 17-46",
@@ -42,6 +20,17 @@
     {
       "rocket": "Atlas 5 • Leo Atlas 08",
       "mission": "Atlas 5 • Leo Atlas 08",
+      "provider": "",
+      "site": "",
+      "net": "2026-07-02T00:00:00.000Z",
+      "window": "NET July 2",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Pegasus • Swift boost",
+      "mission": "Pegasus • Swift boost",
       "provider": "",
       "site": "",
       "net": "2026-07-02T00:00:00.000Z",
@@ -68,6 +57,17 @@
       "site": "",
       "net": "2026-07-02T04:24:00.000Z",
       "window": "Window opens at 12:24 a.m. EDT (0424 UTC",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\n5:09 a.m. EDT (0909 UTC)\n\n\n\nLaunch site: Kwajalein Atoll, Republic of the Marshall Islands",
+      "mission": "Launch time: \n\n5:09 a.m. EDT (0909 UTC)\n\n\n\nLaunch site: Kwajalein Atoll, Republic of the Marshall Islands",
+      "provider": "",
+      "site": "",
+      "net": "2026-07-02T09:09:00.000Z",
+      "window": "5:09 a.m. EDT (0909 UTC) Launch site: Kw",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
