@@ -1,33 +1,11 @@
 {
-  "updated": "2026-07-02T02:29:44.925Z",
+  "updated": "2026-07-02T08:46:41.387Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
     "SpaceX API"
   ],
   "launches": [
-    {
-      "rocket": "Falcon 9 • Starlink 17-46",
-      "mission": "Falcon 9 • Starlink 17-46",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-01T00:00:00.000Z",
-      "window": "July 1/2",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Atlas 5 • Leo Atlas 08",
-      "mission": "Atlas 5 • Leo Atlas 08",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-02T00:00:00.000Z",
-      "window": "NET July 2",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
     {
       "rocket": "Pegasus • Swift boost",
       "mission": "Pegasus • Swift boost",
@@ -38,28 +16,6 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n7:57 p.m. PDT (10:57 p.m. EDT",
-      "mission": "0257 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-02T02:57:00.000Z",
-      "window": "7:57 p.m. PDT (10:57 p.m. EDT / 0257 UTC",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Launch time: \n\nWindow opens at 12:24 a.m. EDT (0424 UTC)\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\nWindow opens at 12:24 a.m. EDT (0424 UTC)\n\n\n\nLaunch site: SLC-41, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-02T04:24:00.000Z",
-      "window": "Window opens at 12:24 a.m. EDT (0424 UTC",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Launch time: \n\n5:09 a.m. EDT (0909 UTC)\n\n\n\nLaunch site: Kwajalein Atoll, Republic of the Marshall Islands",
