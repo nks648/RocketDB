@@ -1,33 +1,11 @@
 {
-  "updated": "2026-07-02T19:11:08.452Z",
+  "updated": "2026-07-03T02:05:11.657Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
     "SpaceX API"
   ],
   "launches": [
-    {
-      "rocket": "Pegasus • Swift boost",
-      "mission": "Pegasus • Swift boost",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-02T00:00:00.000Z",
-      "window": "NET July 2",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n5:09 a.m. EDT (0909 UTC)\n\n\n\nLaunch site: Kwajalein Atoll, Republic of the Marshall Islands",
-      "mission": "Launch time: \n\n5:09 a.m. EDT (0909 UTC)\n\n\n\nLaunch site: Kwajalein Atoll, Republic of the Marshall Islands",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-02T09:09:00.000Z",
-      "window": "5:09 a.m. EDT (0909 UTC) Launch site: Kw",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
     {
       "rocket": "Falcon 9 • Starlink 10-50",
       "mission": "Falcon 9 • Starlink 10-50",
