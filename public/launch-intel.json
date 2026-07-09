@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-09T09:32:35.819Z",
+  "updated": "2026-07-09T14:33:57.005Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -27,28 +27,6 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9 • Starlink 10-42",
-      "mission": "Falcon 9 • Starlink 10-42",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-09T00:00:00.000Z",
-      "window": "July 9",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n5:25 a.m. EDT (0925 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\n5:25 a.m. EDT (0925 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-09T09:25:00.000Z",
-      "window": "5:25 a.m. EDT (0925 UTC) Launch site: SL",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Falcon 9 • Starlink 17-48",
