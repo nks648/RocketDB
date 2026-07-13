@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-13T08:51:24.303Z",
+  "updated": "2026-07-13T14:08:51.755Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -139,6 +139,17 @@
       "confidence": "high"
     },
     {
+      "rocket": "Vikram-1 • Mission Aagaman",
+      "mission": "Vikram-1 • Mission Aagaman",
+      "provider": "",
+      "site": "",
+      "net": "2026-07-18T00:00:00.000Z",
+      "window": "NET July 18",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
       "rocket": "Falcon 9 • Starlink 17-39",
       "mission": "Falcon 9 • Starlink 17-39",
       "provider": "",
@@ -150,6 +161,17 @@
       "confidence": "low"
     },
     {
+      "rocket": "Launch time: \n\nWindow opens at 10:30 a.m. IST (1 a.m. EDT",
+      "mission": "0400 UTC)\n\n\n\nLaunch site: First Launch Pad, Satish Dhawan Space Centre (SDSC SHAR), Sriharikota, India",
+      "provider": "",
+      "site": "",
+      "net": "2026-07-18T10:30:00.000Z",
+      "window": "Window opens at 10:30 a.m. IST (1 a.m. E",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
       "rocket": "Launch time: \n\n7 a.m. PDT (10 a.m. EDT",
       "mission": "1400 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "provider": "",
@@ -159,6 +181,28 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-07-23T00:00:00.000Z",
+      "window": "TBD Launch site: SLC-4E",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Starlink 17-51",
+      "mission": "Falcon 9 • Starlink 17-51",
+      "provider": "",
+      "site": "",
+      "net": "2026-07-23T00:00:00.000Z",
+      "window": "July 23",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
     }
   ]
 }
