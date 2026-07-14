@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-14T07:48:17.171Z",
+  "updated": "2026-07-14T13:11:46.018Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -29,17 +29,6 @@
       "confidence": "low"
     },
     {
-      "rocket": "Falcon 9 • Starlink 10-45",
-      "mission": "Falcon 9 • Starlink 10-45",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-14T00:00:00.000Z",
-      "window": "July 14",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
       "rocket": "Soyuz-2-1a • Soyuz MS-29",
       "mission": "Soyuz-2-1a • Soyuz MS-29",
       "provider": "",
@@ -49,17 +38,6 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n5:10:12 a.m. EDT (0910:12 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\n5:10:12 a.m. EDT (0910:12 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-14T14:12:00.000Z",
-      "window": "5:10:12 a.m. EDT (0910:12 UTC) Launch si",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Launch time: \n\n7:47 p.m. local time (10:47 a.m. EDT",
