@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-17T13:07:41.441Z",
+  "updated": "2026-07-17T18:53:58.563Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -27,28 +27,6 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Soyuz-2-1a • Soyuz MS-29",
-      "mission": "Soyuz-2-1a • Soyuz MS-29",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-14T00:00:00.000Z",
-      "window": "July 14",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n7:47 p.m. local time (10:47 a.m. EDT",
-      "mission": "1447 UTC)\n\n\n\nLaunch site: Site 31, Baikonur Cosmodrome, Kazakhstan",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-14T19:47:00.000Z",
-      "window": "7:47 p.m. local time (10:47 a.m. EDT / 1",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Vikram-1 • Mission Aagaman",
@@ -84,12 +62,34 @@
       "confidence": "low"
     },
     {
+      "rocket": "Starship • Flight 13",
+      "mission": "Starship • Flight 13",
+      "provider": "",
+      "site": "",
+      "net": "2026-07-20T00:00:00.000Z",
+      "window": "NET July 20",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
       "rocket": "Launch time: \n\n7 a.m. PDT (10 a.m. EDT",
       "mission": "1400 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "provider": "",
       "site": "",
       "net": "2026-07-20T14:00:00.000Z",
       "window": "7 a.m. PDT (10 a.m. EDT / 1400 UTC) Laun",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens 5:45 p.m. CDT (6:45 p.m. EDT",
+      "mission": "2245 UTC)\n\n\n\nLaunch site: Pad 2, Starbase, Texas",
+      "provider": "",
+      "site": "",
+      "net": "2026-07-20T22:45:00.000Z",
+      "window": "Window opens 5:45 p.m. CDT (6:45 p.m. ED",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
@@ -117,23 +117,34 @@
       "confidence": "high"
     },
     {
-      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-24T00:00:00.000Z",
-      "window": "TBD Launch site: SLC-4E",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
       "rocket": "Falcon 9 • Starlink 17-51",
       "mission": "Falcon 9 • Starlink 17-51",
       "provider": "",
       "site": "",
       "net": "2026-07-24T00:00:00.000Z",
       "window": "July 24",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-07-28T00:00:00.000Z",
+      "window": "TBD Launch site: SLC-4E",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Starlink 17-52",
+      "mission": "Falcon 9 • Starlink 17-52",
+      "provider": "",
+      "site": "",
+      "net": "2026-07-28T00:00:00.000Z",
+      "window": "July 28",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
