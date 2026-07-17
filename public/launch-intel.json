@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16T18:57:21.156Z",
+  "updated": "2026-07-17T01:52:49.311Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -46,50 +46,6 @@
       "site": "",
       "net": "2026-07-14T19:47:00.000Z",
       "window": "7:47 p.m. local time (10:47 a.m. EDT / 1",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Falcon 9 • Tranche 1 Transport Layer E",
-      "mission": "Falcon 9 • Tranche 1 Transport Layer E",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-16T00:00:00.000Z",
-      "window": "July 16",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Starship • Flight 13",
-      "mission": "Starship • Flight 13",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-16T00:00:00.000Z",
-      "window": "July 16",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\nWindow opens 1:22 p.m. PDT (4:22 p.m. EDT",
-      "mission": "2022 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-16T20:22:00.000Z",
-      "window": "Window opens 1:22 p.m. PDT (4:22 p.m. ED",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Launch time: \n\nWindow opens 5:45 p.m. CDT (6:45 p.m. EDT",
-      "mission": "2245 UTC)\n\n\n\nLaunch site: Pad 2, Starbase, Texas",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-16T22:45:00.000Z",
-      "window": "Window opens 5:45 p.m. CDT (6:45 p.m. ED",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
