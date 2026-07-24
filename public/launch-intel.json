@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-24T13:19:25.446Z",
+  "updated": "2026-07-24T19:13:37.039Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -115,6 +115,61 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Starlink 17-53",
+      "mission": "Falcon 9 • Starlink 17-53",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-01T00:00:00.000Z",
+      "window": "August 1",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 7 a.m. PDT (10 a.m. EDT",
+      "mission": "1400 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-01T14:00:00.000Z",
+      "window": "Window opens at 7 a.m. PDT (10 a.m. EDT",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: Europe's Spaceport, Kourou, French Guiana",
+      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: Europe's Spaceport, Kourou, French Guiana",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-27T00:00:00.000Z",
+      "window": "TBD Launch site: Europe's Spaceport",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Ariane 6 • MTG-I2",
+      "mission": "Ariane 6 • MTG-I2",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-27T00:00:00.000Z",
+      "window": "NET August 27",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Falcon Heavy • Nancy Grace Roman Space Telescope",
+      "mission": "Falcon Heavy • Nancy Grace Roman Space Telescope",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-30T00:00:00.000Z",
+      "window": "NET August 30",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
     }
   ]
 }
