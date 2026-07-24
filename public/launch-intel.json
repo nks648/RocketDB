@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23T19:00:38.748Z",
+  "updated": "2026-07-24T01:53:16.443Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -33,8 +33,8 @@
       "mission": "Starship • Flight 13",
       "provider": "",
       "site": "",
-      "net": "2026-07-23T00:00:00.000Z",
-      "window": "NET July 23",
+      "net": "2026-07-24T00:00:00.000Z",
+      "window": "NET July 24",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
@@ -44,7 +44,7 @@
       "mission": "2245 UTC)\n\n\n\nLaunch site: Pad 2, Starbase, Texas",
       "provider": "",
       "site": "",
-      "net": "2026-07-23T22:45:00.000Z",
+      "net": "2026-07-24T22:45:00.000Z",
       "window": "Window opens 5:45 p.m. CDT (6:45 p.m. ED",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
