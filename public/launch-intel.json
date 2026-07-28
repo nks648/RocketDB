@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-28T13:42:29.957Z",
+  "updated": "2026-07-28T19:09:36.744Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -77,8 +77,8 @@
       "mission": "Falcon 9 • Starlink 17-53",
       "provider": "",
       "site": "",
-      "net": "2026-08-02T00:00:00.000Z",
-      "window": "August 2",
+      "net": "2026-08-03T00:00:00.000Z",
+      "window": "August 3",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
@@ -88,8 +88,30 @@
       "mission": "1400 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "provider": "",
       "site": "",
-      "net": "2026-08-02T14:00:00.000Z",
+      "net": "2026-08-03T14:00:00.000Z",
       "window": "Window opens at 7 a.m. PDT (10 a.m. EDT",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • BlueBird 11-13",
+      "mission": "Falcon 9 • BlueBird 11-13",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-05T00:00:00.000Z",
+      "window": "August 5",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n3:42 a.m. EDT (0742 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\n3:42 a.m. EDT (0742 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-05T07:42:00.000Z",
+      "window": "3:42 a.m. EDT (0742 UTC) Launch site: SL",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
