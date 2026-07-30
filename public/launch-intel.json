@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-30T08:08:42.147Z",
+  "updated": "2026-07-30T13:29:29.496Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -27,28 +27,6 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9 • NROL-95",
-      "mission": "Falcon 9 • NROL-95",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-30T00:00:00.000Z",
-      "window": "July 30",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n3:10 a.m. EDT (0710 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\n3:10 a.m. EDT (0710 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-30T07:10:00.000Z",
-      "window": "3:10 a.m. EDT (0710 UTC) Launch site: SL",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Falcon 9 • Starlink 17-52",
