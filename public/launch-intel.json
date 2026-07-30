@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-30T13:29:29.496Z",
+  "updated": "2026-07-30T19:10:54.159Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -90,6 +90,28 @@
       "site": "",
       "net": "2026-08-05T07:42:00.000Z",
       "window": "3:42 a.m. EDT (0742 UTC) Launch site: SL",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "H3 • QZS-7",
+      "mission": "H3 • QZS-7",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-06T00:00:00.000Z",
+      "window": "NET August 6/7",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n4:30 p.m. JST on Aug. 7 (3:30 a.m. EDT",
+      "mission": "0730 UTC on Aug. 6)\n\n\n\nLaunch site: Yoshinobu Launch Complex, JAXA Tanegashima Space Center",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-06T16:30:00.000Z",
+      "window": "4:30 p.m. JST on Aug. 7 (3:30 a.m. EDT /",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
@@ -192,6 +214,28 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "Vega-C • Sentinel-3C and FLEX Earth Explorer",
+      "mission": "Vega-C • Sentinel-3C and FLEX Earth Explorer",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-14T00:00:00.000Z",
+      "window": "September 14/15",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n10:21 p.m. Kourou time (9:21 p.m. EDT",
+      "mission": "0121 UTC)\n\n\n\nLaunch site: Europe's Spaceport, Kourou, French Guiana",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-14T22:21:00.000Z",
+      "window": "10:21 p.m. Kourou time (9:21 p.m. EDT /",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     }
   ]
 }
