@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-30T19:10:54.159Z",
+  "updated": "2026-07-31T01:57:56.930Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -214,6 +214,17 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n7:26 a.m. EDT (1126 UTC)\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
+      "mission": "Launch time: \n\n7:26 a.m. EDT (1126 UTC)\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-30T11:26:00.000Z",
+      "window": "7:26 a.m. EDT (1126 UTC) Launch site: La",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     },
     {
       "rocket": "Vega-C • Sentinel-3C and FLEX Earth Explorer",
