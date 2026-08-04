@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-04T13:49:35.380Z",
+  "updated": "2026-08-04T19:19:24.479Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -40,6 +40,17 @@
       "confidence": "low"
     },
     {
+      "rocket": "Launch time: \n\n10:05:03 a.m. PDT (1:05:03 p.m. EDT",
+      "mission": "1705:03 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-04T12:03:00.000Z",
+      "window": "10:05:03 a.m. PDT (1:05:03 p.m. EDT / 17",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
       "rocket": "Falcon 9 • BlueBird 11-13",
       "mission": "Falcon 9 • BlueBird 11-13",
       "provider": "",
@@ -57,17 +68,6 @@
       "site": "",
       "net": "2026-08-05T07:42:00.000Z",
       "window": "3:42 a.m. EDT (0742 UTC) Launch site: SL",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Launch time: \n\n9:24:46 a.m. PDT (12:24:46 p.m. EDT",
-      "mission": "1624:46 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-05T07:46:00.000Z",
-      "window": "9:24:46 a.m. PDT (12:24:46 p.m. EDT / 16",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
