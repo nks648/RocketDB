@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-08T12:28:37.391Z",
+  "updated": "2026-08-08T18:23:22.868Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -29,50 +29,6 @@
       "confidence": "low"
     },
     {
-      "rocket": "Falcon 9 • Starlink 17-53",
-      "mission": "Falcon 9 • Starlink 17-53",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-04T00:00:00.000Z",
-      "window": "August 4",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n10:05:03 a.m. PDT (1:05:03 p.m. EDT",
-      "mission": "1705:03 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-04T12:03:00.000Z",
-      "window": "10:05:03 a.m. PDT (1:05:03 p.m. EDT / 17",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "H3 • QZS-7",
-      "mission": "H3 • QZS-7",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-06T00:00:00.000Z",
-      "window": "NET August 6/7",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n4:30 p.m. JST on Aug. 7 (3:30 a.m. EDT",
-      "mission": "0730 UTC on Aug. 6)\n\n\n\nLaunch site: Yoshinobu Launch Complex, JAXA Tanegashima Space Center",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-06T16:30:00.000Z",
-      "window": "4:30 p.m. JST on Aug. 7 (3:30 a.m. EDT /",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
       "rocket": "Falcon 9 • Starlink 17-38",
       "mission": "Falcon 9 • Starlink 17-38",
       "provider": "",
@@ -84,12 +40,12 @@
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\n7 a.m. PDT (10 a.m. EDT",
-      "mission": "1400 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "rocket": "Launch time: \n\n9:35:02 a.m. PDT (12:35:02 p.m. EDT",
+      "mission": "1635:02 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "provider": "",
       "site": "",
-      "net": "2026-08-08T14:00:00.000Z",
-      "window": "7 a.m. PDT (10 a.m. EDT / 1400 UTC) Laun",
+      "net": "2026-08-09T18:02:00.000Z",
+      "window": "9:35:02 a.m. PDT (12:35:02 p.m. EDT / 16",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
@@ -115,6 +71,28 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "H3 • QZS-7",
+      "mission": "H3 • QZS-7",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-10T00:00:00.000Z",
+      "window": "NET August 10/11",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n4 p.m. JST on Aug. 11 (3 a.m. EDT",
+      "mission": "0700 UTC on Aug. 10)\n\n\n\nLaunch site: Yoshinobu Launch Complex, JAXA Tanegashima Space Center",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-10T16:00:00.000Z",
+      "window": "4 p.m. JST on Aug. 11 (3 a.m. EDT / 0700",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     },
     {
       "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
