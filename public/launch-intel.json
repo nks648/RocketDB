@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-08T18:23:22.868Z",
+  "updated": "2026-08-09T01:01:31.608Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -29,37 +29,15 @@
       "confidence": "low"
     },
     {
-      "rocket": "Falcon 9 • Starlink 17-38",
-      "mission": "Falcon 9 • Starlink 17-38",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-08T00:00:00.000Z",
-      "window": "August 8",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n9:35:02 a.m. PDT (12:35:02 p.m. EDT",
-      "mission": "1635:02 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-09T18:02:00.000Z",
-      "window": "9:35:02 a.m. PDT (12:35:02 p.m. EDT / 16",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "rocket": "H3 • QZS-7",
+      "mission": "H3 • QZS-7",
       "provider": "",
       "site": "",
       "net": "2026-08-10T00:00:00.000Z",
-      "window": "TBD Launch site: SLC-40",
+      "window": "NET August 10/11",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
+      "confidence": "low"
     },
     {
       "rocket": "Falcon 9 • Starlink 10-19",
@@ -73,15 +51,15 @@
       "confidence": "low"
     },
     {
-      "rocket": "H3 • QZS-7",
-      "mission": "H3 • QZS-7",
+      "rocket": "Launch time: \n\nWindow opens at 10:49 a.m. (1449 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\nWindow opens at 10:49 a.m. (1449 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
       "provider": "",
       "site": "",
-      "net": "2026-08-10T00:00:00.000Z",
-      "window": "NET August 10/11",
+      "net": "2026-08-10T14:49:00.000Z",
+      "window": "Window opens at 10:49 a.m. (1449 UTC) La",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
+      "confidence": "high"
     },
     {
       "rocket": "Launch time: \n\n4 p.m. JST on Aug. 11 (3 a.m. EDT",
