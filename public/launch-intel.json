@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T01:09:48.300Z",
+  "updated": "2026-08-12T07:10:10.459Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -24,17 +24,6 @@
       "site": "",
       "net": "2026-07-05T00:00:00.000Z",
       "window": "NET July 5, 2028",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9 • Starlink 17-49",
-      "mission": "Falcon 9 • Starlink 17-49",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-11T00:00:00.000Z",
-      "window": "August 11/12",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
