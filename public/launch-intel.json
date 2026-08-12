@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-11T18:49:12.920Z",
+  "updated": "2026-08-12T01:09:48.300Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -29,39 +29,6 @@
       "confidence": "low"
     },
     {
-      "rocket": "H3 • QZS-7",
-      "mission": "H3 • QZS-7",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-10T00:00:00.000Z",
-      "window": "NET August 10/11",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n4 p.m. JST on Aug. 11 (3 a.m. EDT",
-      "mission": "0700 UTC on Aug. 10)\n\n\n\nLaunch site: Yoshinobu Launch Complex, JAXA Tanegashima Space Center",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-10T16:00:00.000Z",
-      "window": "4 p.m. JST on Aug. 11 (3 a.m. EDT / 0700",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Falcon 9 • Starlink 10-19",
-      "mission": "Falcon 9 • Starlink 10-19",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-11T00:00:00.000Z",
-      "window": "August 11",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
       "rocket": "Falcon 9 • Starlink 17-49",
       "mission": "Falcon 9 • Starlink 17-49",
       "provider": "",
@@ -73,34 +40,89 @@
       "confidence": "low"
     },
     {
+      "rocket": "Falcon 9 • USSF-366",
+      "mission": "Falcon 9 • USSF-366",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-15T00:00:00.000Z",
+      "window": "August 15",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Falcon 9 • Globalstar 2-R Launch 1",
+      "mission": "Falcon 9 • Globalstar 2-R Launch 1",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-15T00:00:00.000Z",
+      "window": "August 15/16",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 9:12 p.m. EDT (0112 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\nWindow opens at 9:12 p.m. EDT (0112 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-15T01:12:00.000Z",
+      "window": "Window opens at 9:12 p.m. EDT (0112 UTC)",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 2:52 p.m. PDT (5:52 p.m. EDT",
+      "mission": "2152 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-15T21:52:00.000Z",
+      "window": "Window opens at 2:52 p.m. PDT (5:52 p.m.",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Starlink 17-50",
+      "mission": "Falcon 9 • Starlink 17-50",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-18T00:00:00.000Z",
+      "window": "August 18/19",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
       "rocket": "Launch time: \n\nWindow opens at 7 p.m. PDT (10 p.m. EDT",
       "mission": "0200 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "provider": "",
       "site": "",
-      "net": "2026-08-12T02:00:00.000Z",
+      "net": "2026-08-19T02:00:00.000Z",
       "window": "Window opens at 7 p.m. PDT (10 p.m. EDT",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
     },
     {
-      "rocket": "Launch time: \n\n11:58:26 a.m. EDT (1528:26 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\n11:58:26 a.m. EDT (1528:26 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "rocket": "Falcon 9 • Starlink 10-39",
+      "mission": "Falcon 9 • Starlink 10-39",
       "provider": "",
       "site": "",
-      "net": "2026-08-13T14:26:00.000Z",
-      "window": "11:58:26 a.m. EDT (1528:26 UTC) Launch s",
+      "net": "2026-08-20T00:00:00.000Z",
+      "window": "August 20",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
+      "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: Europe's Spaceport, Kourou, French Guiana",
-      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: Europe's Spaceport, Kourou, French Guiana",
+      "rocket": "Launch time: \n\nWindow opens at 11:19 a.m. EDT (1519 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\nWindow opens at 11:19 a.m. EDT (1519 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
       "provider": "",
       "site": "",
-      "net": "2026-08-27T00:00:00.000Z",
-      "window": "TBD Launch site: Europe's Spaceport",
+      "net": "2026-08-20T15:19:00.000Z",
+      "window": "Window opens at 11:19 a.m. EDT (1519 UTC",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
@@ -115,6 +137,17 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 5:10 p.m. local time (4:10 p.m. EDT",
+      "mission": "2010 UTC)\n\n\n\nLaunch site: Europe's Spaceport, Kourou, French Guiana",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-27T17:10:00.000Z",
+      "window": "Window opens at 5:10 p.m. local time (4:",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     },
     {
       "rocket": "Falcon Heavy • Nancy Grace Roman Space Telescope",
