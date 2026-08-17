@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-17T12:24:28.711Z",
+  "updated": "2026-08-17T18:24:08.599Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -27,50 +27,6 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9 • Globalstar 2-R Launch 1",
-      "mission": "Falcon 9 • Globalstar 2-R Launch 1",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-15T00:00:00.000Z",
-      "window": "August 15/16",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9 • USSF-366",
-      "mission": "Falcon 9 • USSF-366",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-15T00:00:00.000Z",
-      "window": "August 15/16",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\nWindow opens at 9:12 p.m. EDT (0112 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\nWindow opens at 9:12 p.m. EDT (0112 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-15T01:12:00.000Z",
-      "window": "Window opens at 9:12 p.m. EDT (0112 UTC)",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Launch time: \n\n6:50 p.m. PDT (9:50 p.m. EDT",
-      "mission": "0150 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-16T01:50:00.000Z",
-      "window": "6:50 p.m. PDT (9:50 p.m. EDT / 0150 UTC)",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Falcon 9 • Starlink 17-50",
