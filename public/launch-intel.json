@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-20T12:28:51.124Z",
+  "updated": "2026-08-20T18:25:03.889Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -40,17 +40,6 @@
       "confidence": "low"
     },
     {
-      "rocket": "Falcon 9 • Starlink 10-39",
-      "mission": "Falcon 9 • Starlink 10-39",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-20T00:00:00.000Z",
-      "window": "August 20",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
       "rocket": "Launch time: \n\n1 a.m. NZST on Aug. 21 (9 a.m. EDT",
       "mission": "1300 UTC on Aug. 20)\n\n\n\nLaunch site: Launch Complex 1, Mahia, New Zealand",
       "provider": "",
@@ -62,15 +51,26 @@
       "confidence": "high"
     },
     {
-      "rocket": "Launch time: \n\n11:38 a.m. EDT (1538 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\n11:38 a.m. EDT (1538 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
       "provider": "",
       "site": "",
-      "net": "2026-08-20T15:38:00.000Z",
-      "window": "11:38 a.m. EDT (1538 UTC) Launch site: S",
+      "net": "2026-08-21T00:00:00.000Z",
+      "window": "TBD Launch site: SLC-40",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Starlink 10-39",
+      "mission": "Falcon 9 • Starlink 10-39",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-21T00:00:00.000Z",
+      "window": "NET August 21",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
     },
     {
       "rocket": "Falcon 9 • Starlink 15-20",
