@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21T06:30:38.448Z",
+  "updated": "2026-08-21T12:28:07.320Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -51,26 +51,26 @@
       "confidence": "high"
     },
     {
-      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-21T00:00:00.000Z",
-      "window": "TBD Launch site: SLC-40",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
       "rocket": "Falcon 9 • Starlink 10-39",
       "mission": "Falcon 9 • Starlink 10-39",
       "provider": "",
       "site": "",
       "net": "2026-08-21T00:00:00.000Z",
-      "window": "NET August 21",
+      "window": "August 21",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n11:14:22 am EDT (1514 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\n11:14:22 am EDT (1514 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-08-21T15:14:00.000Z",
+      "window": "11:14:22 am EDT (1514 UTC) Launch site:",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     },
     {
       "rocket": "Falcon 9 • Starlink 15-20",
