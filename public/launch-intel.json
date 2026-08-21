@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21T12:28:07.320Z",
+  "updated": "2026-08-21T18:23:15.549Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -29,50 +29,6 @@
       "confidence": "low"
     },
     {
-      "rocket": "Electron • ‘The Lightning God Defends’",
-      "mission": "Electron • ‘The Lightning God Defends’",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-20T00:00:00.000Z",
-      "window": "NET August 20/21",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n1 a.m. NZST on Aug. 21 (9 a.m. EDT",
-      "mission": "1300 UTC on Aug. 20)\n\n\n\nLaunch site: Launch Complex 1, Mahia, New Zealand",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-20T01:00:00.000Z",
-      "window": "1 a.m. NZST on Aug. 21 (9 a.m. EDT / 130",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Falcon 9 • Starlink 10-39",
-      "mission": "Falcon 9 • Starlink 10-39",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-21T00:00:00.000Z",
-      "window": "August 21",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n11:14:22 am EDT (1514 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\n11:14:22 am EDT (1514 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-21T15:14:00.000Z",
-      "window": "11:14:22 am EDT (1514 UTC) Launch site:",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
       "rocket": "Falcon 9 • Starlink 15-20",
       "mission": "Falcon 9 • Starlink 15-20",
       "provider": "",
@@ -84,12 +40,12 @@
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens at 1:25 a.m. PDT (4:25 a.m. EDT",
-      "mission": "0725 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "rocket": "Launch time: \n\n12:25:09 a.m. PDT (3:25:09 a.m. EDT",
+      "mission": "0725:09 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "provider": "",
       "site": "",
-      "net": "2026-08-22T08:25:00.000Z",
-      "window": "Window opens at 1:25 a.m. PDT (4:25 a.m.",
+      "net": "2026-08-23T08:09:00.000Z",
+      "window": "12:25:09 a.m. PDT (3:25:09 a.m. EDT / 07",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
