@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-24T12:29:06.701Z",
+  "updated": "2026-08-24T18:26:23.953Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -44,30 +44,30 @@
       "mission": "Falcon 9 • Starlink 15-22",
       "provider": "",
       "site": "",
-      "net": "2026-08-25T00:00:00.000Z",
-      "window": "August 25",
+      "net": "2026-08-26T00:00:00.000Z",
+      "window": "August 26",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens at 1:49 a.m. EDT (0549 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\nWindow opens at 1:49 a.m. EDT (0549 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "rocket": "Launch time: \n\nWindow opens at 2:27 a.m. PDT (5:27 a.m. EDT",
+      "mission": "0927 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "provider": "",
       "site": "",
-      "net": "2026-08-25T05:49:00.000Z",
-      "window": "Window opens at 1:49 a.m. EDT (0549 UTC)",
+      "net": "2026-08-26T09:27:00.000Z",
+      "window": "Window opens at 2:27 a.m. PDT (5:27 a.m.",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens at 9:44 a.m. PDT (12:44 p.m. EDT",
-      "mission": "1644 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "rocket": "Launch time: \n\n5:33:38 a.m. EDT (0933:38 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\n5:33:38 a.m. EDT (0933:38 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
       "provider": "",
       "site": "",
-      "net": "2026-08-25T16:44:00.000Z",
-      "window": "Window opens at 9:44 a.m. PDT (12:44 p.m",
+      "net": "2026-08-26T13:38:00.000Z",
+      "window": "5:33:38 a.m. EDT (0933:38 UTC) Launch si",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
@@ -115,6 +115,50 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Starlink 15-23",
+      "mission": "Falcon 9 • Starlink 15-23",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-01T00:00:00.000Z",
+      "window": "September 1",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 1:01 a.m. PDT (4:01 a.m. EDT",
+      "mission": "0801 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-01T08:01:00.000Z",
+      "window": "Window opens at 1:01 a.m. PDT (4:01 a.m.",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-04T00:00:00.000Z",
+      "window": "TBD Launch site: SLC-4E",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Starlink 15-24",
+      "mission": "Falcon 9 • Starlink 15-24",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-04T00:00:00.000Z",
+      "window": "September 4",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
     },
     {
       "rocket": "Falcon 9 • NASA’s SpaceX Crew-13",
