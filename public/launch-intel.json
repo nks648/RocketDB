@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-26T06:32:19.351Z",
+  "updated": "2026-08-26T12:32:50.770Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -29,17 +29,6 @@
       "confidence": "low"
     },
     {
-      "rocket": "Falcon 9 • Starlink 15-22",
-      "mission": "Falcon 9 • Starlink 15-22",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-26T00:00:00.000Z",
-      "window": "August 26",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
       "rocket": "Ariane 6 • MTG-I2",
       "mission": "Ariane 6 • MTG-I2",
       "provider": "",
@@ -57,17 +46,6 @@
       "site": "",
       "net": "2026-08-27T17:10:00.000Z",
       "window": "Window opens at 5:10 p.m. local time (4:",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Launch time: \n\n2:35:11 a.m. PDT (5:35:11 a.m. EDT",
-      "mission": "0935:11 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-27T18:11:00.000Z",
-      "window": "2:35:11 a.m. PDT (5:35:11 a.m. EDT / 093",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
