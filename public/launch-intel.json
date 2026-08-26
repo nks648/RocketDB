@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-26T12:32:50.770Z",
+  "updated": "2026-08-26T19:38:24.530Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -156,6 +156,28 @@
       "site": "",
       "net": "2026-09-14T22:21:00.000Z",
       "window": "10:21 p.m. Kourou time (9:21 p.m. EDT /",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "H3 • Martian Moons eXploration (MMX)",
+      "mission": "H3 • Martian Moons eXploration (MMX)",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-19T00:00:00.000Z",
+      "window": "NET October 19/20",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n4:41:03 JST on Oct. 20 (3:41:03 p.m. EDT",
+      "mission": "1941:03 UTC on Oct. 19)\n\n\n\nLaunch site: Yoshinobu Launch Complex, JAXA Tanegashima Space Center",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-21T09:03:00.000Z",
+      "window": "4:41:03 JST on Oct. 20 (3:41:03 p.m. EDT",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
