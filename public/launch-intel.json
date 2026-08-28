@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-27T17:09:00.893Z",
+  "updated": "2026-08-28T01:56:18.767Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -77,30 +77,19 @@
       "mission": "Falcon 9 • Starlink 15-23",
       "provider": "",
       "site": "",
-      "net": "2026-09-01T00:00:00.000Z",
-      "window": "September 1",
+      "net": "2026-09-02T00:00:00.000Z",
+      "window": "September 2",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens at 1:01 a.m. PDT (4:01 a.m. EDT",
-      "mission": "0801 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "rocket": "Launch time: \n\nWindow opens at 12:46 a.m. PDT (3:46 a.m. EDT",
+      "mission": "0746 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "provider": "",
       "site": "",
-      "net": "2026-09-01T08:01:00.000Z",
-      "window": "Window opens at 1:01 a.m. PDT (4:01 a.m.",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-09-04T00:00:00.000Z",
-      "window": "TBD Launch site: SLC-4E",
+      "net": "2026-09-02T07:46:00.000Z",
+      "window": "Window opens at 12:46 a.m. PDT (3:46 a.m",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
@@ -110,11 +99,22 @@
       "mission": "Falcon 9 • Starlink 15-24",
       "provider": "",
       "site": "",
-      "net": "2026-09-04T00:00:00.000Z",
-      "window": "September 4",
+      "net": "2026-09-05T00:00:00.000Z",
+      "window": "September 5",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 4:13 a.m. PDT (7:13 a.m. EDT",
+      "mission": "1113 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-05T11:13:00.000Z",
+      "window": "Window opens at 4:13 a.m. PDT (7:13 a.m.",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     },
     {
       "rocket": "Falcon 9 • NASA’s SpaceX Crew-13",
