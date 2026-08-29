@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-29T11:59:58.161Z",
+  "updated": "2026-08-29T16:28:33.174Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -56,18 +56,18 @@
       "provider": "",
       "site": "",
       "net": "2026-08-30T00:00:00.000Z",
-      "window": "NET August 30",
+      "window": "August 30",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\n7:26 a.m. EDT (1126 UTC)\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
-      "mission": "Launch time: \n\n7:26 a.m. EDT (1126 UTC)\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
+      "rocket": "Launch time: \n\n7:26:04 a.m. EDT (1126:04 UTC)\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
+      "mission": "Launch time: \n\n7:26:04 a.m. EDT (1126:04 UTC)\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
       "provider": "",
       "site": "",
-      "net": "2026-08-30T11:26:00.000Z",
-      "window": "7:26 a.m. EDT (1126 UTC) Launch site: La",
+      "net": "2026-08-31T06:04:00.000Z",
+      "window": "7:26:04 a.m. EDT (1126:04 UTC) Launch si",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
