@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-29T16:28:33.174Z",
+  "updated": "2026-08-29T20:12:22.311Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -27,28 +27,6 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Ariane 6 • MTG-I2",
-      "mission": "Ariane 6 • MTG-I2",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-27T00:00:00.000Z",
-      "window": "NET August 27",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\nWindow opens at 5:10 p.m. local time (4:10 p.m. EDT",
-      "mission": "2010 UTC)\n\n\n\nLaunch site: Europe's Spaceport, Kourou, French Guiana",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-27T17:10:00.000Z",
-      "window": "Window opens at 5:10 p.m. local time (4:",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Falcon Heavy • Nancy Grace Roman Space Telescope",
