@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-31T12:13:40.455Z",
+  "updated": "2026-08-31T22:12:29.791Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -27,28 +27,6 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Falcon Heavy • Nancy Grace Roman Space Telescope",
-      "mission": "Falcon Heavy • Nancy Grace Roman Space Telescope",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-30T00:00:00.000Z",
-      "window": "August 30",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n7:26:04 a.m. EDT (1126:04 UTC)\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
-      "mission": "Launch time: \n\n7:26:04 a.m. EDT (1126:04 UTC)\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-08-31T06:04:00.000Z",
-      "window": "7:26:04 a.m. EDT (1126:04 UTC) Launch si",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Falcon 9 • Starlink 15-23",
