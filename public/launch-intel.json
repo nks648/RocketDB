@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04T10:13:35.238Z",
+  "updated": "2026-09-04T15:29:06.401Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -27,28 +27,6 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "GSLV-F17 • EOS-05",
-      "mission": "GSLV-F17 • EOS-05",
-      "provider": "",
-      "site": "",
-      "net": "2026-09-03T00:00:00.000Z",
-      "window": "September 3/4",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n2:55 a.m. IST on Sept. 4 (5:25 p.m. EDT",
-      "mission": "2125 UTC on Sept. 3)\n\n\n\nLaunch site: Second Launch Pad, Satish Dhawan Space Centre, SHAR, Sriharikota, India",
-      "provider": "",
-      "site": "",
-      "net": "2026-09-03T02:55:00.000Z",
-      "window": "2:55 a.m. IST on Sept. 4 (5:25 p.m. EDT",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Falcon 9 • Starlink 15-24",
