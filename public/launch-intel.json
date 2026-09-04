@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03T20:18:54.527Z",
+  "updated": "2026-09-04T02:15:22.881Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -29,6 +29,28 @@
       "confidence": "low"
     },
     {
+      "rocket": "GSLV-F17 • EOS-05",
+      "mission": "GSLV-F17 • EOS-05",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-03T00:00:00.000Z",
+      "window": "September 3/4",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n2:55 a.m. IST on Sept. 4 (5:25 p.m. EDT",
+      "mission": "2125 UTC on Sept. 3)\n\n\n\nLaunch site: Second Launch Pad, Satish Dhawan Space Centre, SHAR, Sriharikota, India",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-03T02:55:00.000Z",
+      "window": "2:55 a.m. IST on Sept. 4 (5:25 p.m. EDT",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
       "rocket": "Falcon 9 • Starlink 15-24",
       "mission": "Falcon 9 • Starlink 15-24",
       "provider": "",
@@ -46,6 +68,50 @@
       "site": "",
       "net": "2026-09-06T10:59:00.000Z",
       "window": "Window opens at 3:59 a.m. PDT (6:59 a.m.",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Soyuz 2.1b • Progress MS-35",
+      "mission": "96P",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-09T00:00:00.000Z",
+      "window": "September 9",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n9:15 p.m. Baikonur time (12:15 p.m. EDT",
+      "mission": "1615 UTC)\n\n\n\nLaunch site: Site 31/6, Baikonur Cosmodrome, Kazakhstan",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-09T21:15:00.000Z",
+      "window": "9:15 p.m. Baikonur time (12:15 p.m. EDT",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • USSF-153",
+      "mission": "Falcon 9 • USSF-153",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-10T00:00:00.000Z",
+      "window": "September 10",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 8:37 a.m. PDT (11:37 a.m. EDT",
+      "mission": "1537 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-10T15:37:00.000Z",
+      "window": "Window opens at 8:37 a.m. PDT (11:37 a.m",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
@@ -71,6 +137,28 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: Pad 2, Starbase, Texas",
+      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: Pad 2, Starbase, Texas",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-15T00:00:00.000Z",
+      "window": "TBD Launch site: Pad 2",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Starship • Flight 14",
+      "mission": "Starship • Flight 14",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-15T00:00:00.000Z",
+      "window": "NET September 15",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
     },
     {
       "rocket": "H3 • Martian Moons eXploration (MMX)",
