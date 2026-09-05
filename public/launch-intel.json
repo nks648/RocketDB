@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04T20:04:16.065Z",
+  "updated": "2026-09-05T02:08:54.247Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -90,6 +90,28 @@
       "site": "",
       "net": "2026-09-10T15:37:00.000Z",
       "window": "Window opens at 8:37 a.m. PDT (11:37 a.m",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • O3b mPOWER F",
+      "mission": "Falcon 9 • O3b mPOWER F",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-13T00:00:00.000Z",
+      "window": "September 13",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 2:40 p.m. EDT (1840 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\nWindow opens at 2:40 p.m. EDT (1840 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-13T18:40:00.000Z",
+      "window": "Window opens at 2:40 p.m. EDT (1840 UTC)",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
