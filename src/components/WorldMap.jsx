@@ -255,7 +255,7 @@ export default function WorldMap({ launches, selectedLaunch, onSelectLaunch, onP
 
           <button className={`toggle-btn${showAircraft ? ' active' : ''}`}
             onClick={() => setShowAircraft(v => !v)}
-            title="Live aircraft near active site (OpenSky Network)">
+            title="Live aircraft near active site (adsb.lol)">
             <span className="toggle-swatch" style={{ background:'#ffd740', fontSize:10 }}>✈</span>
             <span className="toggle-label">
               Aircraft{aircraftLoading ? ' …' : showAircraft ? ` (${aircraft.length})` : ''}
@@ -308,9 +308,9 @@ export default function WorldMap({ launches, selectedLaunch, onSelectLaunch, onP
         style={{ width:'100%', height:'100%' }}
       >
         <TileLayer
-          url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-          attribution='&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
-          subdomains="abcd" maxZoom={19}
+          url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}"
+          attribution='&copy; <a href="https://www.esri.com/">Esri</a>, HERE, Garmin, &copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> contributors'
+          maxZoom={16}
         />
         <ZoomControl position="bottomleft" />
 
@@ -386,7 +386,7 @@ export default function WorldMap({ launches, selectedLaunch, onSelectLaunch, onP
                   </div>
                 )}
                 <div style={{ fontSize:10, color:'#7a9ab8', marginTop:4 }}>
-                  ICAO: {plane.icao.toUpperCase()} · via OpenSky
+                  ICAO: {plane.icao.toUpperCase()} · via adsb.lol
                 </div>
               </div>
             </Popup>

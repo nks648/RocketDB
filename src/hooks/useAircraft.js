@@ -1,10 +1,14 @@
 import { useState, useEffect, useRef } from 'react'
 
-const POLL_MS = 60_000 // OpenSky anonymous: max ~400 req/day; 60s is safe
+const POLL_MS = 60_000 // adsb.lol is generous but no need to poll faster than this
 
 /**
- * Fetch airborne aircraft from OpenSky Network within ~280 km of a launch pad.
+ * Fetch airborne aircraft from adsb.lol within ~280 km of a launch pad.
  * No API key needed. Falls back silently on CORS / rate-limit errors.
+ *
+ * OpenSky Network retired anonymous REST access (now requires an OAuth2
+ * client / account), so this hook uses adsb.lol's free, key-less,
+ * CORS-enabled point-radius endpoint instead.
  */
 export function useAircraft(enabled, padLat, padLng) {
   const [aircraft, setAircraft] = useState([])
@@ -19,33 +23,27 @@ export function useAircraft(enabled, padLat, padLng) {
       return
     }
 
-    const deg = 2.5 // ~280 km radius
-    const params = new URLSearchParams({
-      lamin: (padLat - deg).toFixed(3),
-      lomin: (padLng - deg).toFixed(3),
-      lamax: (padLat + deg).toFixed(3),
-      lomax: (padLng + deg).toFixed(3),
-    })
-    const url = `https://opensky-network.org/api/states/all?${params}`
+    const radiusNm = 150 // ~280 km, under adsb.lol's 250 nm cap
+    const url = `https://api.adsb.lol/v2/point/${padLat.toFixed(4)}/${padLng.toFixed(4)}/${radiusNm}`
 
     async function poll() {
       setLoading(true)
       try {
         const res = await fetch(url)
-        if (!res.ok) throw new Error(`OpenSky ${res.status}`)
+        if (!res.ok) throw new Error(`adsb.lol ${res.status}`)
         const data = await res.json()
 
-        const planes = (data.states || [])
-          .filter(s => s[5] != null && s[6] != null && !s[8]) // airborne + has position
-          .map(s => ({
-            icao:     s[0],
-            callsign: (s[1] || '').trim() || s[0].toUpperCase(),
-            lng:      s[5],
-            lat:      s[6],
-            altFt:    s[7] != null ? Math.round(s[7] * 3.281) : null,
-            speedKts: s[9] != null ? Math.round(s[9] * 1.944) : null,
-            heading:  s[10] != null ? Math.round(s[10]) : 0,
-            country:  s[2],
+        const planes = (data.ac || [])
+          .filter(a => a.lat != null && a.lon != null && a.alt_baro !== 'ground')
+          .map(a => ({
+            icao:     a.hex,
+            callsign: (a.flight || '').trim() || a.hex.toUpperCase(),
+            lng:      a.lon,
+            lat:      a.lat,
+            altFt:    typeof a.alt_baro === 'number' ? Math.round(a.alt_baro) : null,
+            speedKts: a.gs != null ? Math.round(a.gs) : null,
+            heading:  a.track != null ? Math.round(a.track) : 0,
+            country:  a.r || a.t || '',
           }))
 
         setAircraft(planes)
