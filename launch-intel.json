@@ -1,231 +1,11 @@
 {
-  "updated": "2026-04-15T13:04:22.835Z",
+  "updated": "2026-09-06T09:56:56.035Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
     "SpaceX API"
   ],
   "launches": [
-    {
-      "rocket": "Falcon 9",
-      "mission": "Galaxy 33 (15R) & 34 (12R)",
-      "provider": "SpaceX",
-      "site": "5e9e4501f509094ba4566f84",
-      "net": "2022-10-08T23:05:00.000Z",
-      "window": "hour",
-      "source": "SpaceX API",
-      "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Falcon 9",
-      "mission": "Hotbird 13F",
-      "provider": "SpaceX",
-      "site": "5e9e4501f509094ba4566f84",
-      "net": "2022-10-15T05:22:00.000Z",
-      "window": "hour",
-      "source": "SpaceX API",
-      "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Falcon 9",
-      "mission": "Starlink 4-36 (v1.5)",
-      "provider": "SpaceX",
-      "site": "5e9e4501f509094ba4566f84",
-      "net": "2022-10-20T14:50:00.000Z",
-      "window": "hour",
-      "source": "SpaceX API",
-      "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Falcon 9",
-      "mission": "Starlink 4-37 (v1.5)",
-      "provider": "SpaceX",
-      "site": "5e9e4501f509094ba4566f84",
-      "net": "2022-11-01T00:00:00.000Z",
-      "window": "month",
-      "source": "SpaceX API",
-      "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9",
-      "mission": "O3b mPower 1,2",
-      "provider": "SpaceX",
-      "site": "5e9e4501f509094ba4566f84",
-      "net": "2022-11-01T00:00:00.000Z",
-      "window": "month",
-      "source": "SpaceX API",
-      "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9",
-      "mission": "SES-18 & SES-19",
-      "provider": "SpaceX",
-      "site": "5e9e4501f509094ba4566f84",
-      "net": "2022-11-01T00:00:00.000Z",
-      "window": "month",
-      "source": "SpaceX API",
-      "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9",
-      "mission": "USSF-44",
-      "provider": "SpaceX",
-      "site": "5e9e4502f509094188566f88",
-      "net": "2022-11-01T13:41:00.000Z",
-      "window": "hour",
-      "source": "SpaceX API",
-      "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Falcon 9",
-      "mission": "Hotbird 13G",
-      "provider": "SpaceX",
-      "site": "5e9e4501f509094ba4566f84",
-      "net": "2022-11-03T03:24:00.000Z",
-      "window": "hour",
-      "source": "SpaceX API",
-      "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Falcon 9",
-      "mission": "Galaxy 31 (23R) & 32 (17R)",
-      "provider": "SpaceX",
-      "site": "5e9e4501f509094ba4566f84",
-      "net": "2022-11-08T00:00:00.000Z",
-      "window": "day",
-      "source": "SpaceX API",
-      "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9",
-      "mission": "Eutelsat 10B",
-      "provider": "SpaceX",
-      "site": "5e9e4501f509094ba4566f84",
-      "net": "2022-11-15T00:00:00.000Z",
-      "window": "day",
-      "source": "SpaceX API",
-      "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9",
-      "mission": "CRS-26",
-      "provider": "SpaceX",
-      "site": "5e9e4502f509094188566f88",
-      "net": "2022-11-18T22:00:00.000Z",
-      "window": "hour",
-      "source": "SpaceX API",
-      "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Falcon 9",
-      "mission": "ispace Mission 1 & Rashid",
-      "provider": "SpaceX",
-      "site": "5e9e4501f509094ba4566f84",
-      "net": "2022-11-22T00:00:00.000Z",
-      "window": "day",
-      "source": "SpaceX API",
-      "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9",
-      "mission": "Transporter-6",
-      "provider": "SpaceX",
-      "site": "5e9e4501f509094ba4566f84",
-      "net": "2022-12-01T00:00:00.000Z",
-      "window": "month",
-      "source": "SpaceX API",
-      "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9",
-      "mission": "TTL-1",
-      "provider": "SpaceX",
-      "site": "5e9e4502f509092b78566f87",
-      "net": "2022-12-01T00:00:00.000Z",
-      "window": "month",
-      "source": "SpaceX API",
-      "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9",
-      "mission": "WorldView Legion 1 & 2",
-      "provider": "SpaceX",
-      "site": "5e9e4501f509094ba4566f84",
-      "net": "2022-12-01T00:00:00.000Z",
-      "window": "month",
-      "source": "SpaceX API",
-      "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9",
-      "mission": "Viasat-3 & Arcturus",
-      "provider": "SpaceX",
-      "site": "5e9e4502f509094188566f88",
-      "net": "2022-12-01T00:00:00.000Z",
-      "window": "month",
-      "source": "SpaceX API",
-      "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9",
-      "mission": "O3b mPower 3.4",
-      "provider": "SpaceX",
-      "site": "5e9e4501f509094ba4566f84",
-      "net": "2022-12-01T00:00:00.000Z",
-      "window": "month",
-      "source": "SpaceX API",
-      "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9",
-      "mission": "SWOT",
-      "provider": "SpaceX",
-      "site": "5e9e4502f509092b78566f87",
-      "net": "2022-12-05T00:00:00.000Z",
-      "window": "day",
-      "source": "SpaceX API",
-      "sourceUrl": "https://api.spacexdata.com/v4/launches/upcoming",
-      "confidence": "low"
-    },
-    {
-      "rocket": "New Glenn • BlueBird 7",
-      "mission": "New Glenn • BlueBird 7",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-18T00:00:00.000Z",
-      "window": "NET April 18",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\nWindow opens 6:45 a.m. EDT (1045 UTC)\n\n\n\nLaunch site: Launch Complex 36, Cape Canaveral Space Force Station",
-      "mission": "Launch time: \n\nWindow opens 6:45 a.m. EDT (1045 UTC)\n\n\n\nLaunch site: Launch Complex 36, Cape Canaveral Space Force Station",
-      "provider": "",
-      "site": "",
-      "net": "2026-04-18T10:45:00.000Z",
-      "window": "Window opens 6:45 a.m. EDT (1045 UTC) La",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
     {
       "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
       "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
@@ -247,6 +27,160 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "Falcon 9 • Starlink 15-24",
+      "mission": "Falcon 9 • Starlink 15-24",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-06T00:00:00.000Z",
+      "window": "September 6",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n7:26:28 a.m. PDT (10:26:28 a.m. EDT",
+      "mission": "1426:28 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-07T09:28:00.000Z",
+      "window": "7:26:28 a.m. PDT (10:26:28 a.m. EDT / 14",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Soyuz 2.1b • Progress MS-35",
+      "mission": "96P",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-09T00:00:00.000Z",
+      "window": "September 9",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n9:15 p.m. Baikonur time (12:15 p.m. EDT",
+      "mission": "1615 UTC)\n\n\n\nLaunch site: Site 31/6, Baikonur Cosmodrome, Kazakhstan",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-09T21:15:00.000Z",
+      "window": "9:15 p.m. Baikonur time (12:15 p.m. EDT",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • USSF-153",
+      "mission": "Falcon 9 • USSF-153",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-10T00:00:00.000Z",
+      "window": "September 10",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 8:37 a.m. PDT (11:37 a.m. EDT",
+      "mission": "1537 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-10T15:37:00.000Z",
+      "window": "Window opens at 8:37 a.m. PDT (11:37 a.m",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • O3b mPOWER F",
+      "mission": "Falcon 9 • O3b mPOWER F",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-13T00:00:00.000Z",
+      "window": "September 13",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 2:40 p.m. EDT (1840 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\nWindow opens at 2:40 p.m. EDT (1840 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-13T18:40:00.000Z",
+      "window": "Window opens at 2:40 p.m. EDT (1840 UTC)",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Vega-C • Sentinel-3C and FLEX Earth Explorer",
+      "mission": "Vega-C • Sentinel-3C and FLEX Earth Explorer",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-14T00:00:00.000Z",
+      "window": "September 14/15",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n10:21 p.m. Kourou time (9:21 p.m. EDT",
+      "mission": "0121 UTC)\n\n\n\nLaunch site: Europe's Spaceport, Kourou, French Guiana",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-14T22:21:00.000Z",
+      "window": "10:21 p.m. Kourou time (9:21 p.m. EDT /",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: Pad 2, Starbase, Texas",
+      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: Pad 2, Starbase, Texas",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-15T00:00:00.000Z",
+      "window": "TBD Launch site: Pad 2",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Starship • Flight 14",
+      "mission": "Starship • Flight 14",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-15T00:00:00.000Z",
+      "window": "NET September 15",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "H3 • Martian Moons eXploration (MMX)",
+      "mission": "H3 • Martian Moons eXploration (MMX)",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-19T00:00:00.000Z",
+      "window": "NET October 19/20",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n4:41:03 JST on Oct. 20 (3:41:03 p.m. EDT",
+      "mission": "1941:03 UTC on Oct. 19)\n\n\n\nLaunch site: Yoshinobu Launch Complex, JAXA Tanegashima Space Center",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-21T09:03:00.000Z",
+      "window": "4:41:03 JST on Oct. 20 (3:41:03 p.m. EDT",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     }
   ]
 }
