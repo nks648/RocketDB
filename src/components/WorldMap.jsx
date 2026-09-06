@@ -255,7 +255,7 @@ export default function WorldMap({ launches, selectedLaunch, onSelectLaunch, onP
 
           <button className={`toggle-btn${showAircraft ? ' active' : ''}`}
             onClick={() => setShowAircraft(v => !v)}
-            title="Live aircraft near active site (OpenSky Network)">
+            title="Live aircraft near active site (adsb.lol)">
             <span className="toggle-swatch" style={{ background:'#ffd740', fontSize:10 }}>✈</span>
             <span className="toggle-label">
               Aircraft{aircraftLoading ? ' …' : showAircraft ? ` (${aircraft.length})` : ''}
@@ -386,7 +386,7 @@ export default function WorldMap({ launches, selectedLaunch, onSelectLaunch, onP
                   </div>
                 )}
                 <div style={{ fontSize:10, color:'#7a9ab8', marginTop:4 }}>
-                  ICAO: {plane.icao.toUpperCase()} · via OpenSky
+                  ICAO: {plane.icao.toUpperCase()} · via adsb.lol
                 </div>
               </div>
             </Popup>
