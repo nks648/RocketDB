@@ -307,16 +307,17 @@ export default function WorldMap({ launches, selectedLaunch, onSelectLaunch, onP
         zoomControl={false}
         style={{ width:'100%', height:'100%' }}
       >
-        {/* Base terrain (no labels — Esri splits labels into a reference layer) */}
+        {/* Base terrain (no labels — Esri splits labels into a reference layer).
+            Tiles only exist to z16, so upscale beyond that instead of blocking zoom. */}
         <TileLayer
           url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}"
           attribution='&copy; <a href="https://www.esri.com/">Esri</a>, HERE, Garmin, &copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> contributors'
-          maxZoom={16}
+          maxNativeZoom={16} maxZoom={19}
         />
         {/* Place names, borders and roads, drawn over the base */}
         <TileLayer
           url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}"
-          maxZoom={16}
+          maxNativeZoom={16} maxZoom={19}
         />
         <ZoomControl position="bottomleft" />
 
