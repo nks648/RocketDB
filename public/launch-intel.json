@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-10T10:17:38.998Z",
+  "updated": "2026-09-10T15:32:32.551Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -29,28 +29,6 @@
       "confidence": "low"
     },
     {
-      "rocket": "Soyuz 2.1b • Progress MS-35",
-      "mission": "96P",
-      "provider": "",
-      "site": "",
-      "net": "2026-09-09T00:00:00.000Z",
-      "window": "September 9",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n9:15 p.m. Baikonur time (12:15 p.m. EDT",
-      "mission": "1615 UTC)\n\n\n\nLaunch site: Site 31/6, Baikonur Cosmodrome, Kazakhstan",
-      "provider": "",
-      "site": "",
-      "net": "2026-09-09T21:15:00.000Z",
-      "window": "9:15 p.m. Baikonur time (12:15 p.m. EDT",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
       "rocket": "Falcon 9 • USSF-153",
       "mission": "Falcon 9 • USSF-153",
       "provider": "",
@@ -62,12 +40,12 @@
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens at 8:37 a.m. PDT (11:37 a.m. EDT",
-      "mission": "1537 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "rocket": "Launch time: \n\n8:42:30 a.m. PDT (1142:30 a.m. EDT",
+      "mission": "1542:30 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "provider": "",
       "site": "",
-      "net": "2026-09-10T15:37:00.000Z",
-      "window": "Window opens at 8:37 a.m. PDT (11:37 a.m",
+      "net": "2026-09-12T01:30:00.000Z",
+      "window": "8:42:30 a.m. PDT (1142:30 a.m. EDT / 154",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
