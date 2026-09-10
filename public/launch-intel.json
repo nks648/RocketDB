@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-10T15:32:32.551Z",
+  "updated": "2026-09-10T20:14:58.210Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -27,28 +27,6 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9 • USSF-153",
-      "mission": "Falcon 9 • USSF-153",
-      "provider": "",
-      "site": "",
-      "net": "2026-09-10T00:00:00.000Z",
-      "window": "September 10",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n8:42:30 a.m. PDT (1142:30 a.m. EDT",
-      "mission": "1542:30 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-09-12T01:30:00.000Z",
-      "window": "8:42:30 a.m. PDT (1142:30 a.m. EDT / 154",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Falcon 9 • O3b mPOWER F",
