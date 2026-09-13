@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13T10:49:58.665Z",
+  "updated": "2026-09-13T15:20:45.032Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -73,12 +73,23 @@
       "confidence": "high"
     },
     {
-      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: Pad 2, Starbase, Texas",
-      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: Pad 2, Starbase, Texas",
+      "rocket": "Falcon 9 • USSF-259",
+      "mission": "Falcon 9 • USSF-259",
       "provider": "",
       "site": "",
       "net": "2026-09-15T00:00:00.000Z",
-      "window": "TBD Launch site: Pad 2",
+      "window": "September 15/16",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 6 p.m. PDT",
+      "mission": "9 p.m. EDT on Sept. 15 (0100 UTC on Sept. 16)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-16T01:00:00.000Z",
+      "window": "Window opens at 6 p.m. PDT / 9 p.m. EDT",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
@@ -88,11 +99,22 @@
       "mission": "Starship • Flight 14",
       "provider": "",
       "site": "",
-      "net": "2026-09-15T00:00:00.000Z",
-      "window": "NET September 15",
+      "net": "2026-09-18T00:00:00.000Z",
+      "window": "NET September 18",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 7:15 a.m. CDT (8:15 a.m. EDT",
+      "mission": "1215 UTC)\n\n\n\nLaunch site: Pad 2, Starbase, Texas",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-18T12:15:00.000Z",
+      "window": "Window opens at 7:15 a.m. CDT (8:15 a.m.",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     },
     {
       "rocket": "H3 • Martian Moons eXploration (MMX)",
