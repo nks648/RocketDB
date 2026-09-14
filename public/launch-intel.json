@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13T20:01:49.812Z",
+  "updated": "2026-09-14T02:32:24.704Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -27,28 +27,6 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Falcon 9 • O3b mPOWER F",
-      "mission": "Falcon 9 • O3b mPOWER F",
-      "provider": "",
-      "site": "",
-      "net": "2026-09-13T00:00:00.000Z",
-      "window": "September 13",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\nWindow opens at 2:49 p.m. EDT (1849 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\nWindow opens at 2:49 p.m. EDT (1849 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-09-13T18:49:00.000Z",
-      "window": "Window opens at 2:49 p.m. EDT (1849 UTC)",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Vega-C • Sentinel-3C and FLEX Earth Explorer",
