@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-15T02:36:27.579Z",
+  "updated": "2026-09-15T10:43:38.149Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -27,28 +27,6 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Vega-C • Sentinel-3C and FLEX Earth Explorer",
-      "mission": "Vega-C • Sentinel-3C and FLEX Earth Explorer",
-      "provider": "",
-      "site": "",
-      "net": "2026-09-14T00:00:00.000Z",
-      "window": "September 14/15",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n10:21 p.m. Kourou time (9:21 p.m. EDT",
-      "mission": "0121 UTC)\n\n\n\nLaunch site: Europe's Spaceport, Kourou, French Guiana",
-      "provider": "",
-      "site": "",
-      "net": "2026-09-14T22:21:00.000Z",
-      "window": "10:21 p.m. Kourou time (9:21 p.m. EDT /",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Falcon 9 • USSF-259",
