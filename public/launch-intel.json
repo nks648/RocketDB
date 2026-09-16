@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-15T20:40:27.470Z",
+  "updated": "2026-09-16T02:30:55.337Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -33,19 +33,19 @@
       "mission": "Falcon 9 • USSF-259",
       "provider": "",
       "site": "",
-      "net": "2026-09-15T00:00:00.000Z",
-      "window": "September 15/16",
+      "net": "2026-09-16T00:00:00.000Z",
+      "window": "September 16/17",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\n6:29:18 p.m. PDT",
-      "mission": "929:18 p.m. EDT on Sept. 15 (0129:18 UTC on Sept. 16)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "rocket": "Launch time: \n\nThe four-hour window opens at 6 p.m. PDT (9 p.m. EDT",
+      "mission": "0100 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "provider": "",
       "site": "",
-      "net": "2026-09-17T00:18:00.000Z",
-      "window": "6:29:18 p.m. PDT / 929:18 p.m. EDT on Se",
+      "net": "2026-09-17T01:00:00.000Z",
+      "window": "The four-hour window opens at 6 p.m. PDT",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
