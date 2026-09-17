@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-17T15:55:43.367Z",
+  "updated": "2026-09-17T20:46:34.386Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -33,8 +33,8 @@
       "mission": "Starship • Flight 14",
       "provider": "",
       "site": "",
-      "net": "2026-09-22T00:00:00.000Z",
-      "window": "NET September 22",
+      "net": "2026-09-28T00:00:00.000Z",
+      "window": "NET September 28",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
@@ -44,7 +44,7 @@
       "mission": "1215 UTC)\n\n\n\nLaunch site: Pad 2, Starbase, Texas",
       "provider": "",
       "site": "",
-      "net": "2026-09-22T12:15:00.000Z",
+      "net": "2026-09-28T12:15:00.000Z",
       "window": "Window opens at 7:15 a.m. CDT (8:15 a.m.",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
