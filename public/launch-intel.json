@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-17T20:46:34.386Z",
+  "updated": "2026-09-18T02:20:43.802Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -27,6 +27,72 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "Electron • ‘Owl By The Dozen’",
+      "mission": "Electron • ‘Owl By The Dozen’",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-18T00:00:00.000Z",
+      "window": "September 18/19",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n3:15 p.m. NZST",
+      "mission": "0315 UTC on Sept. 19 (11:15 p.m. EDT on Sept. 18)\n\n\n\nLaunch site: Launch Complex 1, Mahia, New Zealand",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-18T15:15:00.000Z",
+      "window": "3:15 p.m. NZST / 0315 UTC on Sept. 19 (1",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Starlink 15-27",
+      "mission": "Falcon 9 • Starlink 15-27",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-19T00:00:00.000Z",
+      "window": "September 19/20",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 6:47 p.m. PDT (9:47 p.m. EDT",
+      "mission": "0147 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-20T01:47:00.000Z",
+      "window": "Window opens at 6:47 p.m. PDT (9:47 p.m.",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • USSF-385",
+      "mission": "Falcon 9 • USSF-385",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-26T00:00:00.000Z",
+      "window": "September 26",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 4:56 a.m. PDT (7:56 a.m. EDT",
+      "mission": "1156 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-26T11:56:00.000Z",
+      "window": "Window opens at 4:56 a.m. PDT (7:56 a.m.",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     },
     {
       "rocket": "Starship • Flight 14",
