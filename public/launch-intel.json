@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-19T15:04:27.026Z",
+  "updated": "2026-09-19T19:47:36.498Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -27,28 +27,6 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Electron • ‘Owl By The Dozen’",
-      "mission": "Electron • ‘Owl By The Dozen’",
-      "provider": "",
-      "site": "",
-      "net": "2026-09-18T00:00:00.000Z",
-      "window": "September 18/19",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n3:15 p.m. NZST",
-      "mission": "0315 UTC on Sept. 19 (11:15 p.m. EDT on Sept. 18)\n\n\n\nLaunch site: Launch Complex 1, Mahia, New Zealand",
-      "provider": "",
-      "site": "",
-      "net": "2026-09-18T15:15:00.000Z",
-      "window": "3:15 p.m. NZST / 0315 UTC on Sept. 19 (1",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Falcon 9 • Starlink 15-27",
