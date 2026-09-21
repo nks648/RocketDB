@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-21T11:31:25.199Z",
+  "updated": "2026-09-21T17:29:29.711Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -27,6 +27,28 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "Electron • ‘Owlright Owlright Owlright’",
+      "mission": "Electron • ‘Owlright Owlright Owlright’",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-25T00:00:00.000Z",
+      "window": "September 25/26",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 12:15 a.m. NZST",
+      "mission": "0015 UTC on Sept. 26 (8:15 p.m. EDT on Sept. 25)\n\n\n\nLaunch site: Launch Complex 1, Mahia, New Zealand",
+      "provider": "",
+      "site": "",
+      "net": "2026-09-25T00:15:00.000Z",
+      "window": "Window opens at 12:15 a.m. NZST / 0015 U",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     },
     {
       "rocket": "Falcon 9 • USSF-385",
