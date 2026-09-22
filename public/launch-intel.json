@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-22T10:37:59.418Z",
+  "updated": "2026-09-22T15:58:55.719Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -115,6 +115,28 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-10T00:00:00.000Z",
+      "window": "TBD Launch site: SLC-4E",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Starlink 15-25",
+      "mission": "Falcon 9 • Starlink 15-25",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-10T00:00:00.000Z",
+      "window": "October 10",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
     },
     {
       "rocket": "H3 • Martian Moons eXploration (MMX)",
