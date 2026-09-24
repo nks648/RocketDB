@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-24T10:47:42.578Z",
+  "updated": "2026-09-24T16:10:59.650Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -104,6 +104,28 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "Falcon Heavy • NROL-97",
+      "mission": "Falcon Heavy • NROL-97",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-01T00:00:00.000Z",
+      "window": "October 1/2",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n11:53 p.m. EDT (0353 UTC)\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
+      "mission": "Launch time: \n\n11:53 p.m. EDT (0353 UTC)\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-01T03:53:00.000Z",
+      "window": "11:53 p.m. EDT (0353 UTC) Launch site: L",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     },
     {
       "rocket": "Launch time: \n\n11:10 a.m. EDT (1510 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
