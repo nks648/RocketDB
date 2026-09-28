@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T20:38:10.070Z",
+  "updated": "2026-09-28T02:43:32.213Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -27,28 +27,6 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Electron • ‘Owlright Owlright Owlright’",
-      "mission": "Electron • ‘Owlright Owlright Owlright’",
-      "provider": "",
-      "site": "",
-      "net": "2026-09-25T00:00:00.000Z",
-      "window": "September 25/26",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\nWindow opens at 12:15 a.m. NZST",
-      "mission": "0015 UTC on Sept. 26 (8:15 p.m. EDT on Sept. 25)\n\n\n\nLaunch site: Launch Complex 1, Mahia, New Zealand",
-      "provider": "",
-      "site": "",
-      "net": "2026-09-25T00:15:00.000Z",
-      "window": "Window opens at 12:15 a.m. NZST / 0015 U",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Starship • Flight 14",
