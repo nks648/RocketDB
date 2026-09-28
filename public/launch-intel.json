@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28T12:25:47.347Z",
+  "updated": "2026-09-28T22:47:11.883Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -29,34 +29,23 @@
       "confidence": "low"
     },
     {
-      "rocket": "Starship • Flight 14",
-      "mission": "Starship • Flight 14",
-      "provider": "",
-      "site": "",
-      "net": "2026-09-28T00:00:00.000Z",
-      "window": "NET September 28",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\nWindow opens at 7:15 a.m. CDT (8:15 a.m. EDT",
-      "mission": "1215 UTC)\n\n\n\nLaunch site: Pad 2, Starbase, Texas",
-      "provider": "",
-      "site": "",
-      "net": "2026-09-28T12:15:00.000Z",
-      "window": "Window opens at 7:15 a.m. CDT (8:15 a.m.",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
       "rocket": "Falcon 9 • NASA’s SpaceX Crew-13",
       "mission": "Falcon 9 • NASA’s SpaceX Crew-13",
       "provider": "",
       "site": "",
       "net": "2026-10-01T00:00:00.000Z",
       "window": "NET October 1",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Falcon 9 • Transporter-18",
+      "mission": "Falcon 9 • Transporter-18",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-01T00:00:00.000Z",
+      "window": "October 1",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
@@ -90,6 +79,17 @@
       "site": "",
       "net": "2026-10-01T15:10:00.000Z",
       "window": "11:10 a.m. EDT (1510 UTC) Launch site: S",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 11:18 a.m. PDT (2:18 p.m. EDT",
+      "mission": "1818 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-01T18:18:00.000Z",
+      "window": "Window opens at 11:18 a.m. PDT (2:18 p.m",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
