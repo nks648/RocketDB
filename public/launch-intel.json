@@ -1,33 +1,11 @@
 {
-  "updated": "2026-09-30T21:41:28.055Z",
+  "updated": "2026-10-01T03:15:47.621Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
     "SpaceX API"
   ],
   "launches": [
-    {
-      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
-      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-05T00:00:00.000Z",
-      "window": "TBD Launch site: Launch Complex 39A",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Falcon Heavy • Dragonfly",
-      "mission": "Falcon Heavy • Dragonfly",
-      "provider": "",
-      "site": "",
-      "net": "2026-07-05T00:00:00.000Z",
-      "window": "NET July 5, 2028",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
     {
       "rocket": "Falcon 9 • NASA’s SpaceX Crew-13",
       "mission": "Falcon 9 • NASA’s SpaceX Crew-13",
@@ -137,6 +115,28 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
+      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2027-07-05T00:00:00.000Z",
+      "window": "TBD Launch site: Launch Complex 39A",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon Heavy • Dragonfly",
+      "mission": "Falcon Heavy • Dragonfly",
+      "provider": "",
+      "site": "",
+      "net": "2027-07-05T00:00:00.000Z",
+      "window": "NET July 5, 2028",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
     }
   ]
 }
