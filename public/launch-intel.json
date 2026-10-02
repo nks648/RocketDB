@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01T22:09:23.762Z",
+  "updated": "2026-10-02T03:16:22.705Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -18,12 +18,12 @@
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\n11:53 p.m. EDT (0353 UTC)\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
-      "mission": "Launch time: \n\n11:53 p.m. EDT (0353 UTC)\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
+      "rocket": "Launch time: \n\n11:54 p.m. EDT (0354 UTC)\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
+      "mission": "Launch time: \n\n11:54 p.m. EDT (0354 UTC)\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
       "provider": "",
       "site": "",
-      "net": "2026-10-01T03:53:00.000Z",
-      "window": "11:53 p.m. EDT (0353 UTC) Launch site: L",
+      "net": "2026-10-01T03:54:00.000Z",
+      "window": "11:54 p.m. EDT (0354 UTC) Launch site: L",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
