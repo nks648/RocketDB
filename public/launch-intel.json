@@ -1,33 +1,11 @@
 {
-  "updated": "2026-10-02T03:16:22.705Z",
+  "updated": "2026-10-02T11:37:03.089Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
     "SpaceX API"
   ],
   "launches": [
-    {
-      "rocket": "Falcon Heavy • NROL-97",
-      "mission": "Falcon Heavy • NROL-97",
-      "provider": "",
-      "site": "",
-      "net": "2026-10-01T00:00:00.000Z",
-      "window": "October 1/2",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n11:54 p.m. EDT (0354 UTC)\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
-      "mission": "Launch time: \n\n11:54 p.m. EDT (0354 UTC)\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-10-01T03:54:00.000Z",
-      "window": "11:54 p.m. EDT (0354 UTC) Launch site: L",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
     {
       "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
