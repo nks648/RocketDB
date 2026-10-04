@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-04T16:11:55.050Z",
+  "updated": "2026-10-04T20:40:41.937Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -7,12 +7,23 @@
   ],
   "launches": [
     {
-      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "rocket": "Falcon 9 • SDA’s Tranche 1 Transport Layer A",
+      "mission": "Falcon 9 • SDA’s Tranche 1 Transport Layer A",
       "provider": "",
       "site": "",
-      "net": "2026-10-10T00:00:00.000Z",
-      "window": "TBD Launch site: SLC-4E",
+      "net": "2026-10-05T00:00:00.000Z",
+      "window": "October 5",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n1:17 a.m. PDT (4:17 a.m. EDT",
+      "mission": "0817 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-05T08:17:00.000Z",
+      "window": "1:17 a.m. PDT (4:17 a.m. EDT / 0817 UTC)",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
@@ -27,6 +38,17 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 4 p.m. PDT (7 p.m. EDT",
+      "mission": "2300 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-10T23:00:00.000Z",
+      "window": "Window opens at 4 p.m. PDT (7 p.m. EDT /",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     },
     {
       "rocket": "H3 • Martian Moons eXploration (MMX)",
