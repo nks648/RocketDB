@@ -1,33 +1,11 @@
 {
-  "updated": "2026-10-05T23:29:58.935Z",
+  "updated": "2026-10-06T03:59:30.719Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
     "SpaceX API"
   ],
   "launches": [
-    {
-      "rocket": "Falcon 9 • SDA’s Tranche 1 Transport Layer A",
-      "mission": "Falcon 9 • SDA’s Tranche 1 Transport Layer A",
-      "provider": "",
-      "site": "",
-      "net": "2026-10-06T00:00:00.000Z",
-      "window": "NET October 6",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n1:17 a.m. PDT (4:17 a.m. EDT",
-      "mission": "0817 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-10-06T08:17:00.000Z",
-      "window": "1:17 a.m. PDT (4:17 a.m. EDT / 0817 UTC)",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
     {
       "rocket": "Falcon 9 • Starlink 15-25",
       "mission": "Falcon 9 • Starlink 15-25",
