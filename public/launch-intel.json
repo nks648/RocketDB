@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09T12:19:23.508Z",
+  "updated": "2026-10-09T22:02:17.350Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -12,18 +12,18 @@
       "provider": "",
       "site": "",
       "net": "2026-10-10T00:00:00.000Z",
-      "window": "NET October 10",
+      "window": "October 10",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\n12:29 a.m. PDT (3:29 a.m. EDT (0729 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "mission": "Launch time: \n\n12:29 a.m. PDT (3:29 a.m. EDT (0729 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "rocket": "Launch time: \n\n12:39 a.m. PDT (3:39 a.m. EDT (0739 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "mission": "Launch time: \n\n12:39 a.m. PDT (3:39 a.m. EDT (0739 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "provider": "",
       "site": "",
-      "net": "2026-10-10T07:29:00.000Z",
-      "window": "12:29 a.m. PDT (3:29 a.m. EDT (0729 UTC)",
+      "net": "2026-10-10T07:39:00.000Z",
+      "window": "12:39 a.m. PDT (3:39 a.m. EDT (0739 UTC)",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
