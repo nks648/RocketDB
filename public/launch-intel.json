@@ -1,33 +1,11 @@
 {
-  "updated": "2026-10-13T13:13:49.040Z",
+  "updated": "2026-10-13T22:06:33.633Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
     "SpaceX API"
   ],
   "launches": [
-    {
-      "rocket": "Falcon 9 • CRS-35",
-      "mission": "Falcon 9 • CRS-35",
-      "provider": "",
-      "site": "",
-      "net": "2026-10-13T00:00:00.000Z",
-      "window": "October 13",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n6:33:44 a.m. EDT (1033:44 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\n6:33:44 a.m. EDT (1033:44 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "provider": "",
-      "site": "",
-      "net": "2026-10-14T13:44:00.000Z",
-      "window": "6:33:44 a.m. EDT (1033:44 UTC) Launch si",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
     {
       "rocket": "H3 • Martian Moons eXploration (MMX)",
       "mission": "H3 • Martian Moons eXploration (MMX)",
