@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12T23:58:34.927Z",
+  "updated": "2026-10-13T05:45:42.577Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -7,45 +7,23 @@
   ],
   "launches": [
     {
-      "rocket": "Falcon 9 • Starlink 15-25",
-      "mission": "Falcon 9 • Starlink 15-25",
-      "provider": "",
-      "site": "",
-      "net": "2026-10-12T00:00:00.000Z",
-      "window": "October 12",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
       "rocket": "Falcon 9 • CRS-35",
       "mission": "Falcon 9 • CRS-35",
       "provider": "",
       "site": "",
       "net": "2026-10-13T00:00:00.000Z",
-      "window": "NET October 13",
+      "window": "October 13",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\n6:33 a.m. EDT (1033 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\n6:33 a.m. EDT (1033 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "rocket": "Launch time: \n\n6:33:44 a.m. EDT (1033:44 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\n6:33:44 a.m. EDT (1033:44 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
       "provider": "",
       "site": "",
-      "net": "2026-10-13T10:33:00.000Z",
-      "window": "6:33 a.m. EDT (1033 UTC) Launch site: SL",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
-    {
-      "rocket": "Launch time: \n\n5:28:11 p.m. PDT (8:28:11 p.m. EDT",
-      "mission": "0028:11 UTC).\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-10-13T23:11:00.000Z",
-      "window": "5:28:11 p.m. PDT (8:28:11 p.m. EDT / 002",
+      "net": "2026-10-14T13:44:00.000Z",
+      "window": "6:33:44 a.m. EDT (1033:44 UTC) Launch si",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
