@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13T22:06:33.633Z",
+  "updated": "2026-10-14T02:50:11.958Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -7,12 +7,89 @@
   ],
   "launches": [
     {
+      "rocket": "Falcon 9 • USSF-481",
+      "mission": "Falcon 9 • USSF-481",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-15T00:00:00.000Z",
+      "window": "October 15",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 4:44 p.m. PDT (7:44 p.m. EDT",
+      "mission": "2344 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-15T23:44:00.000Z",
+      "window": "Window opens at 4:44 p.m. PDT (7:44 p.m.",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Bandwagon-5",
+      "mission": "Falcon 9 • Bandwagon-5",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-19T00:00:00.000Z",
+      "window": "October 19",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
       "rocket": "H3 • Martian Moons eXploration (MMX)",
       "mission": "H3 • Martian Moons eXploration (MMX)",
       "provider": "",
       "site": "",
       "net": "2026-10-19T00:00:00.000Z",
       "window": "NET October 19/20",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 6:30 a.m. EDT (1030 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\nWindow opens at 6:30 a.m. EDT (1030 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-19T10:30:00.000Z",
+      "window": "Window opens at 6:30 a.m. EDT (1030 UTC)",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Starlink 15-15",
+      "mission": "Falcon 9 • Starlink 15-15",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-20T00:00:00.000Z",
+      "window": "October 20",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 3:14 p.m. PDT (6:14 p.m. EDT",
+      "mission": "2214 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-20T22:14:00.000Z",
+      "window": "Window opens at 3:14 p.m. PDT (6:14 p.m.",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Electron • ‘We’re Not Hawking Around’",
+      "mission": "Electron • ‘We’re Not Hawking Around’",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-21T00:00:00.000Z",
+      "window": "NET October 21",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
@@ -27,6 +104,61 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
+    },
+    {
+      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-24T00:00:00.000Z",
+      "window": "TBD Launch site: SLC-4E",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Starlink 15-16",
+      "mission": "Falcon 9 • Starlink 15-16",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-24T00:00:00.000Z",
+      "window": "October 24",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Electron • ‘The Sea God Surveys’",
+      "mission": "Electron • ‘The Sea God Surveys’",
+      "provider": "",
+      "site": "",
+      "net": "2026-11-04T00:00:00.000Z",
+      "window": "NET November 4",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: Launch Complex 1, Mahia, New Zealand",
+      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: Launch Complex 1, Mahia, New Zealand",
+      "provider": "",
+      "site": "",
+      "net": "2026-11-10T00:00:00.000Z",
+      "window": "TBD Launch site: Launch Complex 1",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Electron • ‘The Mountain God Rises’",
+      "mission": "Electron • ‘The Mountain God Rises’",
+      "provider": "",
+      "site": "",
+      "net": "2026-11-10T00:00:00.000Z",
+      "window": "NET November 10",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
     },
     {
       "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: Launch Complex 39A, Kennedy Space Center, Florida",
