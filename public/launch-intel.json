@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-14T10:53:43.489Z",
+  "updated": "2026-10-14T16:13:07.837Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -156,6 +156,28 @@
       "site": "",
       "net": "2026-11-10T00:00:00.000Z",
       "window": "NET November 10",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: Europe's Spaceport, Kourou, French Guiana",
+      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: Europe's Spaceport, Kourou, French Guiana",
+      "provider": "",
+      "site": "",
+      "net": "2026-11-23T00:00:00.000Z",
+      "window": "TBD Launch site: Europe's Spaceport",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Ariane 6 • Leo Europe 4",
+      "mission": "Ariane 6 • Leo Europe 4",
+      "provider": "",
+      "site": "",
+      "net": "2026-11-23T00:00:00.000Z",
+      "window": "NET November 23",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
