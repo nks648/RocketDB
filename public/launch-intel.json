@@ -1,33 +1,11 @@
 {
-  "updated": "2026-10-15T20:44:52.231Z",
+  "updated": "2026-10-16T02:23:35.877Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
     "SpaceX API"
   ],
   "launches": [
-    {
-      "rocket": "Falcon 9 • USSF-481",
-      "mission": "Falcon 9 • USSF-481",
-      "provider": "",
-      "site": "",
-      "net": "2026-10-15T00:00:00.000Z",
-      "window": "October 15",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n4:57:05 p.m. PDT (7:57:05 p.m. EDT",
-      "mission": "2357:05 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-10-18T04:05:00.000Z",
-      "window": "4:57:05 p.m. PDT (7:57:05 p.m. EDT / 235",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
-    },
     {
       "rocket": "Falcon 9 • Bandwagon-5",
       "mission": "Falcon 9 • Bandwagon-5",
