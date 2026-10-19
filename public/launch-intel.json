@@ -1,22 +1,11 @@
 {
-  "updated": "2026-10-19T02:31:48.404Z",
+  "updated": "2026-10-19T11:38:34.776Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
     "SpaceX API"
   ],
   "launches": [
-    {
-      "rocket": "Falcon 9 • Bandwagon-5",
-      "mission": "Falcon 9 • Bandwagon-5",
-      "provider": "",
-      "site": "",
-      "net": "2026-10-19T00:00:00.000Z",
-      "window": "October 19",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
     {
       "rocket": "H3 • Martian Moons eXploration (MMX)",
       "mission": "H3 • Martian Moons eXploration (MMX)",
@@ -29,15 +18,15 @@
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens at 6:30 a.m. EDT (1030 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\nWindow opens at 6:30 a.m. EDT (1030 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "rocket": "Falcon 9 • Bandwagon-5",
+      "mission": "Falcon 9 • Bandwagon-5",
       "provider": "",
       "site": "",
-      "net": "2026-10-19T10:30:00.000Z",
-      "window": "Window opens at 6:30 a.m. EDT (1030 UTC)",
+      "net": "2026-10-20T00:00:00.000Z",
+      "window": "October 20",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
+      "confidence": "low"
     },
     {
       "rocket": "Falcon 9 • Starlink 15-15",
@@ -49,6 +38,17 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nWindow opens at 6:30 a.m. EDT (1030 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\nWindow opens at 6:30 a.m. EDT (1030 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-20T10:30:00.000Z",
+      "window": "Window opens at 6:30 a.m. EDT (1030 UTC)",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     },
     {
       "rocket": "Launch time: \n\nWindow opens at 3:14 p.m. PDT (6:14 p.m. EDT",
