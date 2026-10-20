@@ -1,22 +1,11 @@
 {
-  "updated": "2026-10-20T02:44:39.293Z",
+  "updated": "2026-10-20T10:41:39.713Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
     "SpaceX API"
   ],
   "launches": [
-    {
-      "rocket": "H3 • Martian Moons eXploration (MMX)",
-      "mission": "H3 • Martian Moons eXploration (MMX)",
-      "provider": "",
-      "site": "",
-      "net": "2026-10-19T00:00:00.000Z",
-      "window": "NET October 19/20",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
     {
       "rocket": "Falcon 9 • Bandwagon-5",
       "mission": "Falcon 9 • Bandwagon-5",
@@ -40,12 +29,12 @@
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\nWindow opens at 6:30 a.m. EDT (1030 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
-      "mission": "Launch time: \n\nWindow opens at 6:30 a.m. EDT (1030 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "rocket": "Launch time: \n\n7:04 a.m. EDT (1104 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
+      "mission": "Launch time: \n\n7:04 a.m. EDT (1104 UTC)\n\n\n\nLaunch site: SLC-40, Cape Canaveral Space Force Station, Florida",
       "provider": "",
       "site": "",
-      "net": "2026-10-20T10:30:00.000Z",
-      "window": "Window opens at 6:30 a.m. EDT (1030 UTC)",
+      "net": "2026-10-20T11:04:00.000Z",
+      "window": "7:04 a.m. EDT (1104 UTC) Launch site: SL",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
@@ -71,17 +60,6 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\n4:41:03 JST on Oct. 20 (3:41:03 p.m. EDT",
-      "mission": "1941:03 UTC on Oct. 19)\n\n\n\nLaunch site: Yoshinobu Launch Complex, JAXA Tanegashima Space Center",
-      "provider": "",
-      "site": "",
-      "net": "2026-10-21T09:03:00.000Z",
-      "window": "4:41:03 JST on Oct. 20 (3:41:03 p.m. EDT",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
