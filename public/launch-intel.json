@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23T16:09:20.258Z",
+  "updated": "2026-10-23T20:49:37.712Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -23,21 +23,10 @@
       "provider": "",
       "site": "",
       "net": "2026-10-23T00:00:00.000Z",
-      "window": "NET October 23",
+      "window": "October 23",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\nWindow opens 2:30 p.m. PDT (5:30 p.m. EDT",
-      "mission": "2130 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-10-23T21:30:00.000Z",
-      "window": "Window opens 2:30 p.m. PDT (5:30 p.m. ED",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "high"
     },
     {
       "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
@@ -60,6 +49,17 @@
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\n3:28:53 p.m. PDT (6:28:53 p.m. EDT",
+      "mission": "2228:53 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-10-24T23:53:00.000Z",
+      "window": "3:28:53 p.m. PDT (6:28:53 p.m. EDT / 222",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
     },
     {
       "rocket": "Electron • ‘The Sea God Surveys’",
