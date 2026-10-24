@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23T20:49:37.712Z",
+  "updated": "2026-10-24T02:38:04.144Z",
   "sources": [
     "SpaceFlightNow",
     "Wikipedia",
@@ -7,56 +7,45 @@
   ],
   "launches": [
     {
-      "rocket": "Electron • ‘We’re Not Hawking Around’",
-      "mission": "Electron • ‘We’re Not Hawking Around’",
+      "rocket": "Falcon 9 • Starlink 15-16",
+      "mission": "Falcon 9 • Starlink 15-16",
       "provider": "",
       "site": "",
-      "net": "2026-10-21T00:00:00.000Z",
-      "window": "NET October 21",
+      "net": "2026-10-26T00:00:00.000Z",
+      "window": "October 26/27",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
     },
     {
-      "rocket": "Falcon 9 • Starlink 15-15",
-      "mission": "Falcon 9 • Starlink 15-15",
+      "rocket": "Launch time: \n\n9:45 p.m. PDT (12:45 a.m. EDT",
+      "mission": "0445 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "provider": "",
       "site": "",
-      "net": "2026-10-23T00:00:00.000Z",
-      "window": "October 23",
-      "source": "SpaceFlightNow",
-      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
-      "confidence": "low"
-    },
-    {
-      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
-      "provider": "",
-      "site": "",
-      "net": "2026-10-24T00:00:00.000Z",
-      "window": "TBD Launch site: SLC-4E",
+      "net": "2026-10-27T04:45:00.000Z",
+      "window": "9:45 p.m. PDT (12:45 a.m. EDT / 0445 UTC",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
     },
     {
-      "rocket": "Falcon 9 • Starlink 15-16",
-      "mission": "Falcon 9 • Starlink 15-16",
+      "rocket": "Falcon 9 • Starlink 15-18",
+      "mission": "Falcon 9 • Starlink 15-18",
       "provider": "",
       "site": "",
-      "net": "2026-10-24T00:00:00.000Z",
-      "window": "October 24",
+      "net": "2026-10-29T00:00:00.000Z",
+      "window": "October 29/30",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
     },
     {
-      "rocket": "Launch time: \n\n3:28:53 p.m. PDT (6:28:53 p.m. EDT",
-      "mission": "2228:53 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "rocket": "Launch time: \n\nWindow opens at 9:02 p.m. PDT (12:02 a.m. EDT",
+      "mission": "0402 UTC)\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
       "provider": "",
       "site": "",
-      "net": "2026-10-24T23:53:00.000Z",
-      "window": "3:28:53 p.m. PDT (6:28:53 p.m. EDT / 222",
+      "net": "2026-10-30T04:02:00.000Z",
+      "window": "Window opens at 9:02 p.m. PDT (12:02 a.m",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "high"
@@ -68,6 +57,28 @@
       "site": "",
       "net": "2026-11-04T00:00:00.000Z",
       "window": "NET November 4",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "low"
+    },
+    {
+      "rocket": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "mission": "Launch time: \n\nTBD\n\n\n\nLaunch site: SLC-4E, Vandenberg Space Force Base, California",
+      "provider": "",
+      "site": "",
+      "net": "2026-11-05T00:00:00.000Z",
+      "window": "TBD Launch site: SLC-4E",
+      "source": "SpaceFlightNow",
+      "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
+      "confidence": "high"
+    },
+    {
+      "rocket": "Falcon 9 • Starlink 15-21",
+      "mission": "Falcon 9 • Starlink 15-21",
+      "provider": "",
+      "site": "",
+      "net": "2026-11-05T00:00:00.000Z",
+      "window": "November 5",
       "source": "SpaceFlightNow",
       "sourceUrl": "https://spaceflightnow.com/launch-schedule/",
       "confidence": "low"
